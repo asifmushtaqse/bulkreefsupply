@@ -60,3 +60,14 @@ def get_jl_records(filename):
     if not os.path.exists(filename):
         return []
     return json.loads("[" + ",".join(open(filename, encoding='utf-8').readlines()) + "]" or '[]')
+
+
+# records = get_json_file_records('./output/bulkreefsupply_products.json')
+# keys = set()
+#
+# for r in records:
+#     keys.update(list(r['more_details'].keys()))
+#
+#
+# print(len(keys))
+# print(keys)

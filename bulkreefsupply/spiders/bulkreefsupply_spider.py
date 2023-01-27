@@ -15,7 +15,7 @@ class BulkReefSupplySpider(Spider):
     name = 'bulkreefsupply_spider'
     base_url = 'https://www.bulkreefsupply.com'
     faulty_urls_file_path = f'../output/faulty_urls.csv'
-    products_filename = f'../output/bulkreefsupply_products_{today_date}.json'
+    products_filename = f'../output/bulkreefsupply_products_{today_date}.csv'
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
 
     start_urls = [
@@ -36,12 +36,24 @@ class BulkReefSupplySpider(Spider):
     ]
 
     csv_headers = [
+        'product_id', 'product_name', 'upc', 'vendor', 'sku', 'price',
+        'in_stock', 'description', 'has_variants', 'main_image_url',
+        'secondary_image_urls', 'product_url',
 
+        # More information fields
+        'fluorescent_bulb_wattage', 'maximum_system_volume', 'control_type', 'aquarium_type',
+        'compatible_with_controllers', 'included_mounting', 'wattage', 'optional_mounts',
+        'ml_per_minute', 'short_name_for_grouped_product', 'media_capacity', 'filter_dimensions', 'main_ingredient',
+        'skimmer_body_types', 'bulb_color/temperature', 'system_size', 'variable_speed', 'power_cord_length',
+        'pvc_connection_type', 'additive_type', 'max._light_coverage_(width)', 'max._light_coverage_(length)',
+        'adhesive_type', 'out_of_stock_message', 'micron_rating', 'manuals', 'recommended_tank_size',
+        'tubing_inside_diameter', 'aquarium_size', 'reactor_placement', 'lighting_type', 'system_type', 'color',
+        'max_head_height', 'duty_rating', 'warranty', 'alarms', 'number_of_leds',
     ]
 
     custom_settings = {
         'CONCURRENT_REQUESTS': 4,
-        'FEEDS': get_feed(products_filename, feed_format='json', overwrite=True),
+        'FEEDS': get_feed(products_filename, feed_format='csv', fields=csv_headers, overwrite=True),
     }
 
     headers = {
@@ -62,15 +74,15 @@ class BulkReefSupplySpider(Spider):
 
     def parse_result(self, response):
         try:
-            item = {}
+            item = self.get_additional_details(response)
             item['main_image_url'] = self.get_main_image(response)
             item["secondary_image_urls"] = self.get_image_urls(response)
-            item['more_details'] = self.get_additional_details(response)
-            if 'upc' in item['more_details']:
-                item['upc'] = item['more_details']['upc']
+            # item['more_details'] = self.get_additional_details(response)
+            # if 'upc' in item['more_details']:
+            #     item['upc'] = item['more_details']['upc']
             item["product_url"] = response.url
             item['has_variants'] = False
-            item['variants'] = []
+            # item['variants'] = []
 
             prod = self.get_product_data(response)
 
@@ -78,11 +90,12 @@ class BulkReefSupplySpider(Spider):
                 item['has_variants'] = True
 
                 for p in prod['children']:
-                    item['variants'].append(self.get_product(p))
+                    it = deepcopy(item)
+                    it.update(self.get_product(p))
+                    yield it
             else:
                 item.update(self.get_product(prod))
-
-            return item
+                yield item
         except Exception as err:
             pass
             # print(err)
@@ -120,12 +133,12 @@ class BulkReefSupplySpider(Spider):
             raw = json.loads(raw[0])
             data = raw.get('[data-gallery-role=gallery-placeholder]', {}).get('mage/gallery/gallery', {}).get('data',
                                                                                                               {})
-            return [self.clean_image_url(r['thumb'][0]) for r in data]
+            return ", ".join([self.clean_image_url(r['thumb'][0]) for r in data])
 
         except Exception as image_err:
             print(image_err)
 
-        return [self.clean_image_url(response.css('::attr("data-product-image")').get())]
+        return ", ".join([self.clean_image_url(response.css('::attr("data-product-image")').get())])
 
     def get_additional_details(self, response):
         details = {}
