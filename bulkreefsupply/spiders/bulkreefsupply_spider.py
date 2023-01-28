@@ -70,6 +70,8 @@ class BulkReefSupplySpider(Spider):
         for url in get_sitemap_urls(response):
             if not url or url.count('/') > 3 or not url.endswith('.html'):
                 continue
+            # if 'com/phosban-reactor-150.html' not in url:
+            #     continue
             yield Request(url, callback=self.parse_result, headers=self.headers, meta=req_meta)
 
     def parse_result(self, response):
