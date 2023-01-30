@@ -77,6 +77,7 @@ class BulkReefSupplySpider(Spider):
     def parse_result(self, response):
         try:
             item = self.get_additional_details(response)
+            item["description"] = self.get_description(response)
             item['main_image_url'] = self.get_main_image(response)
             item["secondary_image_urls"] = self.get_image_urls(response)
             # item['more_details'] = self.get_additional_details(response)
@@ -114,7 +115,7 @@ class BulkReefSupplySpider(Spider):
         item["vendor"] = prod['brand']
         item["sku"] = prod['sku']
         item["price"] = prod['offers']['price']
-        item["description"] = prod['description']
+        # item["description"] = prod['description']
         item['in_stock'] = 'instock' in prod['offers']['availability'].lower()
         return item
 
@@ -174,3 +175,6 @@ class BulkReefSupplySpider(Spider):
 
     def get_main_image(self, response):
         return self.clean_image_url(response.css('::attr("data-product-image")').get())
+
+    def get_description(self, response):
+        return response.css('#description').get()
