@@ -48,7 +48,7 @@ class BulkReefSupplySpider(Spider):
         'pvc_connection_type', 'additive_type', 'max._light_coverage_(width)', 'max._light_coverage_(length)',
         'adhesive_type', 'out_of_stock_message', 'micron_rating', 'manuals', 'recommended_tank_size',
         'tubing_inside_diameter', 'aquarium_size', 'reactor_placement', 'lighting_type', 'system_type', 'color',
-        'max_head_height', 'duty_rating', 'warranty', 'alarms', 'number_of_leds',
+        'max_head_height', 'duty_rating', 'warranty', 'alarms', 'number_of_leds', 'dimensions', 'weight'
     ]
 
     custom_settings = {
@@ -70,13 +70,16 @@ class BulkReefSupplySpider(Spider):
         for url in get_sitemap_urls(response):
             if not url or url.count('/') > 3 or not url.endswith('.html'):
                 continue
-            # if 'com/phosban-reactor-150.html' not in url:
+            # if 'trate-high-range-colorimeter-hi782-marine-water-hanna-instruments.html' not in url:
             #     continue
             yield Request(url, callback=self.parse_result, headers=self.headers, meta=req_meta)
 
     def parse_result(self, response):
         try:
             item = self.get_additional_details(response)
+            item["weight"] = self.get_weight(response)
+            item["dimensions"] = self.get_dimensions(response)
+            item["description"] = self.get_description(response)
             item["description"] = self.get_description(response)
             item['main_image_url'] = self.get_main_image(response)
             item["secondary_image_urls"] = self.get_image_urls(response)
@@ -178,3 +181,9 @@ class BulkReefSupplySpider(Spider):
 
     def get_description(self, response):
         return response.css('#description').get()
+
+    def get_dimensions(self, response):
+        return clean(response.css('li:contains("Dimensions:") span::text').get())
+
+    def get_weight(self, response):
+        return clean(response.css('li:contains("Weight:") span::text').get())
