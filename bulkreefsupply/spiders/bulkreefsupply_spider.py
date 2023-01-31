@@ -183,7 +183,7 @@ class BulkReefSupplySpider(Spider):
         return response.css('#description').get()
 
     def get_dimensions(self, response):
-        return clean(response.css('li:contains("Dimensions:") span::text').get())
+        return clean(response.css('li:contains("Dimensions:") span::text').get()).replace('Dimensions:', '')
 
     def get_weight(self, response):
-        return clean(response.css('li:contains("Weight:") span::text').get())
+        return clean(response.css('li:contains("Weight:") span::text').get()).replace('Weight:', '')
