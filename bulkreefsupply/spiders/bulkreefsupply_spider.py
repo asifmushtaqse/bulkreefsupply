@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import re
+import sys
 import json
 from copy import deepcopy
 
@@ -11,12 +12,20 @@ from scrapy.spiders import Spider
 from static_data import today_date, req_meta
 from utils import clean, get_feed, get_sitemap_urls
 
+from dotenv import dotenv_values
+
+
+def get_output_file_dir():
+    # config = dotenv_values(f"{sys.path[2]}/bulkreefsupply/.env")
+    config = dotenv_values("../.env")
+    return config['PRODUCTS_FILE_DIR'].rstrip('/')
+
 
 class BulkReefSupplySpider(Spider):
     name = 'bulkreefsupply_spider'
     base_url = 'https://www.bulkreefsupply.com'
-    faulty_urls_file_path = f'../output/faulty_urls.csv'
-    products_filename = f'../output/bulkreefsupply_products_{today_date}.csv'
+    faulty_urls_file_path = f'{get_output_file_dir()}/faulty_urls.csv'
+    products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{today_date}.csv'
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
 
     start_urls = [
