@@ -5,10 +5,11 @@ import json
 from copy import deepcopy
 
 from scrapy import Request
+from scrapy.crawler import CrawlerProcess
 from scrapy.spiders import Spider
 
-from ..static_data import today_date, req_meta
-from ..utils import clean, get_feed, get_sitemap_urls
+from static_data import today_date, req_meta
+from utils import clean, get_feed, get_sitemap_urls
 
 
 class BulkReefSupplySpider(Spider):
@@ -187,3 +188,13 @@ class BulkReefSupplySpider(Spider):
 
     def get_weight(self, response):
         return clean(response.css('li:contains("Weight:") span::text').get()).replace('Weight:', '')
+
+
+def run_spider_via_python_script():
+    process = CrawlerProcess()
+    process.crawl(BulkReefSupplySpider)
+    process.start()
+
+
+if __name__ == "__main__":
+    run_spider_via_python_script()
