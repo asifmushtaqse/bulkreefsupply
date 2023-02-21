@@ -16,8 +16,8 @@ from dotenv import dotenv_values
 
 
 def get_output_file_dir():
-    # config = dotenv_values(f"{sys.path[2]}/bulkreefsupply/.env")
-    config = dotenv_values("../.env")
+    # config = dotenv_values("../.env")
+    config = dotenv_values(f"{sys.path[2]}/bulkreefsupply/.env")
     return config['PRODUCTS_FILE_DIR'].rstrip('/')
 
 
