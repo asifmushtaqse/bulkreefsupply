@@ -113,8 +113,8 @@ class BulkReefSupplySpider(Spider):
                 item.update(self.get_product(prod))
                 yield item
         except Exception as err:
+            print(err)
             pass
-            # print(err)
             # self.write_to_csv(response.url)
 
     def get_product_data(self, response):
