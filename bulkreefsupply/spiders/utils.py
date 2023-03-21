@@ -112,15 +112,19 @@ def get_last_report_records():
 
 
 def should_create_new_file():
-    dates = {r['date'] for r in get_last_report_records() if r and r['date']}
-    if not dates:
+    str_dates = list({r['date'] for r in get_last_report_records() if r and r['date']})
+    if not str_dates:
         return True
-    total_days = get_old_date(list(dates)) - get_today_date()
+    days_diff = (datetime.now() - convert_to_datetime(get_old_date(str_dates))).days
 
-    if total_days > 60:
+    if days_diff > 60:
         return True
 
     return False
+
+
+def convert_to_datetime(str_date):
+    return datetime.strptime(str_date, get_date_format())
 
 
 def get_date_format():
@@ -134,7 +138,7 @@ def get_today_date():
 
 def get_old_date(str_dates):
     str_dates.sort(key=lambda date: datetime.strptime(date, get_date_format()))
-    return str_dates[0]
+    return str_dates[-1]
 
 
 def get_output_file_numbers():

@@ -54,11 +54,11 @@ ROBOTSTXT_OBEY = False
 #    'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
 #}
 
-DOWNLOADER_MIDDLEWARES = {
-    'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
-    'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
-    'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
-}
+# DOWNLOADER_MIDDLEWARES = {
+#     'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
+#     'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+#     'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+# }
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html

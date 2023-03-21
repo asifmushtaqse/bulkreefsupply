@@ -21,7 +21,7 @@ class BulkReefSupplySpider(Spider):
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
     faulty_urls_file_path = f'{get_output_file_dir()}/faulty_urls.csv'
     # products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{}.csv'
-    products_filename = get_csv_feed_file_name
+    products_filename = get_csv_feed_file_name()
 
     start_urls = [
         sitemap_url,
@@ -44,6 +44,12 @@ class BulkReefSupplySpider(Spider):
         'CONCURRENT_REQUESTS': 1,
         'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=False),
         "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
+
+        "DOWNLOADER_MIDDLEWARES": {
+            'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
+            'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+            'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+        },
     }
 
     headers = {
