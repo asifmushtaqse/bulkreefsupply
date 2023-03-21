@@ -5,13 +5,13 @@ import sys
 import json
 from copy import deepcopy
 
-import requests
 from scrapy import Request, FormRequest, Selector
 from scrapy.crawler import CrawlerProcess
 from scrapy.spiders import Spider
 
-from static_data import today_date, req_meta
-from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, get_csv_feed_file_name
+from static_data import req_meta
+from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, \
+    get_csv_headers, get_csv_feed_file_name, get_today_date
 
 
 class BulkReefSupplySpider(Spider):
@@ -106,6 +106,7 @@ class BulkReefSupplySpider(Spider):
 
         try:
             item = self.get_additional_details(response)
+            item['date'] = get_today_date()
             item['product_card_id'] = self.get_product_cart_id(response)
             item["weight"] = self.get_weight(response)
             item["dimensions"] = self.get_dimensions(response)
