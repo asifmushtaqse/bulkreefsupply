@@ -5,7 +5,8 @@ import sys
 import json
 from copy import deepcopy
 
-from scrapy import Request
+import requests
+from scrapy import Request, FormRequest, Selector
 from scrapy.crawler import CrawlerProcess
 from scrapy.spiders import Spider
 
@@ -24,9 +25,10 @@ def get_output_file_dir():
 class BulkReefSupplySpider(Spider):
     name = 'bulkreefsupply_spider'
     base_url = 'https://www.bulkreefsupply.com'
+    quantity_url = 'https://www.bulkreefsupply.com/checkout/cart/add'
+    sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
     faulty_urls_file_path = f'{get_output_file_dir()}/faulty_urls.csv'
     products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{today_date}.csv'
-    sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
 
     start_urls = [
         sitemap_url,
@@ -48,7 +50,7 @@ class BulkReefSupplySpider(Spider):
     csv_headers = [
         'product_id', 'product_name', 'upc', 'vendor', 'sku', 'price',
         'in_stock', 'description', 'has_variants', 'main_image_url',
-        'secondary_image_urls', 'product_url',
+        'secondary_image_urls', 'quantity', 'product_url',
 
         # More information fields
         'fluorescent_bulb_wattage', 'maximum_system_volume', 'control_type', 'aquarium_type',
@@ -76,6 +78,38 @@ class BulkReefSupplySpider(Spider):
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
     }
 
+    quantity_interval = 1
+
+    quantity_data = {
+        'product': '14458',
+        'form_key': 'T81MWciVSs6sD7OB',
+        'qty': f'{quantity_interval}',
+    }
+
+    cookies = {
+        'form_key': 'T81MWciVSs6sD7OB',
+    }
+
+    qty_headers = {
+        'authority': 'www.bulkreefsupply.com',
+        'accept': 'application/json, text/javascript, */*; q=0.01',
+        'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+        'cache-control': 'no-cache',
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        # 'cookie': '_gcl_au=1.1.9844429.1674677435; _ALGOLIA=anonymous-8ea40c6f-13a3-4485-a1f1-1b26be4b90ab; mage-cache-storage=%7B%7D; mage-cache-storage-section-invalidation=%7B%7D; mage-cache-sessid=true; mage-messages=; recently_viewed_product=%7B%7D; recently_viewed_product_previous=%7B%7D; recently_compared_product=%7B%7D; recently_compared_product_previous=%7B%7D; product_data_storage=%7B%7D; _fbp=fb.1.1674677437586.2018576269; hubspotutk=e4cbb341029ae4fa3b931cd008b8df90; __attentive_id=051b9cf42bd747a79a188528b50e31df; __attentive_cco=1674677441884; tracker_device=4d3164bc-de31-43ed-8014-d49775c4697f; PHPSESSID=4pkb02033le4b5drh9kh4bt3h0; __utmz=81836677.1675149558.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _gaexp=GAX1.2.r0-iAi_UQuGZn0yd3K3eJA.19511.1; form_key=T81MWciVSs6sD7OB; __utma=81836677.394847864.1674677435.1677089119.1678981894.4; __utmc=81836677; __hssrc=1; private_content_version=d820e9831944ffefdfcc9fede38248c2; _uetsid=cd3f2880c76d11ed855d6751abdba616; _uetvid=54446bb09cec11edbb334364d84e3f4e; _gid=GA1.2.732808888.1679350993; _ga=GA1.1.394847864.1674677435; _ga_8B3845KDDK=GS1.1.1679350993.19.0.1679350993.60.0.0; section_data_ids=%7B%22cart%22%3A1679350993%2C%22aw-afptc-promo%22%3A1678982329%7D; __hstc=138027311.e4cbb341029ae4fa3b931cd008b8df90.1674677437830.1678981894914.1679350995596.16; __hssc=138027311.1.1679350995596; __attentive_pv=1; __attentive_ss_referrer=ORGANIC; __attentive_dv=1',
+        'origin': 'https://www.bulkreefsupply.com',
+        'pragma': 'no-cache',
+        'referer': 'https://www.bulkreefsupply.com/radion-xr30-g6-blue-led-light-fixture-ecotech-marine.html',
+        'sec-ch-ua': '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"macOS"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+        'x-requested-with': 'XMLHttpRequest',
+    }
+
     def parse(self, response):
         for url in get_sitemap_urls(response):
             if not url or url.count('/') > 3 or not url.endswith('.html'):
@@ -83,10 +117,14 @@ class BulkReefSupplySpider(Spider):
             # if 'trate-high-range-colorimeter-hi782-marine-water-hanna-instruments.html' not in url:
             #     continue
             yield Request(url, callback=self.parse_result, headers=self.headers, meta=req_meta)
+            return
 
     def parse_result(self, response):
+        product_variants = []
+
         try:
             item = self.get_additional_details(response)
+            item['product_card_id'] = self.get_product_cart_id(response)
             item["weight"] = self.get_weight(response)
             item["dimensions"] = self.get_dimensions(response)
             item["description"] = self.get_description(response)
@@ -108,14 +146,43 @@ class BulkReefSupplySpider(Spider):
                 for p in prod['children']:
                     it = deepcopy(item)
                     it.update(self.get_product(p))
-                    yield it
+                    # yield it
+                    product_variants.append(it)
             else:
                 item.update(self.get_product(prod))
-                yield item
+                # yield item
+                product_variants.append(item)
         except Exception as err:
             print(err)
             pass
             # self.write_to_csv(response.url)
+
+        response.meta['product_variants'] = product_variants
+        response.meta['qty'] = 0
+        response.meta.setdefault('reverse_count', 0)
+
+        return self.get_qty_form_request(response, callback='self.parse_quantity')
+
+    def parse_quantity(self, response):
+        if 'Successfully added to cart.' in response.text:
+            yield self.get_qty_form_request(response, callback='self.parse_quantity')
+            return
+
+        for p in response.meta['product_variants']:
+            p['quantity'] = response.meta['qty']
+            yield p
+
+        # return self.get_qty_form_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
+
+    def parse_qty_reverse(self, response):
+        if 'Successfully added to cart.' not in response.text and response.meta['reverse_count'] < 6:
+            yield self.get_qty_form_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
+            return
+
+        for p in response.meta['product_variants']:
+            p['quantity'] = response.meta['qty']
+            yield p
+        a = 0
 
     def get_product_data(self, response):
         prod = json.loads(response.css('[type="application/ld+json"]::text')[1].get())
@@ -130,6 +197,7 @@ class BulkReefSupplySpider(Spider):
         item["price"] = prod['offers']['price']
         # item["description"] = prod['description']
         item['in_stock'] = 'instock' in prod['offers']['availability'].lower()
+        item['quantity'] = 1
         return item
 
     def get_title(self, response):
@@ -197,6 +265,34 @@ class BulkReefSupplySpider(Spider):
 
     def get_weight(self, response):
         return clean(response.css('li:contains("Weight:") span::text').get()).replace('Weight:', '')
+
+    def get_product_cart_id(self, response):
+        return response.css('::attr(data-product-id)').get('')
+
+    def get_qty_form_data(self, response, is_qty_add=True):
+        item = response.meta['product_variants'][0]
+
+        if is_qty_add:
+            response.meta['qty'] += self.quantity_interval
+        else:
+            # response.meta.setdefault('reverse_count', 0)
+            response.meta['reverse_count'] += 1
+            response.meta['qty'] -= 1
+
+        data = deepcopy(self.quantity_data)
+        data['qty'] = str(response.meta['qty'])
+        data['product'] = item['product_card_id']
+        return data
+
+    def get_qty_form_request(self, response, callback, is_qty_add=True):
+        return FormRequest(url=self.quantity_url,
+                           # callback=self.parse_quantity,
+                           callback=eval(callback),
+                           formdata=self.get_qty_form_data(response, is_qty_add=is_qty_add),
+                           headers=self.qty_headers,
+                           cookies=self.cookies,
+                           meta=response.meta,
+                           dont_filter=True)
 
 
 def run_spider_via_python_script():
