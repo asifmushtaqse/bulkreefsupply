@@ -7,6 +7,7 @@ from scrapy import signals
 
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
+from w3lib.http import basic_auth_header
 
 
 class BulkreefsupplySpiderMiddleware:
@@ -78,6 +79,7 @@ class BulkreefsupplyDownloaderMiddleware:
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
+        request.headers['Proxy-Authorization'] = basic_auth_header('sbayes', '7Mc8JRz3')
         return None
 
     def process_response(self, request, response, spider):

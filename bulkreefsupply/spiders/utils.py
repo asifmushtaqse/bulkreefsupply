@@ -2,6 +2,12 @@ import json
 import os
 import re
 import time
+from csv import DictReader
+from datetime import datetime
+
+from dotenv import dotenv_values
+
+from static_data import csv_headers
 
 
 def clean(text):
@@ -64,6 +70,102 @@ def get_jl_records(filename):
         return []
     return json.loads("[" + ",".join(open(filename, encoding='utf-8').readlines()) + "]" or '[]')
 
+
+def get_output_file_dir():
+    config = dotenv_values(".env")
+    # config = dotenv_values(f"{sys.path[2]}/bulkreefsupply/.env")
+    return config['PRODUCTS_FILE_DIR'].rstrip('/')
+
+
+def get_filename_t():
+    return get_output_file_dir() + '/bulkreefsupply_products_{f_no}.csv'
+
+
+def get_csv_feed_file_name():
+    last_created_file_no = get_last_created_file_no()
+
+    if should_create_new_file():
+        return get_filename_t().format(f_no=last_created_file_no + 1)
+
+    return get_filename_t().format(f_no=last_created_file_no)
+
+
+def get_report_file_name():
+    last_file_no = get_last_created_file_no()
+    return get_filename_t().format(f_no=last_file_no)
+
+
+def get_last_created_file_no():
+    files_numbers = get_output_file_numbers()
+
+    if not files_numbers:
+        return 0
+
+    return max(files_numbers)
+
+
+def get_last_report_records():
+    file_name = get_filename_t().format(f_no=get_last_created_file_no())
+    if not os.path.exists(file_name):
+        return []
+    return [dict(r) for r in DictReader(open(file_name, encoding='utf-8')) if r]
+
+
+def should_create_new_file():
+    dates = {r['date'] for r in get_last_report_records() if r and r['date']}
+    if not dates:
+        return True
+    total_days = get_old_date(list(dates)) - get_today_date()
+
+    if total_days > 60:
+        return True
+
+    return False
+
+
+def get_date_format():
+    # return '%d-%m-%Y'
+    return '%d%b%Y'
+
+
+def get_today_date():
+    return datetime.now().strftime(get_date_format())
+
+
+def get_old_date(str_dates):
+    str_dates.sort(key=lambda date: datetime.strptime(date, get_date_format()))
+    return str_dates[0]
+
+
+def get_output_file_numbers():
+    files = []
+    output_files_dir = get_output_file_dir()
+
+    for file_path in os.listdir(output_files_dir):
+        if '.csv' not in file_path:
+            continue
+        file_path = output_files_dir + '/' + file_path
+        files.append(file_path)
+
+    return [int(f_no) for f in files if 'bulkreefsupply_products_' in f and
+            (f_no := f.replace('.csv', '').split('_')[-1].strip()) and f_no.isdigit()]
+
+
+def get_next_quantity_column():
+    return f'quantity_{get_today_date()}'
+
+
+def get_csv_headers():
+    records = get_last_report_records()
+
+    if not records:
+        csv_headers.append(get_next_quantity_column)
+        return csv_headers
+
+    qty_columns = [k for k, v in records[0].items() if 'quantity_' in k]
+    csv_headers.extend(qty_columns)
+    csv_headers.append(get_next_quantity_column())
+    return csv_headers
 
 # records = get_json_file_records('./output/bulkreefsupply_products.json')
 # keys = set()

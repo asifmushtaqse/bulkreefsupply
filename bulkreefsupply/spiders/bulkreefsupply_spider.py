@@ -11,15 +11,7 @@ from scrapy.crawler import CrawlerProcess
 from scrapy.spiders import Spider
 
 from static_data import today_date, req_meta
-from utils import clean, get_feed, get_sitemap_urls
-
-from dotenv import dotenv_values
-
-
-def get_output_file_dir():
-    config = dotenv_values(".env")
-    # config = dotenv_values(f"{sys.path[2]}/bulkreefsupply/.env")
-    return config['PRODUCTS_FILE_DIR'].rstrip('/')
+from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, get_csv_feed_file_name
 
 
 class BulkReefSupplySpider(Spider):
@@ -28,7 +20,8 @@ class BulkReefSupplySpider(Spider):
     quantity_url = 'https://www.bulkreefsupply.com/checkout/cart/add'
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
     faulty_urls_file_path = f'{get_output_file_dir()}/faulty_urls.csv'
-    products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{today_date}.csv'
+    # products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{}.csv'
+    products_filename = get_csv_feed_file_name
 
     start_urls = [
         sitemap_url,
@@ -47,25 +40,10 @@ class BulkReefSupplySpider(Spider):
         500, 501, 502, 503, 504, 505, 506, 507, 509,
     ]
 
-    csv_headers = [
-        'product_id', 'product_name', 'upc', 'vendor', 'sku', 'price',
-        'in_stock', 'description', 'has_variants', 'main_image_url',
-        'secondary_image_urls', 'quantity', 'product_url',
-
-        # More information fields
-        'fluorescent_bulb_wattage', 'maximum_system_volume', 'control_type', 'aquarium_type',
-        'compatible_with_controllers', 'included_mounting', 'wattage', 'optional_mounts',
-        'ml_per_minute', 'short_name_for_grouped_product', 'media_capacity', 'filter_dimensions', 'main_ingredient',
-        'skimmer_body_types', 'bulb_color/temperature', 'system_size', 'variable_speed', 'power_cord_length',
-        'pvc_connection_type', 'additive_type', 'max._light_coverage_(width)', 'max._light_coverage_(length)',
-        'adhesive_type', 'out_of_stock_message', 'micron_rating', 'manuals', 'recommended_tank_size',
-        'tubing_inside_diameter', 'aquarium_size', 'reactor_placement', 'lighting_type', 'system_type', 'color',
-        'max_head_height', 'duty_rating', 'warranty', 'alarms', 'number_of_leds', 'dimensions', 'weight'
-    ]
-
     custom_settings = {
-        'CONCURRENT_REQUESTS': 4,
-        'FEEDS': get_feed(products_filename, feed_format='csv', fields=csv_headers, overwrite=True),
+        'CONCURRENT_REQUESTS': 1,
+        'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=False),
+        "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
     }
 
     headers = {
@@ -96,28 +74,26 @@ class BulkReefSupplySpider(Spider):
         'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
         'cache-control': 'no-cache',
         'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        # 'cookie': '_gcl_au=1.1.9844429.1674677435; _ALGOLIA=anonymous-8ea40c6f-13a3-4485-a1f1-1b26be4b90ab; mage-cache-storage=%7B%7D; mage-cache-storage-section-invalidation=%7B%7D; mage-cache-sessid=true; mage-messages=; recently_viewed_product=%7B%7D; recently_viewed_product_previous=%7B%7D; recently_compared_product=%7B%7D; recently_compared_product_previous=%7B%7D; product_data_storage=%7B%7D; _fbp=fb.1.1674677437586.2018576269; hubspotutk=e4cbb341029ae4fa3b931cd008b8df90; __attentive_id=051b9cf42bd747a79a188528b50e31df; __attentive_cco=1674677441884; tracker_device=4d3164bc-de31-43ed-8014-d49775c4697f; PHPSESSID=4pkb02033le4b5drh9kh4bt3h0; __utmz=81836677.1675149558.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _gaexp=GAX1.2.r0-iAi_UQuGZn0yd3K3eJA.19511.1; form_key=T81MWciVSs6sD7OB; __utma=81836677.394847864.1674677435.1677089119.1678981894.4; __utmc=81836677; __hssrc=1; private_content_version=d820e9831944ffefdfcc9fede38248c2; _uetsid=cd3f2880c76d11ed855d6751abdba616; _uetvid=54446bb09cec11edbb334364d84e3f4e; _gid=GA1.2.732808888.1679350993; _ga=GA1.1.394847864.1674677435; _ga_8B3845KDDK=GS1.1.1679350993.19.0.1679350993.60.0.0; section_data_ids=%7B%22cart%22%3A1679350993%2C%22aw-afptc-promo%22%3A1678982329%7D; __hstc=138027311.e4cbb341029ae4fa3b931cd008b8df90.1674677437830.1678981894914.1679350995596.16; __hssc=138027311.1.1679350995596; __attentive_pv=1; __attentive_ss_referrer=ORGANIC; __attentive_dv=1',
         'origin': 'https://www.bulkreefsupply.com',
         'pragma': 'no-cache',
         'referer': 'https://www.bulkreefsupply.com/radion-xr30-g6-blue-led-light-fixture-ecotech-marine.html',
         'sec-ch-ua': '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"macOS"',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-origin',
+        # 'sec-ch-ua-mobile': '?0',
+        # 'sec-ch-ua-platform': '"macOS"',
+        # 'sec-fetch-dest': 'empty',
+        # 'sec-fetch-mode': 'cors',
+        # 'sec-fetch-site': 'same-origin',
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
         'x-requested-with': 'XMLHttpRequest',
     }
 
     def parse(self, response):
-        for url in get_sitemap_urls(response):
+        for url in get_sitemap_urls(response)[:]:
             if not url or url.count('/') > 3 or not url.endswith('.html'):
                 continue
             # if 'trate-high-range-colorimeter-hi782-marine-water-hanna-instruments.html' not in url:
             #     continue
-            yield Request(url, callback=self.parse_result, headers=self.headers, meta=req_meta)
-            return
+            yield Request(url, callback=self.parse_result, headers=self.headers, meta=deepcopy(req_meta))
 
     def parse_result(self, response):
         product_variants = []
@@ -169,7 +145,7 @@ class BulkReefSupplySpider(Spider):
             return
 
         for p in response.meta['product_variants']:
-            p['quantity'] = response.meta['qty']
+            p['quantity'] = response.meta['qty'] - 2
             yield p
 
         # return self.get_qty_form_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
@@ -280,7 +256,7 @@ class BulkReefSupplySpider(Spider):
             response.meta['qty'] -= 1
 
         data = deepcopy(self.quantity_data)
-        data['qty'] = str(response.meta['qty'])
+        # data['qty'] = str(response.meta['qty'])
         data['product'] = item['product_card_id']
         return data
 
