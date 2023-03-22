@@ -51,7 +51,7 @@ class BulkReefSupplySpider(Spider):
     existing_records = get_existing_records()
 
     custom_settings = {
-        'DOWNLOAD_DELAY': 2,
+        # 'DOWNLOAD_DELAY': 2,
         'CONCURRENT_REQUESTS': 1,
         # 'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=True),
 

@@ -164,7 +164,7 @@ def get_csv_headers():
     records = get_last_report_records()
 
     if not records:
-        csv_headers.append(get_next_quantity_column)
+        csv_headers.append(get_next_quantity_column())
         return csv_headers
 
     qty_columns = [k for k, v in records[0].items() if 'quantity_' in k]
