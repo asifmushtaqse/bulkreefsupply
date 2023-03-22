@@ -109,7 +109,7 @@ class BulkReefSupplySpider(Spider):
         self.delete_file(self.products_filename)
 
     def parse(self, response):
-        for url in get_sitemap_urls(response)[:3]:
+        for url in get_sitemap_urls(response)[:]:
             if not url or url.count('/') > 3 or not url.endswith('.html'):
                 continue
             # if 'trate-high-range-colorimeter-hi782-marine-water-hanna-instruments.html' not in url:
