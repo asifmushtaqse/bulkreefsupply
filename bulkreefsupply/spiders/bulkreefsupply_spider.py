@@ -4,14 +4,20 @@ import re
 import sys
 import json
 from copy import deepcopy
+from csv import DictReader
 
 from scrapy import Request, FormRequest, Selector
 from scrapy.crawler import CrawlerProcess
 from scrapy.spiders import Spider
 
 from static_data import req_meta
-from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, \
-    get_csv_headers, get_csv_feed_file_name, get_today_date
+from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
+    get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column
+
+
+def get_existing_records():
+    return {r['product_url'].rstrip('/'): dict(r) for r in get_last_report_records()
+            if r and r['product_url'] != 'product_url'}
 
 
 class BulkReefSupplySpider(Spider):
@@ -22,6 +28,8 @@ class BulkReefSupplySpider(Spider):
     faulty_urls_file_path = f'{get_output_file_dir()}/faulty_urls.csv'
     # products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{}.csv'
     products_filename = get_csv_feed_file_name()
+
+    csv_headers = get_csv_headers()
 
     start_urls = [
         sitemap_url,
@@ -40,16 +48,19 @@ class BulkReefSupplySpider(Spider):
         500, 501, 502, 503, 504, 505, 506, 507, 509,
     ]
 
-    custom_settings = {
-        'CONCURRENT_REQUESTS': 1,
-        'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=False),
-        "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
+    existing_records = get_existing_records()
 
-        "DOWNLOADER_MIDDLEWARES": {
-            'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
-            'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
-            'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
-        },
+    custom_settings = {
+        'DOWNLOAD_DELAY': 2,
+        'CONCURRENT_REQUESTS': 1,
+        # 'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=True),
+
+        # "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
+        # "DOWNLOADER_MIDDLEWARES": {
+        #     'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
+        #     'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+        #     'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+        # },
     }
 
     headers = {
@@ -93,19 +104,26 @@ class BulkReefSupplySpider(Spider):
         'x-requested-with': 'XMLHttpRequest',
     }
 
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.delete_file(self.products_filename)
+
     def parse(self, response):
-        for url in get_sitemap_urls(response)[:]:
+        for url in get_sitemap_urls(response)[:3]:
             if not url or url.count('/') > 3 or not url.endswith('.html'):
                 continue
             # if 'trate-high-range-colorimeter-hi782-marine-water-hanna-instruments.html' not in url:
             #     continue
-            yield Request(url, callback=self.parse_result, headers=self.headers, meta=deepcopy(req_meta))
+            meta = deepcopy(req_meta)
+            meta['item'] = self.existing_records.get(url.rstrip('/'), {})
+            yield Request(url, callback=self.parse_result, headers=self.headers, meta=meta)
 
     def parse_result(self, response):
         product_variants = []
 
         try:
-            item = self.get_additional_details(response)
+            item = response.meta['item']
+            item.update(self.get_additional_details(response))
             item['date'] = get_today_date()
             item['product_card_id'] = self.get_product_cart_id(response)
             item["weight"] = self.get_weight(response)
@@ -152,7 +170,9 @@ class BulkReefSupplySpider(Spider):
             return
 
         for p in response.meta['product_variants']:
-            p['quantity'] = response.meta['qty'] - 2
+            # p['quantity'] = response.meta['qty'] - 2
+            p[get_next_quantity_column()] = response.meta['qty'] - 2
+            self.write_to_csv(p)
             yield p
 
         # return self.get_qty_form_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
@@ -163,7 +183,8 @@ class BulkReefSupplySpider(Spider):
             return
 
         for p in response.meta['product_variants']:
-            p['quantity'] = response.meta['qty']
+            # p['quantity'] = response.meta['qty'] - 2
+            p[get_next_quantity_column()] = response.meta['qty']
             yield p
         a = 0
 
@@ -224,19 +245,6 @@ class BulkReefSupplySpider(Spider):
         code = re.findall(r'cache/(.*?)/', url)[0]
         return url.replace(f'/cache/{code}', '')
 
-    def write_to_csv(self, url):
-        csv_writer = self.get_csv_writer()
-        csv_writer.write(url + '\n')
-        csv_writer.close()
-        print("URL = " + url)
-
-    def get_csv_writer(self):
-        if not os.path.exists(self.faulty_urls_file_path):
-            file = open(self.faulty_urls_file_path, mode='w', encoding='utf-8')
-            file.write(','.join(h for h in ['url']) + '\n')
-            return file
-        return open(self.faulty_urls_file_path, mode='a', encoding='utf-8')
-
     def get_main_image(self, response):
         return self.clean_image_url(response.css('::attr("data-product-image")').get())
 
@@ -276,6 +284,47 @@ class BulkReefSupplySpider(Spider):
                            cookies=self.cookies,
                            meta=response.meta,
                            dont_filter=True)
+
+    def write_to_csv(self, item):
+        row = ','.join('"{}"'.format(item.get(h, '')) for h in self.csv_headers) + '\n'
+        csv_writer = self.get_csv_writer()
+        csv_writer.write(row)
+        csv_writer.close()
+
+    def get_csv_writer(self):
+        # file = open(self.output_csv_file_name, mode='w', encoding='utf-8')
+        # file.write(','.join(h for h in file_headers) + '\n')
+        # return file
+
+        if not os.path.exists(self.products_filename) or len(self.has_records()) < 1:
+            file = open(self.products_filename, mode='w', encoding='utf-8')
+            file.write(','.join(h for h in self.csv_headers) + '\n')
+            return file
+
+        return open(self.products_filename, mode='a', encoding='utf-8')
+
+    def has_records(self):
+        if not os.path.exists(self.products_filename):
+            return []
+        return [r['product_url'] for r in
+                DictReader(open(self.products_filename, encoding='utf-8')) if r and r['product_url']]
+
+    def delete_file(self, path):
+        if os.path.exists(path):
+            os.remove(path)
+
+    # def write_to_csv(self, url):
+    #     csv_writer = self.get_csv_writer()
+    #     csv_writer.write(url + '\n')
+    #     csv_writer.close()
+    #     print("URL = " + url)
+    #
+    # def get_csv_writer(self):
+    #     if not os.path.exists(self.faulty_urls_file_path):
+    #         file = open(self.faulty_urls_file_path, mode='w', encoding='utf-8')
+    #         file.write(','.join(h for h in ['url']) + '\n')
+    #         return file
+    #     return open(self.faulty_urls_file_path, mode='a', encoding='utf-8')
 
 
 def run_spider_via_python_script():

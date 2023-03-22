@@ -9,7 +9,7 @@ handle_httpstatus_list = [
 ]
 
 req_meta = {
-    'dont_merge_cookies': True,
+    # 'dont_merge_cookies': True,
     'handle_httpstatus_list': handle_httpstatus_list,
     # "proxy": f"http://scraperapi:cc919ced7076a6c05b56a89e345d1266@proxy-server.scraperapi.com:8001"
 }

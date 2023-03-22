@@ -112,7 +112,8 @@ def get_last_report_records():
 
 
 def should_create_new_file():
-    str_dates = list({r['date'] for r in get_last_report_records() if r and r['date']})
+    str_dates = list({r['date'] for r in get_last_report_records()
+                      if r and r['date'] and r['date'] != 'date'})
     if not str_dates:
         return True
     days_diff = (datetime.now() - convert_to_datetime(get_old_date(str_dates))).days
