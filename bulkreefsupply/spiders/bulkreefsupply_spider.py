@@ -115,7 +115,7 @@ class BulkReefSupplySpider(Spider):
         yield Request(self.sitemap_url, callback=self.parse, headers=self.headers)
 
     def parse(self, response):
-        for url in get_sitemap_urls(response)[:5]:
+        for url in get_sitemap_urls(response)[:]:
             if not url or url.count('/') > 3 or not url.endswith('.html'):
                 continue
             # if 'trate-high-range-colorimeter-hi782-marine-water-hanna-instruments.html' not in url:
