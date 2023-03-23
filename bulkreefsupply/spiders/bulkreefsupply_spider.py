@@ -22,6 +22,7 @@ def get_existing_records():
 
 class BulkReefSupplySpider(Spider):
     name = 'bulkreefsupply_spider'
+    logs_dir = "../logs/{}_logs.log".format(name)
     base_url = 'https://www.bulkreefsupply.com'
     quantity_url = 'https://www.bulkreefsupply.com/checkout/cart/add'
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
@@ -30,6 +31,9 @@ class BulkReefSupplySpider(Spider):
     products_filename = get_csv_feed_file_name()
 
     csv_headers = get_csv_headers()
+
+    if os.path.exists(logs_dir):
+        os.remove(logs_dir)
 
     start_urls = [
         sitemap_url,
@@ -51,8 +55,8 @@ class BulkReefSupplySpider(Spider):
     existing_records = get_existing_records()
 
     custom_settings = {
-        # 'LOG_LEVEL': 'INFO',
-        # 'LOG_FILE': "../logs/{}_logs.log".format(name),
+        'LOG_LEVEL': 'INFO',
+        'LOG_FILE': logs_dir,
 
         # 'DOWNLOAD_DELAY': 2,
         'CONCURRENT_REQUESTS': 1,
