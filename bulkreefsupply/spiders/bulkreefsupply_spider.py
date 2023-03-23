@@ -52,7 +52,7 @@ class BulkReefSupplySpider(Spider):
 
     custom_settings = {
         # 'LOG_LEVEL': 'INFO',
-        'LOG_FILE': "logs/{}.log".format(name),
+        'LOG_FILE': "../logs/{}_logs.log".format(name),
 
         # 'DOWNLOAD_DELAY': 2,
         'CONCURRENT_REQUESTS': 1,
@@ -160,7 +160,7 @@ class BulkReefSupplySpider(Spider):
                 # yield item
                 product_variants.append(item)
         except Exception as err:
-            print(err)
+            # print(err)
             pass
             # self.write_to_csv(response.url)
 
