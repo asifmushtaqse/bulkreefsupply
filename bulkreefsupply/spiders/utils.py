@@ -43,7 +43,7 @@ def retry_invalid_response(callback):
 
             retry_times = response.meta.get('retry_times', 0)
             if retry_times < 3:
-                time.sleep(3)
+                time.sleep(5)
                 response.meta['retry_times'] = retry_times + 1
                 return response.request.replace(dont_filter=True, meta=response.meta)
 

@@ -12,7 +12,8 @@ from scrapy.spiders import Spider
 
 from static_data import req_meta
 from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
-    get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column
+    get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
+    retry_invalid_response
 
 
 def get_existing_records():
@@ -55,7 +56,7 @@ class BulkReefSupplySpider(Spider):
     existing_records = get_existing_records()
 
     custom_settings = {
-        'LOG_LEVEL': 'INFO',
+        # 'LOG_LEVEL': 'INFO',
         'LOG_FILE': logs_dir,
 
         # 'DOWNLOAD_DELAY': 2,
@@ -118,6 +119,7 @@ class BulkReefSupplySpider(Spider):
     def start_requests(self):
         yield Request(self.sitemap_url, callback=self.parse, headers=self.headers)
 
+    @retry_invalid_response
     def parse(self, response):
         for url in get_sitemap_urls(response)[:]:
             if not url or url.count('/') > 3 or not url.endswith('.html'):
@@ -128,6 +130,7 @@ class BulkReefSupplySpider(Spider):
             meta['item'] = self.existing_records.get(url.rstrip('/'), {})
             yield Request(url, callback=self.parse_result, headers=self.headers, meta=meta)
 
+    @retry_invalid_response
     def parse_result(self, response):
         product_variants = []
 
@@ -321,7 +324,8 @@ class BulkReefSupplySpider(Spider):
 
     def delete_file(self, path):
         if os.path.exists(path):
-            os.remove(path)
+            # os.remove(path)
+            os.rename(path, f"{'/'.join(path.split('/')[:-1])}/previous_report_backup.csv")
 
     # def write_to_csv(self, url):
     #     csv_writer = self.get_csv_writer()
