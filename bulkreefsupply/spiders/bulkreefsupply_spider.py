@@ -55,12 +55,12 @@ class BulkReefSupplySpider(Spider):
         'CONCURRENT_REQUESTS': 1,
         # 'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=True),
 
-        # "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
-        # "DOWNLOADER_MIDDLEWARES": {
-        #     'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
-        #     'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
-        #     'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
-        # },
+        "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
+        "DOWNLOADER_MIDDLEWARES": {
+            'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
+            'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+            'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+        },
     }
 
     headers = {
@@ -107,6 +107,9 @@ class BulkReefSupplySpider(Spider):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.delete_file(self.products_filename)
+
+    def start_requests(self):
+        yield Request(self.sitemap_url, callback=self.parse, headers=self.headers)
 
     def parse(self, response):
         for url in get_sitemap_urls(response)[:]:
