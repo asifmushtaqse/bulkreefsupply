@@ -52,7 +52,7 @@ class BulkReefSupplySpider(Spider):
 
     custom_settings = {
         # 'LOG_LEVEL': 'INFO',
-        'LOG_FILE': "../logs/{}_logs.log".format(name),
+        # 'LOG_FILE': "../logs/{}_logs.log".format(name),
 
         # 'DOWNLOAD_DELAY': 2,
         'CONCURRENT_REQUESTS': 1,
@@ -115,7 +115,7 @@ class BulkReefSupplySpider(Spider):
         yield Request(self.sitemap_url, callback=self.parse, headers=self.headers)
 
     def parse(self, response):
-        for url in get_sitemap_urls(response)[:]:
+        for url in get_sitemap_urls(response)[:5]:
             if not url or url.count('/') > 3 or not url.endswith('.html'):
                 continue
             # if 'trate-high-range-colorimeter-hi782-marine-water-hanna-instruments.html' not in url:
@@ -177,7 +177,7 @@ class BulkReefSupplySpider(Spider):
 
         for p in response.meta['product_variants']:
             # p['quantity'] = response.meta['qty'] - 2
-            p[get_next_quantity_column()] = response.meta['qty'] - 2
+            p[get_next_quantity_column()] = response.meta['qty'] - 1
             self.write_to_csv(p)
             yield p
 
