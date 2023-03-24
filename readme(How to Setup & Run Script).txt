@@ -13,7 +13,14 @@ extract it to your system.
 Editor PyCharm Community Edition.
 
 -> you need to install some modules, just open terminal window in pycharm and write command:
-pip install scrapy
+pip install Scrapy==2.6.3
+pip install python-dotenv==0.21.1
+pip install scrapy-rotating-proxies==0.6.2
+
+OR
+
+you can install all requirements using requirements.txt. Use this command:
+pip install -r requirements.txt
 
 if any issue you will face get help from:
 https://www.youtube.com/watch?v=5JwPKGZUiSs
