@@ -23,7 +23,7 @@ def get_existing_records():
 
 class BulkReefSupplySpider(Spider):
     name = 'bulkreefsupply_spider'
-    logs_dir = "../logs/{}_logs.log".format(name)
+    logs_dir = "logs/{}_logs.log".format(name)
     base_url = 'https://www.bulkreefsupply.com'
     quantity_url = 'https://www.bulkreefsupply.com/checkout/cart/add'
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
@@ -32,6 +32,9 @@ class BulkReefSupplySpider(Spider):
     products_filename = get_csv_feed_file_name()
 
     csv_headers = get_csv_headers()
+
+    if not os.path.exists('logs'):
+        os.mkdir('logs')
 
     if os.path.exists(logs_dir):
         os.remove(logs_dir)
