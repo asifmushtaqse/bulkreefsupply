@@ -27,7 +27,7 @@ class BulkReefSupplySpider(Spider):
     base_url = 'https://www.bulkreefsupply.com'
     quantity_url = 'https://www.bulkreefsupply.com/checkout/cart/add'
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
-    faulty_urls_file_path = f'{get_output_file_dir()}/faulty_urls.csv'
+    # faulty_urls_file_path = f'{get_output_file_dir()}/faulty_urls.csv'
     # products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{}.csv'
     products_filename = get_csv_feed_file_name()
 
@@ -106,11 +106,6 @@ class BulkReefSupplySpider(Spider):
         'pragma': 'no-cache',
         'referer': 'https://www.bulkreefsupply.com/radion-xr30-g6-blue-led-light-fixture-ecotech-marine.html',
         'sec-ch-ua': '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
-        # 'sec-ch-ua-mobile': '?0',
-        # 'sec-ch-ua-platform': '"macOS"',
-        # 'sec-fetch-dest': 'empty',
-        # 'sec-fetch-mode': 'cors',
-        # 'sec-fetch-site': 'same-origin',
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
         'x-requested-with': 'XMLHttpRequest',
     }
