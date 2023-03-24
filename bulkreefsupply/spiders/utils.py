@@ -152,8 +152,13 @@ def get_output_file_numbers():
         file_path = output_files_dir + '/' + file_path
         files.append(file_path)
 
-    return [int(f_no) for f in files if 'bulkreefsupply_products_' in f and
-            (f_no := f.replace('.csv', '').split('_')[-1].strip()) and f_no.isdigit()]
+    # return [int(f_no) for f in files if 'bulkreefsupply_products_' in f and
+    #         (f_no := f.replace('.csv', '').split('_')[-1].strip()) and f_no.isdigit()]
+    return [int(get_file_no(f)) for f in files if 'bulkreefsupply_products_' in f and get_file_no(f).isdigit()]
+
+
+def get_file_no(file_name):
+    return file_name.replace('.csv', '').split('_')[-1].strip()
 
 
 def get_next_quantity_column():
