@@ -37,6 +37,7 @@ you are in the folder /bulkreefsupply/bulkreefsupply/spiders
 Run script command:
 python bulkreefsupply_spider.py
 OR
+python3.9 bulkreefsupply_spider.py
 
 scrapy crawl bulkreefsupply_spider
 
