@@ -10,8 +10,8 @@ from scrapy import Request, FormRequest, Selector
 from scrapy.crawler import CrawlerProcess
 from scrapy.spiders import Spider
 
-from static_data import req_meta
-from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
+from .static_data import req_meta
+from .utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
     retry_invalid_response
 
