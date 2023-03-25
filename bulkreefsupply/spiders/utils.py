@@ -7,7 +7,7 @@ from datetime import datetime
 
 from dotenv import dotenv_values
 
-from .static_data import csv_headers
+from static_data import csv_headers
 
 
 def clean(text):
