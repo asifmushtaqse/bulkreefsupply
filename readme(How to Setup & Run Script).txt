@@ -28,6 +28,8 @@ https://www.youtube.com/watch?v=5JwPKGZUiSs
 download libraries from:
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted
 
+sudo apt install --reinstall python3 python python3-minimal --fix-broken
+
 Note: Now Set your project interpreter in which you have scrapy installed.
 
 *** Step-2 ***
@@ -35,12 +37,18 @@ Before running make What to make sure is:
 you are in the folder /bulkreefsupply/bulkreefsupply/spiders
 
 Run script command:
-python bulkreefsupply_spider.py
+python3 -m scrapy crawl bulkreefsupply_spider
+
 OR
-python3.9 bulkreefsupply_spider.py
+
+python3 bulkreefsupply_spider.py
+
+OR
 
 scrapy crawl bulkreefsupply_spider
 
+Run script at background:
+python3 -m nohup scrapy crawl bulkreefsupply_spider &
 
 Note: "bulkreefsupply_spider" is the name of spider, that scrape data.
 
