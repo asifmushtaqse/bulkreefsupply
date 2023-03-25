@@ -10,8 +10,8 @@ from scrapy import Request, FormRequest, Selector
 from scrapy.crawler import CrawlerProcess
 from scrapy.spiders import Spider
 
-from static_data import req_meta
-from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
+from .static_data import req_meta
+from .utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
     retry_invalid_response
 
@@ -342,11 +342,11 @@ class BulkReefSupplySpider(Spider):
     #     return open(self.faulty_urls_file_path, mode='a', encoding='utf-8')
 
 
-def run_spider_via_python_script():
-    process = CrawlerProcess()
-    process.crawl(BulkReefSupplySpider)
-    process.start()
-
-
-if __name__ == "__main__":
-    run_spider_via_python_script()
+# def run_spider_via_python_script():
+#     process = CrawlerProcess()
+#     process.crawl(BulkReefSupplySpider)
+#     process.start()
+#
+#
+# if __name__ == "__main__":
+#     run_spider_via_python_script()
