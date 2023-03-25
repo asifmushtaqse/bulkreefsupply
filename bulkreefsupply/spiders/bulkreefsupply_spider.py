@@ -243,7 +243,10 @@ class BulkReefSupplySpider(Spider):
         details = {}
 
         for sel in response.css('#product-attribute-specs-table tbody tr'):
-            if not (key := self.get_key(sel)):
+            # if not (key := self.get_key(sel)):
+            #     continue
+            key = self.get_key(sel)
+            if not key:
                 continue
             details[key] = clean(sel.css('td.col.data::text').get())
 
