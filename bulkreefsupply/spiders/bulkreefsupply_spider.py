@@ -342,11 +342,11 @@ class BulkReefSupplySpider(Spider):
     #     return open(self.faulty_urls_file_path, mode='a', encoding='utf-8')
 
 
-# def run_spider_via_python_script():
-#     process = CrawlerProcess()
-#     process.crawl(BulkReefSupplySpider)
-#     process.start()
-#
-#
-# if __name__ == "__main__":
-#     run_spider_via_python_script()
+def run_spider_via_python_script():
+    process = CrawlerProcess()
+    process.crawl(BulkReefSupplySpider)
+    process.start()
+
+
+if __name__ == "__main__":
+    run_spider_via_python_script()
