@@ -6,7 +6,6 @@ from copy import deepcopy
 from csv import DictReader
 
 from scrapy import Request, FormRequest
-from scrapy.crawler import CrawlerProcess
 from scrapy.spiders import Spider
 
 from static_data import req_meta
@@ -365,13 +364,3 @@ class BulkReefSupplySpider(Spider):
     #         file.write(','.join(h for h in ['url']) + '\n')
     #         return file
     #     return open(self.faulty_urls_file_path, mode='a', encoding='utf-8')
-
-
-def run_spider_via_python_script():
-    process = CrawlerProcess()
-    process.crawl(BulkReefSupplySpider)
-    process.start()
-
-
-if __name__ == "__main__":
-    run_spider_via_python_script()
