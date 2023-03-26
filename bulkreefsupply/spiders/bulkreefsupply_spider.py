@@ -163,14 +163,14 @@ class BulkReefSupplySpider(Spider):
                         it.update(self.get_product(p))
                         it['product_cart_id'] = self.get_product_cart_id(response, sku=it['product_id'])
 
-                        self.generate_add_to_cart_request(response, callback='self.parse_quantity', item=it)
+                        self.append_cart_request(response, callback='self.parse_quantity', item=it)
                     except Exception as variant_err:
                         self.logger.debug(f"Got Variant Error:\n{variant_err}")
             else:
                 item.update(self.get_product(prod))
                 item['product_cart_id'] = self.get_product_cart_id(response, sku=item['product_id'])
 
-                self.generate_add_to_cart_request(response, callback='self.parse_quantity', item=item)
+                self.append_cart_request(response, callback='self.parse_quantity', item=item)
         except Exception as err:
             # pass
             # self.write_to_csv(response.url)
@@ -295,7 +295,7 @@ class BulkReefSupplySpider(Spider):
     def get_add_to_cart_quantity_request(self, response, callback, is_qty_add=True):
         return self.get_cart_request(response, callback, response.meta['item'], response.meta, is_qty_add)
 
-    def generate_add_to_cart_request(self, response, callback, item, is_qty_add=True):
+    def append_cart_request(self, response, callback, item, is_qty_add=True):
         item['reverse_count'] = 0
         item['qty'] = 0
 
