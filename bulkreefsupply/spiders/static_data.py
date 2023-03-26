@@ -16,7 +16,7 @@ req_meta = {
 
 csv_headers = [
     'date', 'product_id', 'product_name', 'upc', 'vendor', 'sku', 'price', 'in_stock',
-    'has_variants', 'product_url',
+    'has_variants', 'product_url', 'product_cart_id',
     #  'main_image_url', 'secondary_image_urls', 'quantity', 'description',
 
     # More information fields

@@ -7,7 +7,7 @@ from datetime import datetime
 
 from dotenv import dotenv_values
 
-from .static_data import csv_headers
+from static_data import csv_headers
 
 
 def clean(text):
@@ -49,7 +49,7 @@ def retry_invalid_response(callback):
 
             spider.logger.info("Dropped after 3 retries. url: {}".format(response.url))
             response.meta.pop('retry_times', None)
-            return
+            return spider.get_product_request(response)
 
         return callback(spider, response)
 

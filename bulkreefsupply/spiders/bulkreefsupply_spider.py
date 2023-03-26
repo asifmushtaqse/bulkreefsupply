@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 import os
 import re
-import sys
 import json
 from copy import deepcopy
 from csv import DictReader
 
-from scrapy import Request, FormRequest, Selector
+from scrapy import Request, FormRequest
 from scrapy.crawler import CrawlerProcess
 from scrapy.spiders import Spider
 
-from .static_data import req_meta
-from .utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
+from static_data import req_meta
+from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
     retry_invalid_response
 
@@ -23,21 +22,22 @@ def get_existing_records():
 
 class BulkReefSupplySpider(Spider):
     name = 'bulkreefsupply_spider'
-    logs_dir = "logs/{}_logs.log".format(name)
     base_url = 'https://www.bulkreefsupply.com'
     quantity_url = 'https://www.bulkreefsupply.com/checkout/cart/add'
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
     # faulty_urls_file_path = f'{get_output_file_dir()}/faulty_urls.csv'
     # products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{}.csv'
     products_filename = get_csv_feed_file_name()
+    logs_dir = "logs"
+    logs_file_path = f"{logs_dir}/{name}_logs.log"
 
     csv_headers = get_csv_headers()
 
-    if not os.path.exists('logs'):
-        os.mkdir('logs')
+    if not os.path.exists(logs_dir):
+        os.mkdir(logs_dir)
 
-    if os.path.exists(logs_dir):
-        os.remove(logs_dir)
+    if os.path.exists(logs_file_path):
+        os.remove(logs_file_path)
 
     start_urls = [
         sitemap_url,
@@ -60,10 +60,10 @@ class BulkReefSupplySpider(Spider):
 
     custom_settings = {
         # 'LOG_LEVEL': 'INFO',
-        'LOG_FILE': logs_dir,
+        'LOG_FILE': logs_file_path,
 
         # 'DOWNLOAD_DELAY': 2,
-        'CONCURRENT_REQUESTS': 1,
+        'CONCURRENT_REQUESTS': 2,
         # 'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=True),
 
         "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
@@ -119,36 +119,39 @@ class BulkReefSupplySpider(Spider):
 
     @retry_invalid_response
     def parse(self, response):
+        response.meta['product_requests'] = []
+
         for url in get_sitemap_urls(response)[:]:
             if not url or url.count('/') > 3 or not url.endswith('.html'):
                 continue
-            # if 'trate-high-range-colorimeter-hi782-marine-water-hanna-instruments.html' not in url:
+            # if 'blade-smart-led-strip-freshwater-aqua-illumination.html' not in url:
             #     continue
             meta = deepcopy(req_meta)
             meta['item'] = self.existing_records.get(url.rstrip('/'), {})
-            yield Request(url, callback=self.parse_result, headers=self.headers, meta=meta)
+            req = Request(url, callback=self.parse_result, headers=self.headers, meta=meta)
+
+            response.meta['product_requests'].append(req)
+
+        return self.get_product_request(response)
 
     @retry_invalid_response
     def parse_result(self, response):
-        product_variants = []
-
         try:
             item = response.meta['item']
             item.update(self.get_additional_details(response))
             item['date'] = get_today_date()
-            item['product_card_id'] = self.get_product_cart_id(response)
             item["weight"] = self.get_weight(response)
             item["dimensions"] = self.get_dimensions(response)
             item["description"] = self.get_description(response)
             item["description"] = self.get_description(response)
             item['main_image_url'] = self.get_main_image(response)
             item["secondary_image_urls"] = self.get_image_urls(response)
-            # item['more_details'] = self.get_additional_details(response)
-            # if 'upc' in item['more_details']:
-            #     item['upc'] = item['more_details']['upc']
             item["product_url"] = response.url
             item['has_variants'] = False
             # item['variants'] = []
+            # item['more_details'] = self.get_additional_details(response)
+            # if 'upc' in item['more_details']:
+            #     item['upc'] = item['more_details']['upc']
 
             prod = self.get_product_data(response)
 
@@ -156,41 +159,44 @@ class BulkReefSupplySpider(Spider):
                 item['has_variants'] = True
 
                 for p in prod['children']:
-                    it = deepcopy(item)
-                    it.update(self.get_product(p))
-                    # yield it
-                    product_variants.append(it)
+                    try:
+                        it = deepcopy(item)
+                        it.update(self.get_product(p))
+                        it['product_cart_id'] = self.get_product_cart_id(response, sku=it['product_id'])
+
+                        self.generate_add_to_cart_request(response, callback='self.parse_quantity', item=it)
+                    except Exception as variant_err:
+                        self.logger.debug(f"Got Variant Error:\n{variant_err}")
             else:
                 item.update(self.get_product(prod))
-                # yield item
-                product_variants.append(item)
+                item['product_cart_id'] = self.get_product_cart_id(response, sku=item['product_id'])
+
+                self.generate_add_to_cart_request(response, callback='self.parse_quantity', item=item)
         except Exception as err:
-            # print(err)
-            pass
+            # pass
             # self.write_to_csv(response.url)
+            # print(f"Got Error While Parsing Product {response.url}:\n {err}")
+            self.logger.debug(f"Got Error While Parsing Product {response.url}:\n {err}")
 
-        response.meta['product_variants'] = product_variants
-        response.meta['qty'] = 0
-        response.meta.setdefault('reverse_count', 0)
+        return self.get_product_request(response)
 
-        return self.get_qty_form_request(response, callback='self.parse_quantity')
-
+    @retry_invalid_response
     def parse_quantity(self, response):
-        if 'Successfully added to cart.' in response.text:
-            yield self.get_qty_form_request(response, callback='self.parse_quantity')
+        if 'successfully added to cart.' in response.text.lower():
+            yield self.get_add_to_cart_quantity_request(response, callback='self.parse_quantity')
             return
 
-        for p in response.meta['product_variants']:
-            # p['quantity'] = response.meta['qty'] - 2
-            p[get_next_quantity_column()] = response.meta['qty'] - 1
-            self.write_to_csv(p)
-            yield p
+        item = response.meta['item']
+        item[get_next_quantity_column()] = item.pop('qty') - 1
+        yield from self.write_to_csv(item)
 
-        # return self.get_qty_form_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
+        # yield self.get_qty_form_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
+        yield self.get_product_request(response)
 
+    @retry_invalid_response
     def parse_qty_reverse(self, response):
-        if 'Successfully added to cart.' not in response.text and response.meta['reverse_count'] < 6:
-            yield self.get_qty_form_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
+        if 'successfully added to cart.' in response.text.lower() and response.meta['reverse_count'] < 6:
+            yield self.get_add_to_cart_quantity_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
             return
 
         for p in response.meta['product_variants']:
@@ -271,32 +277,44 @@ class BulkReefSupplySpider(Spider):
     def get_weight(self, response):
         return clean(response.css('li:contains("Weight:") span::text').get()).replace('Weight:', '')
 
-    def get_product_cart_id(self, response):
-        return response.css('::attr(data-product-id)').get('')
+    def get_product_cart_id(self, response, sku):
+        # return response.css('::attr(data-product-id)').get('')
+        return response.css(f'[data-product-sku="{sku}"]::attr(data-product-id)').get('')
 
-    def get_qty_form_data(self, response, is_qty_add=True):
-        item = response.meta['product_variants'][0]
-
+    def get_qty_form_data(self, response, item, is_qty_add=True):
         if is_qty_add:
-            response.meta['qty'] += self.quantity_interval
+            item['qty'] += self.quantity_interval
         else:
-            # response.meta.setdefault('reverse_count', 0)
-            response.meta['reverse_count'] += 1
-            response.meta['qty'] -= 1
+            item['reverse_count'] += 1
+            item['qty'] -= 1
 
         data = deepcopy(self.quantity_data)
-        # data['qty'] = str(response.meta['qty'])
-        data['product'] = item['product_card_id']
+        # data['qty'] = str(item['qty'])
+        data['product'] = item['product_cart_id']
         return data
 
-    def get_qty_form_request(self, response, callback, is_qty_add=True):
+    def get_add_to_cart_quantity_request(self, response, callback, is_qty_add=True):
+        return self.get_cart_request(response, callback, response.meta['item'], response.meta, is_qty_add)
+
+    def generate_add_to_cart_request(self, response, callback, item, is_qty_add=True):
+        item['reverse_count'] = 0
+        item['qty'] = 0
+
+        meta = deepcopy(req_meta)
+        meta['item'] = item
+
+        add_to_cart_request = self.get_cart_request(response, callback, item, meta, is_qty_add)
+
+        response.meta['product_requests'].insert(0, add_to_cart_request)
+
+    def get_cart_request(self, response, callback, item, meta, is_qty_add=True):
         return FormRequest(url=self.quantity_url,
                            # callback=self.parse_quantity,
                            callback=eval(callback),
-                           formdata=self.get_qty_form_data(response, is_qty_add=is_qty_add),
+                           formdata=self.get_qty_form_data(response, item, is_qty_add=is_qty_add),
                            headers=self.qty_headers,
                            cookies=self.cookies,
-                           meta=response.meta,
+                           meta=meta,
                            dont_filter=True)
 
     def write_to_csv(self, item):
@@ -304,6 +322,7 @@ class BulkReefSupplySpider(Spider):
         csv_writer = self.get_csv_writer()
         csv_writer.write(row)
         csv_writer.close()
+        yield item
 
     def get_csv_writer(self):
         # file = open(self.output_csv_file_name, mode='w', encoding='utf-8')
@@ -328,6 +347,12 @@ class BulkReefSupplySpider(Spider):
             # os.remove(path)
             os.rename(path, f"{'/'.join(path.split('/')[:-1])}/previous_report_backup.csv")
 
+    def get_product_request(self, response):
+        if response.meta['product_requests']:
+            req = response.meta['product_requests'].pop(0)
+            req.meta['product_requests'] = response.meta['product_requests']
+            return req
+
     # def write_to_csv(self, url):
     #     csv_writer = self.get_csv_writer()
     #     csv_writer.write(url + '\n')
@@ -342,11 +367,11 @@ class BulkReefSupplySpider(Spider):
     #     return open(self.faulty_urls_file_path, mode='a', encoding='utf-8')
 
 
-# def run_spider_via_python_script():
-#     process = CrawlerProcess()
-#     process.crawl(BulkReefSupplySpider)
-#     process.start()
-#
-#
-# if __name__ == "__main__":
-#     run_spider_via_python_script()
+def run_spider_via_python_script():
+    process = CrawlerProcess()
+    process.crawl(BulkReefSupplySpider)
+    process.start()
+
+
+if __name__ == "__main__":
+    run_spider_via_python_script()
