@@ -104,7 +104,7 @@ class BulkReefSupplySpider(Spider):
         'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
         'origin': 'https://www.bulkreefsupply.com',
         'pragma': 'no-cache',
-        'referer': 'https://www.bulkreefsupply.com/radion-xr30-g6-blue-led-light-fixture-ecotech-marine.html',
+        # 'referer': 'https://www.bulkreefsupply.com/radion-xr30-g6-blue-led-light-fixture-ecotech-marine.html',
         'sec-ch-ua': '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
         'x-requested-with': 'XMLHttpRequest',
@@ -185,7 +185,15 @@ class BulkReefSupplySpider(Spider):
 
     @retry_invalid_response
     def parse_quantity(self, response):
-        if 'successfully added to cart.' in response.text.lower() and response.meta['item']['qty'] < 500:
+        # If reach maximum quantity limit
+        if response.meta['item']['qty'] > 1500:
+            item = response.meta['item']
+            item[get_next_quantity_column()] = item.pop('qty')
+            yield from self.write_to_csv(item)
+            yield self.get_product_request(response)
+            return
+
+        if 'successfully added to cart.' in response.text.lower():
             yield self.get_add_to_cart_quantity_request(response, callback='self.parse_quantity')
             return
 
@@ -314,13 +322,15 @@ class BulkReefSupplySpider(Spider):
         self.cookiejar += 1
         meta['cookiejar'] = self.cookiejar
         # response.meta['cookiejar'] = self.cookiejar
-        # response.meta['cookiejar'] = item['qty'] + self.quantity_interval
+
+        req_headers = deepcopy(self.headers)
+        req_headers['referer'] = item['product_url']
 
         return FormRequest(url=self.quantity_url,
                            # callback=self.parse_quantity,
                            callback=eval(callback),
                            formdata=self.get_qty_form_data(response, item, is_qty_add=is_qty_add),
-                           headers=self.qty_headers,
+                           headers=req_headers,
                            cookies=self.cookies,
                            meta=meta,
                            dont_filter=True,
