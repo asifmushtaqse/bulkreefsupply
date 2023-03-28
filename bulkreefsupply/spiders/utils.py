@@ -43,7 +43,7 @@ def retry_invalid_response(callback):
 
             retry_times = response.meta.get('retry_times', 0)
             if retry_times < 3:
-                time.sleep(5)
+                time.sleep(2)
                 response.meta['retry_times'] = retry_times + 1
                 return response.request.replace(dont_filter=True, meta=response.meta)
 
@@ -174,7 +174,10 @@ def get_csv_headers():
 
     qty_columns = [k for k, v in records[0].items() if 'quantity_' in k]
     csv_headers.extend(qty_columns)
-    csv_headers.append(get_next_quantity_column())
+
+    if get_next_quantity_column() not in csv_headers:
+        csv_headers.append(get_next_quantity_column())
+
     return csv_headers
 
 # records = get_json_file_records('./output/bulkreefsupply_products.json')
