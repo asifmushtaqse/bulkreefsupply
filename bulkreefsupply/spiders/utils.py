@@ -139,7 +139,7 @@ def get_today_date():
 
 def get_old_date(str_dates):
     str_dates.sort(key=lambda date: datetime.strptime(date, get_date_format()))
-    return str_dates[-1]
+    return str_dates[0]
 
 
 def get_output_file_numbers():
@@ -168,7 +168,7 @@ def get_next_quantity_column():
 def get_csv_headers():
     records = get_last_report_records()
 
-    if not records:
+    if not records or should_create_new_file():
         csv_headers.append(get_next_quantity_column())
         return csv_headers
 
