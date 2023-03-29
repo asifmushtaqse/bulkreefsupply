@@ -49,7 +49,7 @@ def retry_invalid_response(callback):
 
             spider.logger.info("Dropped after 3 retries. url: {}".format(response.url))
             response.meta.pop('retry_times', None)
-            return spider.get_product_request(response)
+            return spider.get_next_product_request(response)
 
         return callback(spider, response)
 

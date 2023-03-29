@@ -7,9 +7,8 @@ from csv import DictReader
 
 from scrapy import Request, FormRequest
 from scrapy.spiders import Spider
-from scrapy_headless import HeadlessRequest
 
-from static_data import req_meta
+from static_data import req_meta, category_urls
 from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
     retry_invalid_response
@@ -25,13 +24,12 @@ class BulkReefSupplySpider(Spider):
     base_url = 'https://www.bulkreefsupply.com'
     quantity_url = 'https://www.bulkreefsupply.com/checkout/cart/add'
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
-    # faulty_urls_file_path = f'{get_output_file_dir()}/faulty_urls.csv'
     # products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{}.csv'
     products_filename = get_csv_feed_file_name()
     logs_dir = "logs"
     logs_file_path = f"{logs_dir}/{name}_logs.log"
 
-    csv_headers = get_csv_headers()
+    quantity_interval = 5
 
     if not os.path.exists(logs_dir):
         os.mkdir(logs_dir)
@@ -56,6 +54,8 @@ class BulkReefSupplySpider(Spider):
         500, 501, 502, 503, 504, 505, 506, 507, 509,
     ]
 
+    csv_headers = get_csv_headers()
+
     existing_records = get_existing_records()
 
     custom_settings = {
@@ -63,7 +63,7 @@ class BulkReefSupplySpider(Spider):
         # 'LOG_FILE': logs_file_path,
 
         # 'DOWNLOAD_DELAY': 1,
-        'CONCURRENT_REQUESTS': 1,
+        'CONCURRENT_REQUESTS': 2,
         # 'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=True),
 
         "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
@@ -84,18 +84,6 @@ class BulkReefSupplySpider(Spider):
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
     }
 
-    quantity_interval = 5
-
-    quantity_data = {
-        'product': '14458',
-        'form_key': 'T81MWciVSs6sD7OB',
-        'qty': f'{quantity_interval}',
-    }
-
-    cookies = {
-        'form_key': 'T81MWciVSs6sD7OB',
-    }
-
     qty_headers = {
         'authority': 'www.bulkreefsupply.com',
         'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -110,35 +98,43 @@ class BulkReefSupplySpider(Spider):
         'x-requested-with': 'XMLHttpRequest',
     }
 
-    cookiejar = 0
+    quantity_data = {
+        'product': '14458',
+        'form_key': 'T81MWciVSs6sD7OB',
+        'qty': f'{quantity_interval}',
+    }
+
+    cookies = {
+        'form_key': 'T81MWciVSs6sD7OB',
+    }
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        self.cookiejar = 0
+        self.seen_urls = []
         self.delete_file(self.products_filename)
 
     def start_requests(self):
-        yield Request(self.sitemap_url, callback=self.parse, headers=self.headers)
+        yield Request(self.base_url, callback=self.parse, headers=self.headers)
+        yield Request(self.sitemap_url, callback=self.parse_sitemap, headers=self.headers)
+        yield from [Request(url=url, callback=self.parse_listings, headers=self.headers) for url in category_urls]
 
     @retry_invalid_response
     def parse(self, response):
-        response.meta['product_requests'] = []
-
-        for url in get_sitemap_urls(response)[:]:
-            if not url or url.count('/') > 3 or not url.endswith('.html'):
-                continue
-            # if 'blade-smart-led-strip-freshwater-aqua-illumination.html' not in url:  # variants
-            # if 'radion-xr30-g6-blue-led-light-fixture-ecotech-marine.html' not in url:
-            #     continue
-            meta = deepcopy(req_meta)
-            meta['item'] = self.existing_records.get(url.rstrip('/'), {})
-            req = Request(url, callback=self.parse_result, headers=self.headers, meta=meta)
-
-            response.meta['product_requests'].append(req)
-
-        return self.get_product_request(response)
+        return self.get_product_requests(response, self.existing_records)
 
     @retry_invalid_response
-    def parse_result(self, response):
+    def parse_sitemap(self, response):
+        return self.get_product_requests(response, get_sitemap_urls(response)[:])
+
+    @retry_invalid_response
+    def parse_listings(self, response):
+        css = '.product-item-photo::attr(href), .product.product-item a::attr(href)'
+        product_urls = [response.urljoin(url) for url in response.css(css).getall()]
+        return self.get_product_requests(response, product_urls)
+
+    @retry_invalid_response
+    def parse_details(self, response):
         try:
             item = response.meta['item']
             item.update(self.get_additional_details(response))
@@ -176,21 +172,19 @@ class BulkReefSupplySpider(Spider):
 
                 self.append_cart_request(response, callback='self.parse_quantity', item=item)
         except Exception as err:
-            # pass
-            # self.write_to_csv(response.url)
-            # print(f"Got Error While Parsing Product {response.url}:\n {err}")
             self.logger.debug(f"Got Error While Parsing Product {response.url}:\n {err}")
+            a = 0
 
-        return self.get_product_request(response)
+        return self.get_next_product_request(response)
 
     @retry_invalid_response
     def parse_quantity(self, response):
-        # If reach maximum quantity limit
-        if response.meta['item']['qty'] > 1500:
+        # If a product quantity reach to the maximum limit
+        if response.meta['item']['qty'] > 1000:
             item = response.meta['item']
             item[get_next_quantity_column()] = item.pop('qty')
-            yield from self.write_to_csv(item)
-            yield self.get_product_request(response)
+            yield self.write_to_csv(item)
+            yield self.get_next_product_request(response)
             return
 
         if 'successfully added to cart.' in response.text.lower():
@@ -206,15 +200,15 @@ class BulkReefSupplySpider(Spider):
 
     @retry_invalid_response
     def parse_qty_reverse(self, response):
-        if 'the requested qty is not available' in response.text.lower() and response.meta['item']['reverse_count'] < 6:
+        if 'the requested qty is not available' in response.text.lower() and \
+                response.meta['item']['reverse_count'] < self.quantity_interval + 1:
             yield self.get_add_to_cart_quantity_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
             return
 
         item = response.meta['item']
         item[get_next_quantity_column()] = item.pop('qty')
-        yield from self.write_to_csv(item)
-
-        yield self.get_product_request(response)
+        yield self.write_to_csv(item)
+        yield self.get_next_product_request(response)
 
     def get_product_data(self, response):
         prod = json.loads(response.css('[type="application/ld+json"]::text')[1].get())
@@ -341,7 +335,7 @@ class BulkReefSupplySpider(Spider):
         csv_writer = self.get_csv_writer()
         csv_writer.write(row)
         csv_writer.close()
-        yield item
+        return item
 
     def get_csv_writer(self):
         # file = open(self.output_csv_file_name, mode='w', encoding='utf-8')
@@ -366,21 +360,30 @@ class BulkReefSupplySpider(Spider):
             # os.remove(path)
             os.rename(path, f"{'/'.join(path.split('/')[:-1])}/previous_report_backup.csv")
 
-    def get_product_request(self, response):
+    def get_next_product_request(self, response):
         if response.meta['product_requests']:
             req = response.meta['product_requests'].pop(0)
             req.meta['product_requests'] = response.meta['product_requests']
             return req
 
-    # def write_to_csv(self, url):
-    #     csv_writer = self.get_csv_writer()
-    #     csv_writer.write(url + '\n')
-    #     csv_writer.close()
-    #     print("URL = " + url)
-    #
-    # def get_csv_writer(self):
-    #     if not os.path.exists(self.faulty_urls_file_path):
-    #         file = open(self.faulty_urls_file_path, mode='w', encoding='utf-8')
-    #         file.write(','.join(h for h in ['url']) + '\n')
-    #         return file
-    #     return open(self.faulty_urls_file_path, mode='a', encoding='utf-8')
+    def get_product_requests(self, response, product_urls):
+        for url in product_urls:
+            url = url.rstrip('/')
+            if not url or url.count('/') > 3 or not url.endswith('.html') or url in self.seen_urls:
+                continue
+            self.seen_urls.append(url)
+
+            # if 'blade-smart-led-strip-freshwater-aqua-illumination.html' not in url:  # variants
+            # if 'radion-xr30-g6-blue-led-light-fixture-ecotech-marine.html' not in url:
+            #     continue
+
+            meta = deepcopy(req_meta)
+            meta['item'] = self.existing_records.get(url.rstrip('/'), {})
+            # meta['item']['product_url'] = url
+            # yield meta['item']
+
+            req = Request(url, callback=self.parse_details, headers=self.headers, meta=meta)
+
+            response.meta.setdefault('product_requests', []).append(req)
+
+        return self.get_next_product_request(response)
