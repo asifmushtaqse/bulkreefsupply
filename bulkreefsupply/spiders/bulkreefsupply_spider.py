@@ -141,10 +141,9 @@ class BulkReefSupplySpider(Spider):
             item['date'] = get_today_date()
             item["weight"] = self.get_weight(response)
             item["dimensions"] = self.get_dimensions(response)
-            item["description"] = self.get_description(response)
-            item["description"] = self.get_description(response)
-            item['main_image_url'] = self.get_main_image(response)
-            item["secondary_image_urls"] = self.get_image_urls(response)
+            # item["description"] = self.get_description(response)
+            # item['main_image_url'] = self.get_main_image(response)
+            # item["secondary_image_urls"] = self.get_image_urls(response)
             item["product_url"] = response.url
             item['has_variants'] = False
             # item['variants'] = []
