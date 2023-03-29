@@ -41,15 +41,8 @@ python3 -m scrapy crawl bulkreefsupply_spider
 
 OR
 
-python3 bulkreefsupply_spider.py
-
-OR
-
-scrapy crawl bulkreefsupply_spider
-
 Run script at background:
 nohup python3 -m scrapy crawl bulkreefsupply_spider &
-nohup python3 -m run_script.py &
 
 Note: "bulkreefsupply_spider" is the name of spider, that scrape data.
 
