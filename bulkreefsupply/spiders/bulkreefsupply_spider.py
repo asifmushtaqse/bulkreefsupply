@@ -60,7 +60,7 @@ class BulkReefSupplySpider(Spider):
 
     custom_settings = {
         # 'LOG_LEVEL': 'INFO',
-        # 'LOG_FILE': logs_file_path,
+        'LOG_FILE': logs_file_path,
 
         # 'DOWNLOAD_DELAY': 1,
         'CONCURRENT_REQUESTS': 2,
