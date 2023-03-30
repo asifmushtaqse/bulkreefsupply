@@ -63,7 +63,7 @@ class BulkReefSupplySpider(Spider):
         'LOG_FILE': logs_file_path,
 
         # 'DOWNLOAD_DELAY': 1,
-        'CONCURRENT_REQUESTS': 2,
+        'CONCURRENT_REQUESTS': 1,
         # 'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=True),
 
         "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
