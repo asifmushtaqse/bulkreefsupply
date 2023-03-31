@@ -4,11 +4,12 @@ import re
 import json
 from copy import deepcopy
 from csv import DictReader
+import random
 
 from scrapy import Request, FormRequest
 from scrapy.spiders import Spider
 
-from .static_data import req_meta, category_urls
+from .static_data import req_meta, category_urls, user_agents
 from .utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
     retry_invalid_response
@@ -60,7 +61,7 @@ class BulkReefSupplySpider(Spider):
 
     custom_settings = {
         # 'LOG_LEVEL': 'INFO',
-        'LOG_FILE': logs_file_path,
+        # 'LOG_FILE': logs_file_path,
 
         # 'DOWNLOAD_DELAY': 1,
         'CONCURRENT_REQUESTS': 1,
@@ -117,7 +118,7 @@ class BulkReefSupplySpider(Spider):
     def start_requests(self):
         yield Request(self.base_url, callback=self.parse, headers=self.headers)
         yield Request(self.sitemap_url, callback=self.parse_sitemap, headers=self.headers)
-        yield from [Request(url=url, callback=self.parse_listings, headers=self.headers) for url in category_urls]
+        # yield from self.get_categories_requests()
 
     @retry_invalid_response
     def parse(self, response):
@@ -318,6 +319,7 @@ class BulkReefSupplySpider(Spider):
 
         req_headers = deepcopy(self.headers)
         req_headers['referer'] = item['product_url']
+        req_headers['user-agent'] = random.choice(user_agents)
 
         return FormRequest(url=self.quantity_url,
                            # callback=self.parse_quantity,
@@ -381,8 +383,16 @@ class BulkReefSupplySpider(Spider):
             # meta['item']['product_url'] = url
             # yield meta['item']
 
-            req = Request(url, callback=self.parse_details, headers=self.headers, meta=meta)
+            req = Request(url, callback=self.parse_details, headers=self.get_headers(), meta=meta)
 
             response.meta.setdefault('product_requests', []).append(req)
 
         return self.get_next_product_request(response)
+
+    def get_categories_requests(self):
+        return [Request(url=url, callback=self.parse_listings, headers=self.get_headers()) for url in category_urls]
+
+    def get_headers(self):
+        headers = deepcopy(self.headers)
+        headers['user-agent'] = random.choice(user_agents)
+        return headers
