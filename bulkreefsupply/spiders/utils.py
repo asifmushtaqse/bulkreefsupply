@@ -61,6 +61,11 @@ def retry_invalid_response(callback):
     return wrapper
 
 
+def create_dir(dir_path):
+    if not os.path.exists(dir_path):
+        os.mkdir(dir_path)
+
+
 def get_sitemap_urls(response):
     return re.findall('<loc>(.*)</loc>', response.text)
 
@@ -150,6 +155,8 @@ def get_old_date(str_dates):
 def get_output_file_numbers():
     files = []
     output_files_dir = get_output_file_dir()
+
+    create_dir(get_output_file_dir())
 
     for file_path in os.listdir(output_files_dir):
         if '.csv' not in file_path:

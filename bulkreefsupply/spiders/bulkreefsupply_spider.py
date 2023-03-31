@@ -15,6 +15,11 @@ from .utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_c
     retry_invalid_response
 
 
+def create_dir(dir_path):
+    if not os.path.exists(dir_path):
+        os.mkdir(dir_path)
+
+
 def get_existing_records():
     return {r['product_url'].rstrip('/'): dict(r) for r in get_last_report_records()
             if r and r['product_url'] != 'product_url'}
@@ -30,10 +35,8 @@ class BulkReefSupplySpider(Spider):
     logs_dir = "logs"
     logs_file_path = f"{logs_dir}/{name}_logs.log"
 
+    cookiejar = 0
     quantity_interval = 5
-
-    if not os.path.exists(logs_dir):
-        os.mkdir(logs_dir)
 
     if os.path.exists(logs_file_path):
         os.remove(logs_file_path)
@@ -111,7 +114,6 @@ class BulkReefSupplySpider(Spider):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.cookiejar = 0
         self.seen_urls = []
         self.delete_file(self.products_filename)
 
