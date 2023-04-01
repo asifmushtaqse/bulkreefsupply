@@ -7,7 +7,8 @@ from datetime import datetime
 
 from dotenv import dotenv_values
 
-from .static_data import csv_headers
+from .static_data import csv_headers, scrapingbee_proxy_url, scrapingbee_premium_proxy_url,\
+    scrapingbee_stealth_proxy_url
 
 
 def clean(text):
@@ -59,6 +60,24 @@ def retry_invalid_response(callback):
         return callback(spider, response)
 
     return wrapper
+
+
+def get_actual_url(response):
+    if isinstance(response, str):
+        # return response.split('url=')[-1].split('&')[0]
+        return response.split('url=')[-1].split('.html')[0] + '.html'
+
+    # return response.url.split('url=')[-1].split('&')[0]
+    return response.url.split('url=')[-1].split('.html')[0] + '.html'
+
+
+def get_proxy_url(url, is_premium=False, is_stealth=False):
+    if is_premium:
+        return scrapingbee_premium_proxy_url.format(url)
+    if is_stealth:
+        return scrapingbee_stealth_proxy_url.format(url)
+
+    return scrapingbee_proxy_url.format(url)
 
 
 def create_dir(dir_path):

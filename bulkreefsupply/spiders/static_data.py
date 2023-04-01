@@ -2,6 +2,22 @@ from datetime import datetime
 
 from scrapy import Selector
 
+scrapingbee_api_key = "N5S4WPYMW534HUU079AERKCRPDUNJTYIH7OV09TPEZEQKOSM21JQO6AY6UF08VLLEO5QXQNICNLQKXD5"
+scrapingbee_proxy_url = ("https://app.scrapingbee.com/api/v1/?api_key=" + scrapingbee_api_key +
+                         "&url={}&forward_headers=true&country_code=us"
+                         # "&premium_proxy=true"
+                         # "&stealth_proxy=true"
+                         )
+
+scrapingbee_premium_proxy_url = ("https://app.scrapingbee.com/api/v1/?api_key=" + scrapingbee_api_key +
+                                 "&url={}&forward_headers=true&country_code=us"
+                                 "&premium_proxy=true"
+                                 )
+
+scrapingbee_stealth_proxy_url = ("https://app.scrapingbee.com/api/v1/?api_key=" + scrapingbee_api_key +
+                                 "&url={}&forward_headers=true&country_code=us"
+                                 "&stealth_proxy=true"
+                                 )
 
 today_date = datetime.now().strftime('%d%b%Y')
 
@@ -12,6 +28,16 @@ handle_httpstatus_list = [
 
 req_meta = {
     'handle_httpstatus_list': handle_httpstatus_list,
+    # "proxy": f"http://{scraping_bee_api_key}:huwaiguest@gmail.com:8886",
+    # "proxy": f"http://scrapingbee:{scrapingbee_api_key}@proxy-server.scrapingbee.com:8886"
+}
+
+scrapingbee_params = {
+    'api_key': scrapingbee_api_key,
+    'url': 'http://httpbin.org/anything?json',
+    # 'premium_proxy': 'true',
+    # 'stealth_proxy': 'true',
+    'country_code': 'us'
 }
 
 csv_headers = [
