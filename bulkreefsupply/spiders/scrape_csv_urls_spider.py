@@ -6,10 +6,11 @@ from copy import deepcopy
 from csv import DictReader
 import random
 
+import requests
 from scrapy import Request, FormRequest
 from scrapy.spiders import Spider
 
-from .static_data import req_meta, category_urls, user_agents, scrapingbee_params
+from .static_data import req_meta, category_urls, user_agents, scrapingbee_params, scrapingbee_api_key
 from .utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
     retry_invalid_response, create_dir, get_proxy_url, get_actual_url
@@ -119,9 +120,12 @@ class ScrapeCsvURLsSpider(Spider):
         yield Request(get_proxy_url(self.sitemap_url), callback=self.parse_sitemap,
                       headers=self.headers, body=json.dumps(scrapingbee_params))
         # # yield from self.get_categories_requests()
+        # yield Request("http://quotes.toscrape.com/", callback=self.parse)
 
     @retry_invalid_response
     def parse(self, response):
+        # url = "https://www.bulkreefsupply.com/aquamaxx-long-low-iron-rimless-aquarium-22-gallon.html"
+        # return self.get_product_requests(response, [url])
         return self.get_product_requests(response, self.existing_records)
 
     @retry_invalid_response
@@ -298,6 +302,7 @@ class ScrapeCsvURLsSpider(Spider):
         data = deepcopy(self.quantity_data)
         data['qty'] = str(item['qty'])
         data['product'] = item['product_cart_id']
+        data.update(scrapingbee_params)
         return data
 
     def get_add_to_cart_quantity_request(self, response, callback, is_qty_add=True):
@@ -319,20 +324,34 @@ class ScrapeCsvURLsSpider(Spider):
         meta['cookiejar'] = self.cookiejar
         # response.meta['cookiejar'] = self.cookiejar
 
-        req_headers = deepcopy(self.headers)
+        req_headers = deepcopy(self.qty_headers)
         req_headers['referer'] = get_actual_url(item['product_url'])
         req_headers['user-agent'] = random.choice(user_agents)
 
-        return FormRequest(url=self.quantity_url,
-                           # callback=self.parse_quantity,
-                           callback=eval(callback),
-                           formdata=self.get_qty_form_data(response, item, is_qty_add=is_qty_add),
-                           headers=req_headers,
-                           cookies=self.cookies,
-                           meta=meta,
-                           dont_filter=True,
-                           body=json.dumps(scrapingbee_params),
-                           )
+        # return FormRequest(url=self.quantity_url,
+        #                    callback=eval(callback),
+        #                    formdata=self.get_qty_form_data(response, item, is_qty_add=is_qty_add),
+        #                    headers=req_headers,
+        #                    cookies=self.cookies,
+        #                    meta=meta,
+        #                    dont_filter=True,
+        #                    # body=json.dumps(body),
+        #                    )
+
+        data = self.get_qty_form_data(response, item, is_qty_add=is_qty_add)
+        # body = f"product={data['product']}&form_key=T81MWciVSs6sD7OB&qty={data['qty']}&api_key={scrapingbee_api_key}&country_code=us"
+        body = f"product={data['product']}&form_key=T81MWciVSs6sD7OB&qty={data['qty']}"
+
+        return Request(
+            url=self.quantity_url + f"?api_key={scrapingbee_api_key}&country_code=us",
+            callback=eval(callback),
+            method='POST',
+            dont_filter=True,
+            cookies=self.cookies,
+            headers=req_headers,
+            body=body,
+            meta=meta,
+        )
 
     def write_to_csv(self, item):
         row = ','.join('"{}"'.format(item.get(h, '')) for h in self.csv_headers) + '\n'

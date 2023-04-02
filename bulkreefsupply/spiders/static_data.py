@@ -2,9 +2,11 @@ from datetime import datetime
 
 from scrapy import Selector
 
-scrapingbee_api_key = "N5S4WPYMW534HUU079AERKCRPDUNJTYIH7OV09TPEZEQKOSM21JQO6AY6UF08VLLEO5QXQNICNLQKXD5"
+scrapingbee_api_key = "FPH5TC2OJFXNOV3JXL4ZB1UC1RKNXV62SIKKSLI3GFG612BDBKIY1AH1PVOH3GVTT7VDS3NRR93GYN4A"
 scrapingbee_proxy_url = ("https://app.scrapingbee.com/api/v1/?api_key=" + scrapingbee_api_key +
-                         "&url={}&forward_headers=true&country_code=us"
+                         "&url={}&forward_headers=true"
+                         "&country_code=us"
+                         # "&render_js=false"
                          # "&premium_proxy=true"
                          # "&stealth_proxy=true"
                          )
@@ -26,18 +28,28 @@ handle_httpstatus_list = [
     500, 501, 502, 503, 504, 505, 506, 507, 509,
 ]
 
+proxies = {
+        "http": f"http://{scrapingbee_api_key}&premium_proxy=True@proxy.scrapingbee.com:8886",
+        "https": f"https://{scrapingbee_api_key}&premium_proxy=True@proxy.scrapingbee.com:8887"
+}
+
+
 req_meta = {
     'handle_httpstatus_list': handle_httpstatus_list,
     # "proxy": f"http://{scraping_bee_api_key}:huwaiguest@gmail.com:8886",
     # "proxy": f"http://scrapingbee:{scrapingbee_api_key}@proxy-server.scrapingbee.com:8886"
+    # "proxy": f"https://{scrapingbee_api_key}&premium_proxy=True@proxy.scrapingbee.com:8887",
+    # "proxy": f"http://{scrapingbee_api_key}&premium_proxy=True:arslan_scrapingbee@proxy.scrapingbee.com:8886",
+    # "proxy": f"http://scraperapi:cc919ced7076a6c05b56a89e345d1266@proxy-server.scraperapi.com:8001"
 }
+
 
 scrapingbee_params = {
     'api_key': scrapingbee_api_key,
     'url': 'http://httpbin.org/anything?json',
     # 'premium_proxy': 'true',
     # 'stealth_proxy': 'true',
-    'country_code': 'us'
+    # 'country_code': 'us'
 }
 
 csv_headers = [
