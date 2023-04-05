@@ -36,6 +36,7 @@ class BulkReefSupplySpider(Spider):
     logs_file_path = f"{logs_dir}/{name}_logs.log"
 
     cookiejar = 0
+    max_quantity = 1000
     quantity_interval = 5
 
     if os.path.exists(logs_file_path):
@@ -182,7 +183,7 @@ class BulkReefSupplySpider(Spider):
     @retry_invalid_response
     def parse_quantity(self, response):
         # If a product quantity reach to the maximum limit
-        if response.meta['item']['qty'] > 1000:
+        if response.meta['item']['qty'] > self.max_quantity:
             item = response.meta['item']
             item[get_next_quantity_column()] = item.pop('qty')
             yield self.write_to_csv(item)

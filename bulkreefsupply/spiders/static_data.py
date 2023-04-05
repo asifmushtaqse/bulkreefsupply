@@ -2,7 +2,7 @@ from datetime import datetime
 
 from scrapy import Selector
 
-scrapingbee_api_key = "FPH5TC2OJFXNOV3JXL4ZB1UC1RKNXV62SIKKSLI3GFG612BDBKIY1AH1PVOH3GVTT7VDS3NRR93GYN4A"
+scrapingbee_api_key = "I21NC3DWP4MDCLJCBQ07VS3MXYC7O5V1VFGVEGP2H6PK18MG33JODJNSTK9B8UEU9CZ2CQU77PIUTMSZ"
 scrapingbee_proxy_url = ("https://app.scrapingbee.com/api/v1/?api_key=" + scrapingbee_api_key +
                          "&url={}&forward_headers=true"
                          "&country_code=us"
@@ -46,7 +46,7 @@ req_meta = {
 
 scrapingbee_params = {
     'api_key': scrapingbee_api_key,
-    'url': 'http://httpbin.org/anything?json',
+    'url': 'https://www.bulkreefsupply.com/checkout/cart/add',
     # 'premium_proxy': 'true',
     # 'stealth_proxy': 'true',
     # 'country_code': 'us'

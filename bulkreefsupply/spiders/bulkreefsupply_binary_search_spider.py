@@ -6,14 +6,18 @@ from copy import deepcopy
 from csv import DictReader
 import random
 
-import requests
 from scrapy import Request, FormRequest
 from scrapy.spiders import Spider
 
-from .static_data import req_meta, category_urls, user_agents, scrapingbee_params, scrapingbee_api_key
+from .static_data import req_meta, category_urls, user_agents
 from .utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
-    retry_invalid_response, create_dir, get_proxy_url, get_actual_url
+    retry_invalid_response
+
+
+def create_dir(dir_path):
+    if not os.path.exists(dir_path):
+        os.mkdir(dir_path)
 
 
 def get_existing_records():
@@ -21,10 +25,8 @@ def get_existing_records():
             if r and r['product_url'] != 'product_url'}
 
 
-class ScrapeCsvURLsSpider(Spider):
-    name = 'scrape_csv_urls_spider'
-    # create_dir(get_output_file_dir())
-
+class BulkReefSupplyBinarySearchSpider(Spider):
+    name = 'bulkreefsupply_binary_search_spider'
     base_url = 'https://www.bulkreefsupply.com'
     quantity_url = 'https://www.bulkreefsupply.com/checkout/cart/add'
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
@@ -34,6 +36,7 @@ class ScrapeCsvURLsSpider(Spider):
     logs_file_path = f"{logs_dir}/{name}_logs.log"
 
     cookiejar = 0
+    max_quantity = 1000
     quantity_interval = 5
 
     if os.path.exists(logs_file_path):
@@ -68,12 +71,12 @@ class ScrapeCsvURLsSpider(Spider):
         'CONCURRENT_REQUESTS': 1,
         # 'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=True),
 
-        # "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
-        # "DOWNLOADER_MIDDLEWARES": {
-        #     'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
-        #     'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
-        #     'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
-        # },
+        "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
+        "DOWNLOADER_MIDDLEWARES": {
+            'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
+            'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+            'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+        },
     }
 
     headers = {
@@ -101,7 +104,7 @@ class ScrapeCsvURLsSpider(Spider):
     }
 
     quantity_data = {
-        'product': '14458',
+        'product': '',  # product cart id like '14458'
         'form_key': 'T81MWciVSs6sD7OB',
         'qty': f'{quantity_interval}',
     }
@@ -113,26 +116,20 @@ class ScrapeCsvURLsSpider(Spider):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.seen_urls = []
-        # self.delete_file(self.products_filename)
+        self.delete_file(self.products_filename)
 
     def start_requests(self):
-        # yield Request(get_proxy_url(self.base_url), callback=self.parse, headers=self.headers)
-        yield Request(get_proxy_url(self.sitemap_url), callback=self.parse_sitemap,
-                      headers=self.headers, body=json.dumps(scrapingbee_params))
-        # # yield from self.get_categories_requests()
-        # yield Request("http://quotes.toscrape.com/", callback=self.parse)
+        yield Request(self.base_url, callback=self.parse, headers=self.headers)
+        yield Request(self.sitemap_url, callback=self.parse_sitemap, headers=self.headers)
+        # yield from self.get_categories_requests()
 
     @retry_invalid_response
     def parse(self, response):
-        # url = "https://www.bulkreefsupply.com/aquamaxx-long-low-iron-rimless-aquarium-22-gallon.html"
-        # return self.get_product_requests(response, [url])
         return self.get_product_requests(response, self.existing_records)
 
     @retry_invalid_response
     def parse_sitemap(self, response):
-        filtered_urls = [url for url in get_sitemap_urls(response)
-                         if url.rstrip('/') not in self.existing_records and url.count('/') <= 3]
-        return self.get_product_requests(response, filtered_urls)
+        return self.get_product_requests(response, get_sitemap_urls(response)[:])
 
     @retry_invalid_response
     def parse_listings(self, response):
@@ -151,7 +148,7 @@ class ScrapeCsvURLsSpider(Spider):
             # item["description"] = self.get_description(response)
             # item['main_image_url'] = self.get_main_image(response)
             # item["secondary_image_urls"] = self.get_image_urls(response)
-            item["product_url"] = get_actual_url(response.url)
+            item["product_url"] = response.url
             item['has_variants'] = False
             # item['variants'] = []
             # item['more_details'] = self.get_additional_details(response)
@@ -169,14 +166,14 @@ class ScrapeCsvURLsSpider(Spider):
                         it.update(self.get_product(p))
                         it['product_cart_id'] = self.get_product_cart_id(response, sku=it['product_id'])
 
-                        self.append_cart_request(response, callback='self.parse_quantity', item=it)
+                        self.append_cart_request(response, callback='self.parse_quantity_downward', item=it)
                     except Exception as variant_err:
                         self.logger.debug(f"Got Variant Error:\n{variant_err}")
             else:
                 item.update(self.get_product(prod))
                 item['product_cart_id'] = self.get_product_cart_id(response, sku=item['product_id'])
 
-                self.append_cart_request(response, callback='self.parse_quantity', item=item)
+                self.append_cart_request(response, callback='self.parse_quantity_downward', item=item)
         except Exception as err:
             self.logger.debug(f"Got Error While Parsing Product {response.url}:\n {err}")
             a = 0
@@ -184,9 +181,21 @@ class ScrapeCsvURLsSpider(Spider):
         return self.get_next_product_request(response)
 
     @retry_invalid_response
-    def parse_quantity(self, response):
+    def parse_quantity_downward(self, response):
+        if 'successfully added to cart.' in response.text.lower():
+            yield self.get_add_to_cart_quantity_request(response,
+                                                        callback='self.parse_quantity_upward',
+                                                        qty_filter='upward')
+            return
+
+        yield self.get_add_to_cart_quantity_request(response,
+                                                    callback='self.parse_quantity_downward',
+                                                    qty_filter='downward')
+
+    @retry_invalid_response
+    def parse_quantity_upward(self, response):
         # If a product quantity reach to the maximum limit
-        if response.meta['item']['qty'] > 1000:
+        if response.meta['item']['qty'] > self.max_quantity:
             item = response.meta['item']
             item[get_next_quantity_column()] = item.pop('qty')
             yield self.write_to_csv(item)
@@ -194,7 +203,25 @@ class ScrapeCsvURLsSpider(Spider):
             return
 
         if 'successfully added to cart.' in response.text.lower():
-            yield self.get_add_to_cart_quantity_request(response, callback='self.parse_quantity')
+            yield self.get_add_to_cart_quantity_request(response,
+                                                        callback='self.parse_quantity_upward',
+                                                        qty_filter='upward')
+            return
+
+        yield self.get_add_to_cart_quantity_request(response, callback='self.parse_quantity_add', qty_filter='add')
+
+    @retry_invalid_response
+    def parse_quantity_add(self, response):
+        # If a product quantity reach to the maximum limit
+        if response.meta['item']['qty'] > self.max_quantity:
+            item = response.meta['item']
+            item[get_next_quantity_column()] = item.pop('qty')
+            yield self.write_to_csv(item)
+            yield self.get_next_product_request(response)
+            return
+
+        if 'successfully added to cart.' in response.text.lower():
+            yield self.get_add_to_cart_quantity_request(response, callback='self.parse_quantity_add', qty_filter='add')
             return
 
         # item = response.meta['item']
@@ -202,13 +229,14 @@ class ScrapeCsvURLsSpider(Spider):
         # yield from self.write_to_csv(item)
         # yield self.get_product_request(response)
 
-        yield self.get_add_to_cart_quantity_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
+        yield self.get_add_to_cart_quantity_request(response, callback='self.parse_qty_reverse', qty_filter='reverse')
 
     @retry_invalid_response
     def parse_qty_reverse(self, response):
         if 'the requested qty is not available' in response.text.lower() and \
                 response.meta['item']['reverse_count'] < self.quantity_interval + 1:
-            yield self.get_add_to_cart_quantity_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
+            yield self.get_add_to_cart_quantity_request(response,
+                                                        callback='self.parse_qty_reverse', qty_filter='reverse')
             return
 
         item = response.meta['item']
@@ -292,67 +320,54 @@ class ScrapeCsvURLsSpider(Spider):
         # return response.css('::attr(data-product-id)').get('')
         return response.css(f'[data-product-sku="{sku}"]::attr(data-product-id)').get('')
 
-    def get_qty_form_data(self, response, item, is_qty_add=True):
-        if is_qty_add:
+    def get_qty_form_data(self, response, item, qty_filter):
+        if qty_filter == 'add':
             item['qty'] += self.quantity_interval
-        else:
+        elif qty_filter == 'downward':
+            item['qty'] = round(item['qty'] // 2)
+        elif qty_filter == 'upward':
+            item['qty'] = item['qty'] * 2 + 100
+        elif qty_filter == 'reverse':
             item['reverse_count'] += 1
             item['qty'] -= 1
 
         data = deepcopy(self.quantity_data)
         data['qty'] = str(item['qty'])
         data['product'] = item['product_cart_id']
-        data.update(scrapingbee_params)
         return data
 
-    def get_add_to_cart_quantity_request(self, response, callback, is_qty_add=True):
-        return self.get_cart_request(response, callback, response.meta['item'], response.meta, is_qty_add)
+    def get_add_to_cart_quantity_request(self, response, callback, qty_filter):
+        return self.get_cart_request(response, callback, response.meta['item'], response.meta, qty_filter)
 
-    def append_cart_request(self, response, callback, item, is_qty_add=True):
+    def append_cart_request(self, response, callback, item, qty_filter):
         item['reverse_count'] = 0
-        item['qty'] = 0
+        item['qty'] = self.max_quantity // 2
 
         meta = deepcopy(req_meta)
         meta['item'] = item
 
-        add_to_cart_request = self.get_cart_request(response, callback, item, meta, is_qty_add)
+        add_to_cart_request = self.get_cart_request(response, callback, item, meta, qty_filter)
 
         response.meta['product_requests'].insert(0, add_to_cart_request)
 
-    def get_cart_request(self, response, callback, item, meta, is_qty_add=True):
+    def get_cart_request(self, response, callback, item, meta, qty_filter):
         self.cookiejar += 1
         meta['cookiejar'] = self.cookiejar
         # response.meta['cookiejar'] = self.cookiejar
 
-        req_headers = deepcopy(self.qty_headers)
-        req_headers['referer'] = get_actual_url(item['product_url'])
+        req_headers = deepcopy(self.headers)
+        req_headers['referer'] = item['product_url']
         req_headers['user-agent'] = random.choice(user_agents)
 
-        # return FormRequest(url=self.quantity_url,
-        #                    callback=eval(callback),
-        #                    formdata=self.get_qty_form_data(response, item, is_qty_add=is_qty_add),
-        #                    headers=req_headers,
-        #                    cookies=self.cookies,
-        #                    meta=meta,
-        #                    dont_filter=True,
-        #                    # body=json.dumps(body),
-        #                    )
-
-        data = self.get_qty_form_data(response, item, is_qty_add=is_qty_add)
-        body = f"product={data['product']}&form_key=T81MWciVSs6sD7OB&qty={data['qty']}"
-        # body = f"product={data['product']}&form_key=T81MWciVSs6sD7OB&qty={data['qty']}&api_key={scrapingbee_api_key}&country_code=us"
-
-        return Request(
-            # url=self.quantity_url,
-            url=get_proxy_url(self.quantity_url),
-            callback=eval(callback),
-            method='POST',
-            dont_filter=True,
-            cookies=self.cookies,
-            headers=req_headers,
-            body=body,
-            meta=meta,
-        )
+        return FormRequest(url=self.quantity_url,
+                           # callback=self.parse_quantity,
+                           callback=eval(callback),
+                           formdata=self.get_qty_form_data(response, item, qty_filter),
+                           headers=req_headers,
+                           cookies=self.cookies,
+                           meta=meta,
+                           dont_filter=True,
+                           )
 
     def write_to_csv(self, item):
         row = ','.join('"{}"'.format(item.get(h, '')) for h in self.csv_headers) + '\n'
@@ -406,16 +421,14 @@ class ScrapeCsvURLsSpider(Spider):
             # meta['item']['product_url'] = url
             # yield meta['item']
 
-            req = Request(get_proxy_url(url), callback=self.parse_details,
-                          headers=self.get_headers(), meta=meta, body=json.dumps(scrapingbee_params))
+            req = Request(url, callback=self.parse_details, headers=self.get_headers(), meta=meta)
 
             response.meta.setdefault('product_requests', []).append(req)
 
         return self.get_next_product_request(response)
 
     def get_categories_requests(self):
-        return [Request(url=get_proxy_url(url), callback=self.parse_listings, headers=self.get_headers())
-                for url in category_urls]
+        return [Request(url=url, callback=self.parse_listings, headers=self.get_headers()) for url in category_urls]
 
     def get_headers(self):
         headers = deepcopy(self.headers)
