@@ -65,7 +65,7 @@ class BulkReefSupplySpider(Spider):
 
     custom_settings = {
         # 'DOWNLOAD_DELAY': 1,
-        'CONCURRENT_REQUESTS': 4,
+        'CONCURRENT_REQUESTS': 2,
 
         'CRAWLERA_ENABLED': True,
 
@@ -127,15 +127,17 @@ class BulkReefSupplySpider(Spider):
 
     def start_requests(self):
         yield Request(self.base_url, callback=self.parse, headers=self.headers)
-        # yield Request(self.sitemap_url, callback=self.parse_sitemap, headers=self.headers)
-        # yield from self.get_categories_requests()
+        yield Request(self.sitemap_url, callback=self.parse_sitemap, headers=self.headers)
+        yield from self.get_categories_requests()
 
     @retry_invalid_response
     def parse(self, response):
+        # Testing specific URLs
         # url = "https://www.bulkreefsupply.com/fish-acclimation-bundle-bulk-reef-supply.html"  # 204
         # url = "https://www.bulkreefsupply.com/brs-stick-on-thermometer-bulk-reef-supply.html"  # 1005
         # url = "https://www.bulkreefsupply.com/jumpguard-feeding-portal-d-d-the-aquarium-solution.html"  # 868
         # return self.get_product_requests(response, [url])
+
         return self.get_product_requests(response, self.existing_records)
 
     @retry_invalid_response
@@ -181,14 +183,14 @@ class BulkReefSupplySpider(Spider):
                         variant.update(self.get_product(p))
                         variant['product_cart_id'] = self.get_product_cart_id(response, sku=variant['product_id'])
 
-                        self.append_cart_request(response, callback='self.parse_quantity', item=variant)
+                        self.append_cart_request(response, item=variant)
                     except Exception as variant_err:
                         self.logger.debug(f"Got Variant Error:\n{variant_err}")
             else:
                 item.update(self.get_product(prod))
                 item['product_cart_id'] = self.get_product_cart_id(response, sku=item['product_id'])
 
-                self.append_cart_request(response, callback='self.parse_quantity', item=item)
+                self.append_cart_request(response, item=item)
         except Exception as err:
             self.logger.debug(f"Got Error While Parsing Product {response.url}:\n {err}")
             a = 0
@@ -201,7 +203,7 @@ class BulkReefSupplySpider(Spider):
         item = response.meta['item']
 
         if response.meta['item']['qty'] < self.max_quantity and item['qty'] != item['lower_limit']:
-            yield self.get_add_to_cart_quantity_request(response, callback='self.parse_quantity')
+            yield self.get_add_to_cart_quantity_request(response)
         else:
             item = response.meta['item']
             item[get_next_quantity_column()] = item.pop('qty')
@@ -335,20 +337,18 @@ class BulkReefSupplySpider(Spider):
     def get_limits_avg(self, upper_limit, lower_limit):
         return (upper_limit + lower_limit) // 2
 
-    def get_add_to_cart_quantity_request(self, response, callback):
-        return self.get_cart_request(response, callback, response.meta['item'], response.meta)
+    def get_add_to_cart_quantity_request(self, response):
+        return self.get_cart_request(response, response.meta['item'], response.meta)
 
-    def append_cart_request(self, response, callback, item):
-        item['reverse_count'] = 0
-
+    def append_cart_request(self, response, item):
         meta = deepcopy(req_meta)
         meta['item'] = item
 
-        add_to_cart_request = self.get_cart_request(response, callback, item, meta)
+        add_to_cart_request = self.get_cart_request(response, item, meta)
 
         response.meta['product_requests'].insert(0, add_to_cart_request)
 
-    def get_cart_request(self, response, callback, item, meta):
+    def get_cart_request(self, response, item, meta):
         self.cookiejar += 1
         meta['cookiejar'] = self.cookiejar
         # response.meta['cookiejar'] = self.cookiejar
@@ -359,7 +359,6 @@ class BulkReefSupplySpider(Spider):
 
         return FormRequest(url=self.quantity_url,
                            callback=self.parse_quantity,
-                           # callback=eval(callback),
                            formdata=self.get_qty_form_data(response, item),
                            headers=req_headers,
                            cookies=self.cookies,
