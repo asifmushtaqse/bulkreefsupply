@@ -195,7 +195,9 @@ class BulkReefSupplySpider(Spider):
             self.logger.debug(f"Got Error While Parsing Product {response.url}:\n {err}")
             a = 0
 
-        return self.get_next_product_request(response)
+        yield self.get_next_product_request(response)
+        yield self.get_next_product_request(response)
+        # return self.get_next_product_request(response)
 
     @retry_invalid_response
     def parse_quantity(self, response):
@@ -210,7 +212,7 @@ class BulkReefSupplySpider(Spider):
             yield self.write_to_csv(item)
             yield self.get_next_product_request(response)
 
-    def is_qty_added(self, response):
+    def is_qty_added_successfully(self, response):
         return 'successfully added to cart.' in response.text.lower()
 
     def get_product_data(self, response):
@@ -316,6 +318,7 @@ class BulkReefSupplySpider(Spider):
     def delete_file(self, path):
         if os.path.exists(path):
             # os.remove(path)
+            # # OR
             os.rename(path, f"{'/'.join(path.split('/')[:-1])}/previous_report_backup.csv")
 
     def get_qty_form_data(self, response, item):
@@ -344,9 +347,7 @@ class BulkReefSupplySpider(Spider):
         meta = deepcopy(req_meta)
         meta['item'] = item
 
-        add_to_cart_request = self.get_cart_request(response, item, meta)
-
-        response.meta['product_requests'].insert(0, add_to_cart_request)
+        response.meta['product_requests'].insert(0, self.get_cart_request(response, item, meta))
 
     def get_cart_request(self, response, item, meta):
         self.cookiejar += 1
