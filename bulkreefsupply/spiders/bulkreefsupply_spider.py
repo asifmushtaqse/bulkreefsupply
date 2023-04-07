@@ -9,7 +9,7 @@ import random
 from scrapy import Request, FormRequest
 from scrapy.spiders import Spider
 
-from .static_data import req_meta, category_urls, user_agents
+from .static_data import req_meta, category_urls, user_agents, crawlera_api_key
 from .utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
     retry_invalid_response
@@ -64,18 +64,23 @@ class BulkReefSupplySpider(Spider):
     existing_records = get_existing_records()
 
     custom_settings = {
-        # 'LOG_LEVEL': 'INFO',
-        # 'LOG_FILE': logs_file_path,
-
         # 'DOWNLOAD_DELAY': 1,
-        'CONCURRENT_REQUESTS': 1,
+        'CONCURRENT_REQUESTS': 4,
+
+        'CRAWLERA_ENABLED': True,
+
+        'CRAWLERA_APIKEY': crawlera_api_key,
+        # "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
+        # 'LOG_FILE': logs_file_path,
+        # 'LOG_LEVEL': 'INFO',
+
         # 'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=True),
 
-        "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
         "DOWNLOADER_MIDDLEWARES": {
-            'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
-            'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
-            'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+            'scrapy_crawlera.CrawleraMiddleware': 610,
+            # 'bulkreefsupply.middlewares.BulkreefsupplyDownloaderMiddleware': 543,
+            # 'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+            # 'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
         },
     }
 
@@ -87,6 +92,7 @@ class BulkReefSupplySpider(Spider):
         'pragma': 'no-cache',
         'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+        'X-Crawlera-Cookies': 'disable',
     }
 
     qty_headers = {
@@ -101,10 +107,11 @@ class BulkReefSupplySpider(Spider):
         'sec-ch-ua': '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
         'x-requested-with': 'XMLHttpRequest',
+        'X-Crawlera-Cookies': 'disable',
     }
 
     quantity_data = {
-        'product': '14458',
+        'product': '',  # product cart id like '14458'
         'form_key': 'T81MWciVSs6sD7OB',
         'qty': f'{quantity_interval}',
     }
@@ -120,11 +127,15 @@ class BulkReefSupplySpider(Spider):
 
     def start_requests(self):
         yield Request(self.base_url, callback=self.parse, headers=self.headers)
-        yield Request(self.sitemap_url, callback=self.parse_sitemap, headers=self.headers)
+        # yield Request(self.sitemap_url, callback=self.parse_sitemap, headers=self.headers)
         # yield from self.get_categories_requests()
 
     @retry_invalid_response
     def parse(self, response):
+        # url = "https://www.bulkreefsupply.com/fish-acclimation-bundle-bulk-reef-supply.html"  # 204
+        # url = "https://www.bulkreefsupply.com/brs-stick-on-thermometer-bulk-reef-supply.html"  # 1005
+        # url = "https://www.bulkreefsupply.com/jumpguard-feeding-portal-d-d-the-aquarium-solution.html"  # 868
+        # return self.get_product_requests(response, [url])
         return self.get_product_requests(response, self.existing_records)
 
     @retry_invalid_response
@@ -157,16 +168,20 @@ class BulkReefSupplySpider(Spider):
 
             prod = self.get_product_data(response)
 
+            item['qty'] = self.max_quantity // 2
+            item['lower_limit'] = 0
+            item['upper_limit'] = self.max_quantity
+
             if 'children' in prod:
                 item['has_variants'] = True
 
                 for p in prod['children']:
                     try:
-                        it = deepcopy(item)
-                        it.update(self.get_product(p))
-                        it['product_cart_id'] = self.get_product_cart_id(response, sku=it['product_id'])
+                        variant = deepcopy(item)
+                        variant.update(self.get_product(p))
+                        variant['product_cart_id'] = self.get_product_cart_id(response, sku=variant['product_id'])
 
-                        self.append_cart_request(response, callback='self.parse_quantity', item=it)
+                        self.append_cart_request(response, callback='self.parse_quantity', item=variant)
                     except Exception as variant_err:
                         self.logger.debug(f"Got Variant Error:\n{variant_err}")
             else:
@@ -182,36 +197,19 @@ class BulkReefSupplySpider(Spider):
 
     @retry_invalid_response
     def parse_quantity(self, response):
-        # If a product quantity reach to the maximum limit
-        if response.meta['item']['qty'] > self.max_quantity:
+        self.set_limits(response)
+        item = response.meta['item']
+
+        if response.meta['item']['qty'] < self.max_quantity and item['qty'] != item['lower_limit']:
+            yield self.get_add_to_cart_quantity_request(response, callback='self.parse_quantity')
+        else:
             item = response.meta['item']
             item[get_next_quantity_column()] = item.pop('qty')
             yield self.write_to_csv(item)
             yield self.get_next_product_request(response)
-            return
 
-        if 'successfully added to cart.' in response.text.lower():
-            yield self.get_add_to_cart_quantity_request(response, callback='self.parse_quantity')
-            return
-
-        # item = response.meta['item']
-        # item[get_next_quantity_column()] = item.pop('qty') - 1
-        # yield from self.write_to_csv(item)
-        # yield self.get_product_request(response)
-
-        yield self.get_add_to_cart_quantity_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
-
-    @retry_invalid_response
-    def parse_qty_reverse(self, response):
-        if 'the requested qty is not available' in response.text.lower() and \
-                response.meta['item']['reverse_count'] < self.quantity_interval + 1:
-            yield self.get_add_to_cart_quantity_request(response, callback='self.parse_qty_reverse', is_qty_add=False)
-            return
-
-        item = response.meta['item']
-        item[get_next_quantity_column()] = item.pop('qty')
-        yield self.write_to_csv(item)
-        yield self.get_next_product_request(response)
+    def is_qty_added(self, response):
+        return 'successfully added to cart.' in response.text.lower()
 
     def get_product_data(self, response):
         prod = json.loads(response.css('[type="application/ld+json"]::text')[1].get())
@@ -226,7 +224,6 @@ class BulkReefSupplySpider(Spider):
         item["price"] = prod['offers']['price']
         # item["description"] = prod['description']
         item['in_stock'] = 'instock' in prod['offers']['availability'].lower()
-        # item['quantity'] = 1
         return item
 
     def get_title(self, response):
@@ -289,51 +286,6 @@ class BulkReefSupplySpider(Spider):
         # return response.css('::attr(data-product-id)').get('')
         return response.css(f'[data-product-sku="{sku}"]::attr(data-product-id)').get('')
 
-    def get_qty_form_data(self, response, item, is_qty_add=True):
-        if is_qty_add:
-            item['qty'] += self.quantity_interval
-        else:
-            item['reverse_count'] += 1
-            item['qty'] -= 1
-
-        data = deepcopy(self.quantity_data)
-        data['qty'] = str(item['qty'])
-        data['product'] = item['product_cart_id']
-        return data
-
-    def get_add_to_cart_quantity_request(self, response, callback, is_qty_add=True):
-        return self.get_cart_request(response, callback, response.meta['item'], response.meta, is_qty_add)
-
-    def append_cart_request(self, response, callback, item, is_qty_add=True):
-        item['reverse_count'] = 0
-        item['qty'] = 0
-
-        meta = deepcopy(req_meta)
-        meta['item'] = item
-
-        add_to_cart_request = self.get_cart_request(response, callback, item, meta, is_qty_add)
-
-        response.meta['product_requests'].insert(0, add_to_cart_request)
-
-    def get_cart_request(self, response, callback, item, meta, is_qty_add=True):
-        self.cookiejar += 1
-        meta['cookiejar'] = self.cookiejar
-        # response.meta['cookiejar'] = self.cookiejar
-
-        req_headers = deepcopy(self.headers)
-        req_headers['referer'] = item['product_url']
-        req_headers['user-agent'] = random.choice(user_agents)
-
-        return FormRequest(url=self.quantity_url,
-                           # callback=self.parse_quantity,
-                           callback=eval(callback),
-                           formdata=self.get_qty_form_data(response, item, is_qty_add=is_qty_add),
-                           headers=req_headers,
-                           cookies=self.cookies,
-                           meta=meta,
-                           dont_filter=True,
-                           )
-
     def write_to_csv(self, item):
         row = ','.join('"{}"'.format(item.get(h, '')) for h in self.csv_headers) + '\n'
         csv_writer = self.get_csv_writer()
@@ -363,6 +315,57 @@ class BulkReefSupplySpider(Spider):
         if os.path.exists(path):
             # os.remove(path)
             os.rename(path, f"{'/'.join(path.split('/')[:-1])}/previous_report_backup.csv")
+
+    def get_qty_form_data(self, response, item):
+        data = deepcopy(self.quantity_data)
+        data['qty'] = str(item['qty'])
+        data['product'] = item['product_cart_id']
+        return data
+
+    def set_limits(self, response):
+        item = response.meta['item']
+
+        if 'successfully added to cart.' in response.text.lower():
+            response.meta['item']['lower_limit'] = item['qty']
+        else:
+            response.meta['item']['upper_limit'] = item['qty']
+
+        response.meta['item']['qty'] = self.get_limits_avg(item['upper_limit'], item['lower_limit'])
+
+    def get_limits_avg(self, upper_limit, lower_limit):
+        return (upper_limit + lower_limit) // 2
+
+    def get_add_to_cart_quantity_request(self, response, callback):
+        return self.get_cart_request(response, callback, response.meta['item'], response.meta)
+
+    def append_cart_request(self, response, callback, item):
+        item['reverse_count'] = 0
+
+        meta = deepcopy(req_meta)
+        meta['item'] = item
+
+        add_to_cart_request = self.get_cart_request(response, callback, item, meta)
+
+        response.meta['product_requests'].insert(0, add_to_cart_request)
+
+    def get_cart_request(self, response, callback, item, meta):
+        self.cookiejar += 1
+        meta['cookiejar'] = self.cookiejar
+        # response.meta['cookiejar'] = self.cookiejar
+
+        req_headers = deepcopy(self.headers)
+        req_headers['referer'] = item['product_url']
+        req_headers['user-agent'] = random.choice(user_agents)
+
+        return FormRequest(url=self.quantity_url,
+                           callback=self.parse_quantity,
+                           # callback=eval(callback),
+                           formdata=self.get_qty_form_data(response, item),
+                           headers=req_headers,
+                           cookies=self.cookies,
+                           meta=meta,
+                           dont_filter=True,
+                           )
 
     def get_next_product_request(self, response):
         if response.meta['product_requests']:

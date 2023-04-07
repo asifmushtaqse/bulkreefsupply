@@ -14,6 +14,7 @@ Editor PyCharm Community Edition.
 
 -> you need to install some modules, just open terminal window in pycharm and write command:
 pip install Scrapy==2.6.3
+pip install scrapy-crawlera==1.7.2
 pip install python-dotenv==0.21.1
 pip install scrapy-rotating-proxies==0.6.2
 
