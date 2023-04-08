@@ -69,7 +69,7 @@ class BulkReefSupplySpider(Spider):
 
     custom_settings = {
         # 'DOWNLOAD_DELAY': 1,
-        'CONCURRENT_REQUESTS': 2,
+        'CONCURRENT_REQUESTS': 8,
 
         'CRAWLERA_ENABLED': True,
 
@@ -188,7 +188,6 @@ class BulkReefSupplySpider(Spider):
                         variant['product_cart_id'] = self.get_product_cart_id(response, sku=variant['product_id'])
 
                         self.append_cart_request(response, item=variant)
-                        yield self.get_next_product_request(response)
                     except Exception as variant_err:
                         self.logger.debug(f"Got Variant Error:\n{variant_err}")
             else:
@@ -196,12 +195,10 @@ class BulkReefSupplySpider(Spider):
                 item['product_cart_id'] = self.get_product_cart_id(response, sku=item['product_id'])
 
                 self.append_cart_request(response, item=item)
-                yield self.get_next_product_request(response)
         except Exception as err:
             self.logger.debug(f"Got Error While Parsing Product {response.url}:\n {err}")
-            yield self.get_next_product_request(response)
 
-        # return self.get_next_product_request(response)
+        return self.get_next_product_request(response)
 
     @retry_invalid_response
     def parse_quantity(self, response):
@@ -214,7 +211,7 @@ class BulkReefSupplySpider(Spider):
             item = deepcopy(response.meta['item'])
             item[get_next_quantity_column()] = item.pop('qty')
             yield self.write_to_csv(item)
-            yield self.get_next_product_request(response)
+            yield from self.get_next_product_request(response)
 
     def is_qty_added_successfully(self, response):
         return 'successfully added to cart.' in response.text.lower()
@@ -371,13 +368,22 @@ class BulkReefSupplySpider(Spider):
                            dont_filter=True,
                            )
 
-    def get_next_product_request(self, response):
-        if 'product_requests' in response.meta and response.meta['product_requests']:
-            req = response.meta['product_requests'].pop(0)
-            req.meta['product_requests'] = response.meta['product_requests']
-            return req
+    def get_next_product_request(self, response, pop_limit=4):
+        r = []
+
+        while pop_limit != 0:
+            pop_limit -= 1
+
+            if 'product_requests' in response.meta and response.meta['product_requests']:
+                req = response.meta['product_requests'].pop(0)
+                req.meta['product_requests'] = response.meta['product_requests']
+                r.append(req)
+
+        return r
 
     def get_product_requests(self, response, product_urls):
+        req_count = 0
+
         for url in product_urls:
             url = url.rstrip('/')
             if not url or url.count('/') > 3 or not url.endswith('.html') or url in self.seen_urls:
@@ -397,6 +403,10 @@ class BulkReefSupplySpider(Spider):
 
             response.meta.setdefault('product_requests', []).append(req)
 
+            # req_count += 1
+            # if req_count > 500:
+            #     break
+
         return self.get_next_product_request(response)
 
     def get_categories_requests(self):
@@ -408,7 +418,7 @@ class BulkReefSupplySpider(Spider):
         return headers
 
     def close(spider, reason):
-        end_time = (spider.start_time - datetime.now()).total_seconds()
+        end_time = (datetime.now() - spider.start_time).total_seconds()
 
         spider.logger.info(f"Total Execution Time in Seconds = {end_time}")
         spider.logger.info(f"Total Execution Time in Minutes = {(end_time // 60)}")
