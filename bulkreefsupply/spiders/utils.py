@@ -2,12 +2,13 @@ import json
 import os
 import re
 import time
+from copy import deepcopy
 from csv import DictReader
 from datetime import datetime
 
 from dotenv import dotenv_values
 
-from .static_data import csv_headers, scrapingbee_proxy_url, scrapingbee_premium_proxy_url,\
+from .static_data import csv_headers, scrapingbee_proxy_url, scrapingbee_premium_proxy_url, \
     scrapingbee_stealth_proxy_url
 
 
@@ -197,19 +198,26 @@ def get_next_quantity_column():
 
 
 def get_csv_headers():
+    header_cols = deepcopy(csv_headers)
+
     records = get_last_report_records()
 
     if not records or should_create_new_file():
-        csv_headers.append(get_next_quantity_column())
-        return csv_headers
+        header_cols.append(get_next_quantity_column())
+        return header_cols
 
-    qty_columns = [k for k, v in records[0].items() if 'quantity_' in k]
-    csv_headers.extend(qty_columns)
+    qty_columns = []
 
-    if get_next_quantity_column() not in csv_headers:
-        csv_headers.append(get_next_quantity_column())
+    for k, v in records[0].items():
+        if 'quantity_' in k and k not in qty_columns:
+            qty_columns.append(k)
 
-    return csv_headers
+    header_cols.extend(qty_columns)
+
+    if get_next_quantity_column() not in header_cols:
+        header_cols.append(get_next_quantity_column())
+
+    return header_cols
 
 # records = get_json_file_records('./output/bulkreefsupply_products.json')
 # keys = set()

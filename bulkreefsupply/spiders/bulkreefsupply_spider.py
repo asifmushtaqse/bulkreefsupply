@@ -2,6 +2,7 @@
 import os
 import re
 import json
+from datetime import datetime
 from copy import deepcopy
 from csv import DictReader
 import random
@@ -27,6 +28,9 @@ def get_existing_records():
 
 class BulkReefSupplySpider(Spider):
     name = 'bulkreefsupply_spider'
+
+    start_time = datetime.now()
+
     base_url = 'https://www.bulkreefsupply.com'
     quantity_url = 'https://www.bulkreefsupply.com/checkout/cart/add'
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
@@ -128,7 +132,7 @@ class BulkReefSupplySpider(Spider):
     def start_requests(self):
         yield Request(self.base_url, callback=self.parse, headers=self.headers)
         yield Request(self.sitemap_url, callback=self.parse_sitemap, headers=self.headers)
-        yield from self.get_categories_requests()
+        # yield from self.get_categories_requests()  # It is called via function -> retry_invalid_response
 
     @retry_invalid_response
     def parse(self, response):
@@ -184,6 +188,7 @@ class BulkReefSupplySpider(Spider):
                         variant['product_cart_id'] = self.get_product_cart_id(response, sku=variant['product_id'])
 
                         self.append_cart_request(response, item=variant)
+                        yield self.get_next_product_request(response)
                     except Exception as variant_err:
                         self.logger.debug(f"Got Variant Error:\n{variant_err}")
             else:
@@ -191,12 +196,11 @@ class BulkReefSupplySpider(Spider):
                 item['product_cart_id'] = self.get_product_cart_id(response, sku=item['product_id'])
 
                 self.append_cart_request(response, item=item)
+                yield self.get_next_product_request(response)
         except Exception as err:
             self.logger.debug(f"Got Error While Parsing Product {response.url}:\n {err}")
-            a = 0
+            yield self.get_next_product_request(response)
 
-        yield self.get_next_product_request(response)
-        yield self.get_next_product_request(response)
         # return self.get_next_product_request(response)
 
     @retry_invalid_response
@@ -207,7 +211,7 @@ class BulkReefSupplySpider(Spider):
         if response.meta['item']['qty'] < self.max_quantity and item['qty'] != item['lower_limit']:
             yield self.get_add_to_cart_quantity_request(response)
         else:
-            item = response.meta['item']
+            item = deepcopy(response.meta['item'])
             item[get_next_quantity_column()] = item.pop('qty')
             yield self.write_to_csv(item)
             yield self.get_next_product_request(response)
@@ -368,7 +372,7 @@ class BulkReefSupplySpider(Spider):
                            )
 
     def get_next_product_request(self, response):
-        if response.meta['product_requests']:
+        if 'product_requests' in response.meta and response.meta['product_requests']:
             req = response.meta['product_requests'].pop(0)
             req.meta['product_requests'] = response.meta['product_requests']
             return req
@@ -402,3 +406,11 @@ class BulkReefSupplySpider(Spider):
         headers = deepcopy(self.headers)
         headers['user-agent'] = random.choice(user_agents)
         return headers
+
+    def close(spider, reason):
+        end_time = (spider.start_time - datetime.now()).total_seconds()
+
+        spider.logger.info(f"Total Execution Time in Seconds = {end_time}")
+        spider.logger.info(f"Total Execution Time in Minutes = {(end_time // 60)}")
+
+        print("** Spider Closed **")
