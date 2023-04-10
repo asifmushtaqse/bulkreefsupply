@@ -69,7 +69,7 @@ class BulkReefSupplySpider(Spider):
 
     custom_settings = {
         # 'DOWNLOAD_DELAY': 1,
-        'CONCURRENT_REQUESTS': 8,
+        'CONCURRENT_REQUESTS': 32,
 
         'CRAWLERA_ENABLED': True,
 
