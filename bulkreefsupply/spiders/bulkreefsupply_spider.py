@@ -368,7 +368,7 @@ class BulkReefSupplySpider(Spider):
                            dont_filter=True,
                            )
 
-    def get_next_product_request(self, response, pop_limit=4):
+    def get_next_product_request(self, response, pop_limit=8):
         r = []
 
         while pop_limit != 0:
