@@ -142,7 +142,7 @@ def get_last_report_records():
 
 
 def should_create_new_file():
-    str_dates = list({val.replace('quantity_', '') for k, val in get_last_report_records()[0].items()
+    str_dates = list({k.replace('quantity_', '') for k, val in get_last_report_records()[0].items()
                       if val and 'quantity_' in k and k != val})
     if not str_dates:
         return True
