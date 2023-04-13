@@ -5,6 +5,7 @@ import time
 from copy import deepcopy
 from csv import DictReader
 from datetime import datetime
+from html import unescape
 
 from dotenv import dotenv_values
 
@@ -15,6 +16,9 @@ from .static_data import csv_headers, scrapingbee_proxy_url, scrapingbee_premium
 def clean(text):
     if not text:
         return ''
+
+    text = re.sub(u'"', u"\u201C", unescape(text or ''))
+    text = re.sub(u"'", u"\u2018", text)
 
     if text and isinstance(text, str):
         for c in ['\r\n', '\n\r', u'\n', u'\r', u'\t', u'\xa0']:
@@ -136,13 +140,22 @@ def get_last_created_file_no():
 
 def get_last_report_records():
     file_name = get_filename_t().format(f_no=get_last_created_file_no())
-    if not os.path.exists(file_name):
+    return get_csv_records(file_name)
+
+
+def get_csv_records(filepath):
+    if not os.path.exists(filepath):
         return []
-    return [dict(r) for r in DictReader(open(file_name, encoding='utf-8')) if r]
+    return [dict(r) for r in DictReader(open(filepath, encoding='utf-8')) if r]
 
 
 def should_create_new_file():
-    str_dates = list({k.replace('quantity_', '') for k, val in get_last_report_records()[0].items()
+    records = get_last_report_records()
+
+    if not records:
+        return True
+
+    str_dates = list({k.replace('quantity_', '') for k, val in records[0].items()
                       if val and 'quantity_' in k and k != val})
     if not str_dates:
         return True

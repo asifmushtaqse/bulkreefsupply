@@ -13,7 +13,7 @@ from scrapy.spiders import Spider
 from .static_data import req_meta, category_urls, user_agents, crawlera_api_key
 from .utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
-    retry_invalid_response, create_dir
+    retry_invalid_response, create_dir, get_csv_records
 
 
 def get_existing_records():
@@ -21,8 +21,8 @@ def get_existing_records():
             if r and r['product_url'] != 'product_url'}
 
 
-class BulkReefSupplySpider(Spider):
-    name = 'bulkreefsupply_spider'
+class BulkReefSupplyDailySpider(Spider):
+    name = 'bulkreefsupply_daily_spider'
 
     start_time = datetime.now()
 
@@ -126,28 +126,13 @@ class BulkReefSupplySpider(Spider):
 
     def start_requests(self):
         yield Request(self.base_url, callback=self.parse, headers=self.headers)
-        yield Request(self.sitemap_url, callback=self.parse_sitemap, headers=self.headers)
-        # yield from self.get_categories_requests()  # It is called via function -> retry_invalid_response
 
     @retry_invalid_response
     def parse(self, response):
-        # Testing specific URLs
-        # url = "https://www.bulkreefsupply.com/fish-acclimation-bundle-bulk-reef-supply.html"  # 204
-        # # url = "https://www.bulkreefsupply.com/brs-stick-on-thermometer-bulk-reef-supply.html"  # 1005
-        # # url = "https://www.bulkreefsupply.com/jumpguard-feeding-portal-d-d-the-aquarium-solution.html"  # 868
-        # return self.get_product_requests(response, [url])
+        items = get_csv_records('../input/daily_products.csv')
+        products = {r['product_url'].rstrip('/'): dict(r) for r in items if r and r['product_url'] != 'product_url'}
 
-        return self.get_product_requests(response, self.existing_records)
-
-    @retry_invalid_response
-    def parse_sitemap(self, response):
-        return self.get_product_requests(response, get_sitemap_urls(response)[:])
-
-    @retry_invalid_response
-    def parse_listings(self, response):
-        css = '.product-item-photo::attr(href), .product.product-item a::attr(href)'
-        product_urls = [response.urljoin(url) for url in response.css(css).getall()]
-        return self.get_product_requests(response, product_urls)
+        return self.get_product_requests(response, products)
 
     @retry_invalid_response
     def parse_details(self, response):
@@ -296,7 +281,7 @@ class BulkReefSupplySpider(Spider):
         return response.css(f'[data-product-sku="{sku}"]::attr(data-product-id)').get('')
 
     def write_to_csv(self, item):
-        row = ','.join('"{}"'.format(item.get(h, '').replace('"', '')) for h in self.csv_headers) + '\n'
+        row = ','.join('"{}"'.format(str(item.get(h, '')).replace('"', '')) for h in self.csv_headers) + '\n'
         csv_writer = self.get_csv_writer()
         csv_writer.write(row)
         csv_writer.close()
@@ -352,6 +337,7 @@ class BulkReefSupplySpider(Spider):
         meta = deepcopy(req_meta)
         meta['item'] = item
 
+        response.meta.setdefault('product_requests', [])
         response.meta['product_requests'].insert(0, self.get_cart_request(response, item, meta))
 
     def get_cart_request(self, response, item, meta):
@@ -412,9 +398,6 @@ class BulkReefSupplySpider(Spider):
             #     break
 
         return self.get_next_product_request(response)
-
-    def get_categories_requests(self):
-        return [Request(url=url, callback=self.parse_listings, headers=self.get_headers()) for url in category_urls]
 
     def get_headers(self):
         headers = deepcopy(self.headers)
