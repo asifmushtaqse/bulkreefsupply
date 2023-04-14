@@ -42,10 +42,22 @@ python3 -m scrapy crawl bulkreefsupply_spider
 
 OR
 
-Run script at background:
+1.1) Run script at background:
 nohup python3 -m scrapy crawl bulkreefsupply_spider &
 
 Note: "bulkreefsupply_spider" is the name of spider, that scrape data.
+
+
+2) Run Script command for scrape daily products:
+Run script command:
+python3 -m scrapy crawl brs_daily_products_spider
+
+2.1) Run script at background:
+nohup python3 -m scrapy crawl brs_daily_products_spider &
+
+Note: "brs_daily_products_spider" is the name of spider, that scrape data.
+
+
 
 *** Step-3 ***
 Now where will you get the output?

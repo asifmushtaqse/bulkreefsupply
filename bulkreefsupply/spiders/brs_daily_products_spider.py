@@ -21,8 +21,8 @@ def get_existing_records():
             if r and r['product_url'] != 'product_url'}
 
 
-class BrsScrapeProductsDailySpider(Spider):
-    name = 'brs_scrape_products_daily_spider'
+class BrsDailyProductsSpider(Spider):
+    name = 'brs_daily_products_spider'
 
     start_time = datetime.now()
 
