@@ -17,7 +17,7 @@ from .utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_c
 
 
 def get_existing_records():
-    return {r['product_url'].rstrip('/'): dict(r) for r in get_last_report_records()
+    return {r['product_url'].rstrip('/'): dict(r) for r in get_last_report_records(is_scrape_daily=False)
             if r and r['product_url'] != 'product_url'}
 
 

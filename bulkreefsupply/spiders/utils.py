@@ -140,7 +140,7 @@ def get_last_created_file_no(is_scrape_daily):
     return max(files_numbers)
 
 
-def get_last_report_records(is_scrape_daily):
+def get_last_report_records(is_scrape_daily=False):
     file_name = get_filename_t(is_scrape_daily).format(f_no=get_last_created_file_no(is_scrape_daily))
     return get_csv_records(file_name)
 
