@@ -17,12 +17,12 @@ from .utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_c
 
 
 def get_existing_records():
-    return {r['product_url'].rstrip('/'): dict(r) for r in get_last_report_records()
+    return {r['product_url'].rstrip('/'): dict(r) for r in get_last_report_records(is_scrape_daily=True)
             if r and r['product_url'] != 'product_url'}
 
 
-class BulkReefSupplySpecificProductsSpider(Spider):
-    name = 'scrape_specific_products_spider'
+class BrsScrapeProductsDailySpider(Spider):
+    name = 'brs_scrape_products_daily_spider'
 
     start_time = datetime.now()
 
@@ -30,7 +30,7 @@ class BulkReefSupplySpecificProductsSpider(Spider):
     quantity_url = 'https://www.bulkreefsupply.com/checkout/cart/add'
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
     # products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{}.csv'
-    products_filename = get_csv_feed_file_name()
+    products_filename = get_csv_feed_file_name(is_scrape_daily=True)
     logs_dir = "logs"
     logs_file_path = f"{logs_dir}/{name}_logs.log"
 
@@ -45,20 +45,12 @@ class BulkReefSupplySpecificProductsSpider(Spider):
         sitemap_url,
     ]
 
-    # sitemap_urls = [
-    #     sitemap_url,
-    # ]
-    #
-    # sitemap_rules = [
-    #     ('.html', 'parse'),
-    # ]
-
     handle_httpstatus_list = [
         400, 401, 402, 403, 404, 405, 406, 407, 409,
         500, 501, 502, 503, 504, 505, 506, 507, 509,
     ]
 
-    csv_headers = get_csv_headers()
+    csv_headers = get_csv_headers(is_scrape_daily=True)
 
     existing_records = get_existing_records()
 
@@ -129,19 +121,12 @@ class BulkReefSupplySpecificProductsSpider(Spider):
 
     @retry_invalid_response
     def parse(self, response):
-        for item in get_csv_records('../input/bulkreefsupply_products_1.csv'):
-            if not item or item['product_url'] == 'product_url':
-                continue
-            # if item[get_next_quantity_column()] or 'false' in item['in_stock'].lower():
-            if item['quantity_13Apr2023'] or 'false' in item['in_stock'].lower():
-                yield self.write_to_csv(item)
-            else:
-                item['qty'] = self.max_quantity // 2
-                item['lower_limit'] = 0
-                item['upper_limit'] = self.max_quantity
-                self.append_cart_request(response, item=item)
+        items = get_csv_records('../input/daily_products.csv')
+        products = {r['product_url'].rstrip('/'): dict(r) for r in items if r and r['product_url'] != 'product_url'}
 
-        yield from self.get_next_product_request(response)
+        self.existing_records = deepcopy(products)
+
+        return self.get_product_requests(response, products)
 
     @retry_invalid_response
     def parse_details(self, response):

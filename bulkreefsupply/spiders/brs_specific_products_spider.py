@@ -21,8 +21,8 @@ def get_existing_records():
             if r and r['product_url'] != 'product_url'}
 
 
-class BulkReefSupplyDailySpider(Spider):
-    name = 'bulkreefsupply_daily_spider'
+class BulkReefSupplySpecificProductsSpider(Spider):
+    name = 'brs_specific_products_spider'
 
     start_time = datetime.now()
 
@@ -129,10 +129,19 @@ class BulkReefSupplyDailySpider(Spider):
 
     @retry_invalid_response
     def parse(self, response):
-        items = get_csv_records('../input/daily_products.csv')
-        products = {r['product_url'].rstrip('/'): dict(r) for r in items if r and r['product_url'] != 'product_url'}
+        for item in get_csv_records('../input/bulkreefsupply_products_1.csv'):
+            if not item or item['product_url'] == 'product_url':
+                continue
+            # if item['quantity_13Apr2023'] or 'false' in item['in_stock'].lower():
+            if item[get_next_quantity_column()] or 'false' in item['in_stock'].lower():
+                yield self.write_to_csv(item)
+            else:
+                item['qty'] = self.max_quantity // 2
+                item['lower_limit'] = 0
+                item['upper_limit'] = self.max_quantity
+                self.append_cart_request(response, item=item)
 
-        return self.get_product_requests(response, products)
+        yield from self.get_next_product_request(response)
 
     @retry_invalid_response
     def parse_details(self, response):

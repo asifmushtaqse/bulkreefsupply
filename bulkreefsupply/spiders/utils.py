@@ -111,26 +111,28 @@ def get_output_file_dir():
     return config['PRODUCTS_FILE_DIR'].rstrip('/')
 
 
-def get_filename_t():
+def get_filename_t(is_scrape_daily=False):
+    if is_scrape_daily:
+        return get_output_file_dir() + '/brs_daily_products_{f_no}.csv'
     return get_output_file_dir() + '/bulkreefsupply_products_{f_no}.csv'
 
 
-def get_csv_feed_file_name():
-    last_created_file_no = get_last_created_file_no()
+def get_csv_feed_file_name(is_scrape_daily=False):
+    last_created_file_no = get_last_created_file_no(is_scrape_daily)
 
-    if should_create_new_file():
-        return get_filename_t().format(f_no=last_created_file_no + 1)
+    if should_create_new_file(is_scrape_daily):
+        return get_filename_t(is_scrape_daily).format(f_no=last_created_file_no + 1)
 
-    return get_filename_t().format(f_no=last_created_file_no)
+    return get_filename_t(is_scrape_daily).format(f_no=last_created_file_no)
 
 
-def get_report_file_name():
-    last_file_no = get_last_created_file_no()
+def get_report_file_name(is_scrape_daily):
+    last_file_no = get_last_created_file_no(is_scrape_daily)
     return get_filename_t().format(f_no=last_file_no)
 
 
-def get_last_created_file_no():
-    files_numbers = get_output_file_numbers()
+def get_last_created_file_no(is_scrape_daily):
+    files_numbers = get_output_file_numbers(is_scrape_daily)
 
     if not files_numbers:
         return 0
@@ -138,8 +140,8 @@ def get_last_created_file_no():
     return max(files_numbers)
 
 
-def get_last_report_records():
-    file_name = get_filename_t().format(f_no=get_last_created_file_no())
+def get_last_report_records(is_scrape_daily):
+    file_name = get_filename_t(is_scrape_daily).format(f_no=get_last_created_file_no(is_scrape_daily))
     return get_csv_records(file_name)
 
 
@@ -149,8 +151,8 @@ def get_csv_records(filepath):
     return [dict(r) for r in DictReader(open(filepath, encoding='utf-8')) if r]
 
 
-def should_create_new_file():
-    records = get_last_report_records()
+def should_create_new_file(is_scrape_daily):
+    records = get_last_report_records(is_scrape_daily)
 
     if not records:
         return True
@@ -185,7 +187,7 @@ def get_old_date(str_dates):
     return str_dates[0]
 
 
-def get_output_file_numbers():
+def get_output_file_numbers(is_scrape_daily):
     files = []
     output_files_dir = get_output_file_dir()
 
@@ -199,6 +201,9 @@ def get_output_file_numbers():
 
     # return [int(f_no) for f in files if 'bulkreefsupply_products_' in f and
     #         (f_no := f.replace('.csv', '').split('_')[-1].strip()) and f_no.isdigit()]
+    if is_scrape_daily:
+        return [int(get_file_no(f)) for f in files if 'brs_daily_products' in f and get_file_no(f).isdigit()]
+
     return [int(get_file_no(f)) for f in files if 'bulkreefsupply_products_' in f and get_file_no(f).isdigit()]
 
 
@@ -210,12 +215,12 @@ def get_next_quantity_column():
     return f'quantity_{get_today_date()}'
 
 
-def get_csv_headers():
+def get_csv_headers(is_scrape_daily=False):
     header_cols = deepcopy(csv_headers)
 
-    records = get_last_report_records()
+    records = get_last_report_records(is_scrape_daily)
 
-    if not records or should_create_new_file():
+    if not records or should_create_new_file(is_scrape_daily):
         header_cols.append(get_next_quantity_column())
         return header_cols
 
