@@ -13,7 +13,7 @@ from scrapy.spiders import Spider
 from bulkreefsupply.spiders.static_data import req_meta, category_urls, user_agents, crawlera_api_key
 from bulkreefsupply.spiders.utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
-    retry_invalid_response, create_dir
+    retry_invalid_response, create_dir, get_csv_records
 
 
 def get_existing_records():
@@ -123,6 +123,11 @@ class BulkReefSupplyBRSSpider(Spider):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.seen_urls = []
+
+        daily_products = get_csv_records('../input/daily_products.csv')
+        self.seen_urls += [r['product_url'].rstrip('/') for r in daily_products
+                           if r and r['product_url'] != 'product_url']
+
         self.delete_file(self.products_filename)
 
     def start_requests(self):
@@ -205,7 +210,7 @@ class BulkReefSupplyBRSSpider(Spider):
         except Exception as err:
             self.logger.debug(f"Got Error While Parsing Product {response.url}:\n {err}")
 
-        return self.get_next_product_request(response)
+        yield from self.get_next_product_request(response)
 
     @retry_invalid_response
     def parse_quantity(self, response):
@@ -299,7 +304,7 @@ class BulkReefSupplyBRSSpider(Spider):
         return response.css(f'[data-product-sku="{sku}"]::attr(data-product-id)').get('')
 
     def write_to_csv(self, item):
-        row = ','.join('"{}"'.format(item.get(h, '').replace('"', '')) for h in self.csv_headers) + '\n'
+        row = ','.join('"{}"'.format(str(item.get(h, '')).replace('"', '')) for h in self.csv_headers) + '\n'
         csv_writer = self.get_csv_writer()
         csv_writer.write(row)
         csv_writer.close()
