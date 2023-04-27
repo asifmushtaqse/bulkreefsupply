@@ -59,6 +59,7 @@ class BulkReefSupplyBRSSpider(Spider):
     ]
 
     csv_headers = get_csv_headers()
+    quantity_col_report = get_next_quantity_column()
 
     existing_records = get_existing_records()
 
@@ -186,7 +187,8 @@ class BulkReefSupplyBRSSpider(Spider):
                             self.append_cart_request(response, item=variant)
                         else:
                             variant['qty'] = 0
-                            yield variant
+                            variant[self.quantity_col_report] = 0
+                            yield self.write_to_csv(variant)
                     except Exception as variant_err:
                         self.logger.debug(f"Got Variant Error:\n{variant_err}")
             else:
@@ -197,7 +199,8 @@ class BulkReefSupplyBRSSpider(Spider):
                     self.append_cart_request(response, item=item)
                 else:
                     item['qty'] = 0
-                    yield item
+                    item[self.quantity_col_report] = 0
+                    yield self.write_to_csv(item)
 
         except Exception as err:
             self.logger.debug(f"Got Error While Parsing Product {response.url}:\n {err}")
@@ -213,7 +216,7 @@ class BulkReefSupplyBRSSpider(Spider):
             yield self.get_add_to_cart_quantity_request(response)
         else:
             item = deepcopy(response.meta['item'])
-            item[get_next_quantity_column()] = item.pop('qty')
+            item[self.quantity_col_report] = item.pop('qty')
             yield self.write_to_csv(item)
             yield from self.get_next_product_request(response)
 
