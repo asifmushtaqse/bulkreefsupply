@@ -128,6 +128,9 @@ class BulkReefSupplyBRSSpider(Spider):
         self.seen_urls += [r['product_url'].rstrip('/') for r in daily_products
                            if r and r['product_url'] != 'product_url']
 
+        # self.seen_urls += [r['product_url'].rstrip('/') for r in get_csv_records('../output/bulkreefsupply_products_1.csv')
+        #                    if r and r['product_url'] != 'product_url']
+
         self.delete_file(self.products_filename)
 
     def start_requests(self):
