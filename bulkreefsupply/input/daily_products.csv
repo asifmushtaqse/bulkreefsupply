@@ -1,0 +1,988 @@
+product_id,product_name,upc,vendor,sku,price,in_stock,has_variants,product_url,product_cart_id,quantity_11Apr2023
+251888,Blade Smart LED Strip - Coral Glow (39 inch) - Aqua Illumination,,Aqua Illumination,251888,469.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-glow-aqua-illumination.html,15328,40
+251889,Blade Smart LED Strip - Coral Glow (48 inch) - Aqua Illumination,,Aqua Illumination,251889,569.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-glow-aqua-illumination.html,15329,48
+252012,Blade LED Elevated Tank Mount,7.04E+11,Aqua Illumination,252012,21.99,TRUE,FALSE,https://www.bulkreefsupply.com/blade-led-elevated-tank-mount-aqua-illumination.html,15648,183
+251972,Blade LED Mounting Clips,,Aqua Illumination,251972,8.49,TRUE,FALSE,https://www.bulkreefsupply.com/blade-smart-led-mounting-clips-aqua-illumination.html,15613,115
+251885,Blade Smart LED Strip - Coral Glow (12 inch) - Aqua Illumination,,Aqua Illumination,251885,169.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-glow-aqua-illumination.html,15325,32
+251886,Blade Smart LED Strip - Coral Glow (21 inch) - Aqua Illumination,,Aqua Illumination,251886,269.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-glow-aqua-illumination.html,15326,58
+251891,Blade Smart LED Strip - Coral Glow (66 inch) - Aqua Illumination,,Aqua Illumination,251891,769.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-glow-aqua-illumination.html,15331,10
+251887,Blade Smart LED Strip - Coral Glow (30 inch) - Aqua Illumination,,Aqua Illumination,251887,369.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-glow-aqua-illumination.html,15327,29
+251890,Blade Smart LED Strip - Coral Glow (57 inch) - Aqua Illumination,,Aqua Illumination,251890,669.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-glow-aqua-illumination.html,15330,16
+251895,Blade Smart LED Strip - Freshwater (39 inch) - Aqua Illumination,,Aqua Illumination,251895,329.99,FALSE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-freshwater-aqua-illumination.html,15338,0
+251892,Blade Smart LED Strip - Freshwater (12 inch) - Aqua Illumination,,Aqua Illumination,251892,139.99,FALSE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-freshwater-aqua-illumination.html,15335,0
+251881,Blade Smart LED Strip - Coral Grow (39 inch) - Aqua Illumination,,Aqua Illumination,251881,329.99,FALSE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-grow-aqua-illumination.html,15320,0
+251879,Blade Smart LED Strip - Coral Grow (21 inch) - Aqua Illumination,,Aqua Illumination,251879,189.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-grow-aqua-illumination.html,15318,77
+251896,Blade Smart LED Strip - Freshwater (48 inch) - Aqua Illumination,,Aqua Illumination,251896,399.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-freshwater-aqua-illumination.html,15339,10
+251882,Blade Smart LED Strip - Coral Grow (48 inch) - Aqua Illumination,,Aqua Illumination,251882,399.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-grow-aqua-illumination.html,15321,31
+251878,Blade Smart LED Strip - Coral Grow (12 inch) - Aqua Illumination,,Aqua Illumination,251878,139.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-grow-aqua-illumination.html,15317,3
+251880,Blade Smart LED Strip - Coral Grow (30 inch) - Aqua Illumination,,Aqua Illumination,251880,239.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-grow-aqua-illumination.html,15319,71
+251883,Blade Smart LED Strip - Coral Grow (57 inch) - Aqua Illumination,,Aqua Illumination,251883,499.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-grow-aqua-illumination.html,15322,21
+251893,Blade Smart LED Strip - Freshwater (21 inch) - Aqua Illumination,,Aqua Illumination,251893,189.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-freshwater-aqua-illumination.html,15336,20
+251894,Blade Smart LED Strip - Freshwater (30 inch) - Aqua Illumination,,Aqua Illumination,251894,239.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-freshwater-aqua-illumination.html,15337,1
+251897,Blade Smart LED Strip - Freshwater (57 inch) - Aqua Illumination,,Aqua Illumination,251897,499.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-freshwater-aqua-illumination.html,15340,7
+251898,Blade Smart LED Strip - Freshwater (66 inch) - Aqua Illumination,,Aqua Illumination,251898,599.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-freshwater-aqua-illumination.html,15341,3
+250620,Hydra 32 HD LED Freshwater Light - Black Body,6.53E+11,Aqua Illumination,250620,429.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydra-32-hd-led-freshwater-light-black-body-aqua-illumination.html,14099,4
+250621,Hydra 32 HD LED Freshwater Light - White Body,6.53E+11,Aqua Illumination,250621,429.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydra-32-hd-led-freshwater-light-white-body-aqua-illumination.html,14100,9
+231837,Nero 3 Powerhead (2000 GPH),6.53E+11,Aqua Illumination,231837,179.99,TRUE,FALSE,https://www.bulkreefsupply.com/nero-3-powerhead-2000-gph-aqua-illumination.html,11273,188
+212967,Hydra LED Flex Arm,6.53E+11,Aqua Illumination,212967,78.83,TRUE,FALSE,https://www.bulkreefsupply.com/hydra-led-flex-arm-aqua-illumination.html,10690,8
+212457,Hydra 32 HD LED Reef Light - White Body,6.53E+11,Aqua Illumination,212457,429.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydra-32-hd-led-reef-light-white-aqua-illumination.html,9727,44
+212462,Prime 16 LED Fuge Light - Black Body,6.53E+11,Aqua Illumination,212462,249.99,TRUE,FALSE,https://www.bulkreefsupply.com/prime-16-led-fuge-light-black-body-aqua-illumination.html,9788,39
+212454,Hydra 64 HD LED Reef Light - Black Body,6.53E+11,Aqua Illumination,212454,719.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydra-64-hd-led-reef-light-black-aqua-illumination.html,9724,13
+212460,Prime 16 LED Freshwater Light - Black Body,6.53E+11,Aqua Illumination,212460,249.99,TRUE,FALSE,https://www.bulkreefsupply.com/prime-16-hd-led-freshwater-light-black-body-aqua-illumination.html,9786,4
+212463,Prime 16 SOL LED Light - White Body,6.53E+11,Aqua Illumination,212463,224.99,TRUE,FALSE,https://www.bulkreefsupply.com/prime-16-sol-led-light-white-body-aqua-illumination.html,9789,10
+212455,Hydra 64 HD LED Reef Light - White Body,6.53E+11,Aqua Illumination,212455,719.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydra-64-hd-led-reef-light-white-aqua-illumination.html,9725,17
+212456,Hydra 32 HD LED Reef Light - Black Body,6.53E+11,Aqua Illumination,212456,429.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydra-32-hd-led-reef-light-black-aqua-illumination.html,9726,173
+212461,Prime 16 LED Freshwater Light - White Body,6.53E+11,Aqua Illumination,212461,249.99,TRUE,FALSE,https://www.bulkreefsupply.com/prime-16-hd-led-freshwater-light-white-body-aqua-illumination.html,9787,6
+212459,Prime 16 HD LED Reef Light - White Body,6.53E+11,Aqua Illumination,212459,249.99,TRUE,FALSE,https://www.bulkreefsupply.com/prime-16-hd-led-reef-light-white-body-aqua-illumination.html,9785,30
+212458,Prime 16 HD LED Reef Light - Black Body,6.53E+11,Aqua Illumination,212458,249.99,TRUE,FALSE,https://www.bulkreefsupply.com/prime-16-hd-led-reef-light-black-body-aqua-illumination.html,9784,498
+211848,Nero 5 Powerhead (3000 GPH),6.53E+11,Aqua Illumination,211848,239.99,TRUE,FALSE,https://www.bulkreefsupply.com/nero-5-powerhead-3000-gph-aqua-illumination.html,8084,26
+211347,EXT Single Module Hanging Kit (Black),6.53E+11,Aqua Illumination,211347,42.45,TRUE,FALSE,https://www.bulkreefsupply.com/ext-single-module-hanging-kit-black-aqua-illumination.html,6956,24
+210578,HMS Rail 37.5 - Aqua Illumination",,Aqua Illumination,210578,72.77,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-hms-track-aqua-illumination.html,6009,9
+210576,HMS Hydra 64 Bracket,6.53E+11,Aqua Illumination,210576,15.02,TRUE,FALSE,https://www.bulkreefsupply.com/hms-hydra-64-bracket-aqua-illumination.html,6007,49
+210577,HMS Rail 25.5 - Aqua Illumination",,Aqua Illumination,210577,54.57,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-hms-track-aqua-illumination.html,6008,20
+210581,HMS Rail 73.5 - Aqua Illumination",,Aqua Illumination,210581,115.21,FALSE,TRUE,https://www.bulkreefsupply.com/multi-light-hms-track-aqua-illumination.html,6012,0
+210580,HMS Rail 61.5 - Aqua Illumination",,Aqua Illumination,210580,103.08,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-hms-track-aqua-illumination.html,6011,3
+210579,HMS Rail 49.5 - Aqua Illumination",,Aqua Illumination,210579,90.96,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-hms-track-aqua-illumination.html,6010,11
+210573,HMS Single Light Mount Kit,6.53E+11,Aqua Illumination,210573,90.96,TRUE,FALSE,https://www.bulkreefsupply.com/hms-single-light-mount-kit-aqua-illumination.html,6004,272
+210575,HMS Hydra 32 Bracket,6.53E+11,Aqua Illumination,210575,15.02,TRUE,FALSE,https://www.bulkreefsupply.com/hms-hydra-32-bracket-aqua-illumination.html,6006,23
+210582,HMS Hanging Kit,6.53E+11,Aqua Illumination,210582,42.45,TRUE,FALSE,https://www.bulkreefsupply.com/hms-hanging-kit-aqua-illumination.html,6014,17
+210574,HMS Multi Light Mount Kit,6.53E+11,Aqua Illumination,210574,90.96,TRUE,FALSE,https://www.bulkreefsupply.com/hms-multi-light-mount-kit-aqua-illumination.html,6005,14
+210029,Prime Flex Arm - 18 Inch,19962474538,Aqua Illumination,210029,36.37,TRUE,FALSE,https://www.bulkreefsupply.com/prime-flex-arm-18-inch-aqua-illumination.html,5539,211
+210028,Prime Flex Arm - 12 Inch,19962474736,Aqua Illumination,210028,30.31,TRUE,FALSE,https://www.bulkreefsupply.com/prime-flex-arm-12-inch-aqua-illumination.html,5538,265
+209009,Prime LED Hanging Kit - Black,19962011245,Aqua Illumination,209009,28.88,TRUE,FALSE,https://www.bulkreefsupply.com/ai-prime-hanging-kit-black.html,4172,31
+209007,Prime LED Tank Mount - Black,19962011047,Aqua Illumination,209007,40.43,TRUE,FALSE,https://www.bulkreefsupply.com/ai-prime-tank-mount-black.html,4170,261
+251884,Blade Smart LED Strip - Coral Grow (66 inch) - Aqua Illumination,,Aqua Illumination,251884,599.99,TRUE,TRUE,https://www.bulkreefsupply.com/blade-smart-led-strip-coral-grow-aqua-illumination.html,15323,35
+212905,Chemi-Pure Elite - 6.5 oz - Boyd Enterprises,,Boyd Enterprises,212905,9.34,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-pure-elite-boyd-enterprises.html,10515,93
+213829,4oz Vita-Chem Marine - Boyd Enterprises,,Boyd Enterprises,213829,10.62,TRUE,TRUE,https://www.bulkreefsupply.com/vita-chem-marine-boyd-enterprises.html,10833,85
+212904,Chemi-Pure Elite - 3.1 oz - Boyd Enterprises,,Boyd Enterprises,212904,7.22,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-pure-elite-boyd-enterprises.html,10514,76
+212907,Chemi-Pure Elite - 46 oz - Boyd Enterprises,,Boyd Enterprises,212907,53.97,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-pure-elite-boyd-enterprises.html,10517,31
+212906,Chemi-Pure Elite - 11.74 oz - Boyd Enterprises,,Boyd Enterprises,212906,14.87,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-pure-elite-boyd-enterprises.html,10516,206
+212911,Chemi-Pure - 10 oz - Boyd Enterprises,,Boyd Enterprises,212911,9.34,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-pure-boyd-enterprises.html,10520,8
+212914,Chemi-Pure Blue - 5.5 oz - Boyd Enterprises,,Boyd Enterprises,212914,10.62,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-pure-blue-boyd-enterprises.html,10510,163
+212915,Chemi-Pure Blue - 11 oz - Boyd Enterprises,,Boyd Enterprises,212915,17.84,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-pure-blue-boyd-enterprises.html,10511,37
+212919,Chemi-Pure Blue - Nano Single - Boyd Enterprises,,Boyd Enterprises,212919,2.54,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-pure-blue-boyd-enterprises.html,10508,44
+212920,Chemi-Pure Blue - Nano 5 Pack - Boyd Enterprises,,Boyd Enterprises,212920,11.47,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-pure-blue-boyd-enterprises.html,10509,103
+212916,Chemi-Pure Blue - 44 oz - Boyd Enterprises,,Boyd Enterprises,212916,59.49,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-pure-blue-boyd-enterprises.html,10512,26
+210057,Chemi Clean Red Cyano Remover - Liquid,7.20E+11,Boyd Enterprises,210057,22.94,TRUE,FALSE,https://www.bulkreefsupply.com/chemi-clean-2-oz-liquid-boyd-enterprises.html,5329,106
+210055,Chemi Clean 2 gram Powder - Boyd Enterprises,,Boyd Enterprises,210055,14.87,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-clean-red-cyano-remover-boyd-enterprises.html,5327,217
+210056,Chemi Clean 6 gram Powder - Boyd Enterprises,,Boyd Enterprises,210056,26.77,TRUE,TRUE,https://www.bulkreefsupply.com/chemi-clean-red-cyano-remover-boyd-enterprises.html,5328,165
+252077,Kamoer X1/Hydros Dosing Pump Bracket,8.10E+11,Coralvue,252077,11.99,TRUE,FALSE,https://www.bulkreefsupply.com/kamoer-x1-hydros-dosing-pump-bracket-coralvue.html,15930,11
+251992,2 Hydros Flow Sensor - CoralVue",,Coralvue,251992,119.99,TRUE,TRUE,https://www.bulkreefsupply.com/hydros-flow-sensor-coralvue.html,15820,20
+251991,1 1/2 Hydros Flow Sensor - CoralVue",,Coralvue,251991,99.99,TRUE,TRUE,https://www.bulkreefsupply.com/hydros-flow-sensor-coralvue.html,15819,30
+251989,3/4 Hydros Flow Sensor - CoralVue",,Coralvue,251989,58.99,TRUE,TRUE,https://www.bulkreefsupply.com/hydros-flow-sensor-coralvue.html,15817,40
+251990,1 Hydros Flow Sensor - CoralVue",,Coralvue,251990,61.99,TRUE,TRUE,https://www.bulkreefsupply.com/hydros-flow-sensor-coralvue.html,15818,47
+251956,Hydros Control XD Aquarium Controller,8.50E+11,Coralvue,251956,199.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-control-xd-aquarium-controller-coralvue.html,15541,36
+250769,Hydros WaveEngine V2 Standard Multi Pump Controller,8.50E+11,Coralvue,250769,299.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-waveengine-v2-standard-multi-pump-controller-coralvue.html,14150,33
+250747,Hydros Control XP8 Energy Bar Aquarium Controller,8.50E+11,Coralvue,250747,279.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-control-xp8-coralvue.html,14064,24
+250748,Hydros Control X3 Aquarium Controller PRO Pack,8.50E+11,Coralvue,250748,539.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-control-x3-aquarium-controller-pro-pack-coralvue.html,14065,10
+250749,Hydros Control X4 Aquarium Controller PRO Pack,8.50E+11,Coralvue,250749,659.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-control-x4-aquarium-controller-pro-pack-coralvue.html,14066,30
+250746,Hydros Command Bus Terminator,8.50E+11,Coralvue,250746,4.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-command-bus-terminator-coralvue.html,14067,54
+250635,Hydros WaveEngine LE Dual Pump Controller,8.50E+11,Coralvue,250635,199.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-waveengine-le-controller-coralvue.html,14040,21
+250189,Hydros WaveEngine Direct Drive Tunze 0-10V Pump Adapter,8.50E+11,Coralvue,250189,14.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-waveengine-direct-drive-tunze-0-10v-pump-adapter-coralvue.html,12906,3
+250188,Hydros WaveEngine Direct Drive IceCap Gyre Pump Adapter,8.50E+11,Coralvue,250188,11.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-waveengine-direct-drive-pump-adapter-coralvue.html,12904,62
+250190,Hydros WaveEngine Direct Drive Maxspect XF330/350 Series Pump Adapter,8.50E+11,Coralvue,250190,11.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-waveengine-direct-drive-maxspect-xf330-350-series-pump-adapter-coralvue.html,12907,21
+250192,Hydros WaveEngine Direct Drive Maxspect Gyre 130/230 Pump Adapter,8.50E+11,Coralvue,250192,11.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-waveengine-direct-drive-maxspect-gyre-130-230-pump-adapter-coralvue.html,12909,9
+250193,Hydros WaveEngine APX Link Third Party Controller Cable,8.50E+11,Coralvue,250193,12.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-waveengine-apx-link-third-party-controller-cable-coralvue.html,12910,17
+250191,Hydros WaveEngine Direct Drive Reef Octopus Varios/Octo Pulse Pump Adapter,8.50E+11,Coralvue,250191,11.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-waveengine-direct-drive-reef-octopus-varios-octo-pulse-pump-adapter-coralvue.html,12908,31
+250196,Hydros WaveEngine Direct Drive Maxspect XF150/250/280 Series Pump Adapter,8.50E+11,Coralvue,250196,11.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-waveengine-direct-drive-maxspect-xf150-250-280-series-pump-adapter-coralvue.html,12905,11
+250187,Hydros WaveEngine 0-10V Quad Cable,8.50E+11,Coralvue,250187,12.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-waveengine-0-10v-quad-cable-coralvue.html,12903,33
+232537,HYDROS Dual Inline TDS Sensor,4.71E+12,Coralvue,232537,49.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-dual-inline-tds-sensor-coralvue.html,12565,5
+232300,Hydros Automatic Fish Feeder,8.50E+11,Coralvue,232300,34.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-automatic-fish-feeder-coralvue.html,12301,86
+231881,Hydros Control 2 Starter Pack - Aquarium Controller System,8.50E+11,Coralvue,231881,199.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-control-2-starter-pack-aquarium-controller-system-hydros.html,11788,12
+231898,Hydros DC Solenoid Water Valve -  Coralvue,4.71E+12,Coralvue,231898,24.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-dc-solenoid-water-valve-hydros.html,11806,19
+231891,Hydros Rope Leak Sensor Extension -  Coralvue,8.50E+11,Coralvue,231891,29.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-rope-leak-sensor-extension-hydros.html,11799,21
+231889,Hydros Drive Port 9ft Extension Cable,8.50E+11,Coralvue,231889,9.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-drive-port-9ft-extension-cable-hydros.html,11797,15
+231892,Hydros 3.5mm Adapter Cable,8.50E+11,Coralvue,231892,9.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-3-5mm-adapter-cable-hydros.html,11800,13
+231883,Hydros Control 4 Starter Pack - Aquarium Controller System,8.50E+11,Coralvue,231883,449.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-control-4-starter-pack-aquarium-controller-system-hydros.html,11789,47
+231900,Hydros DC CO2 Solenoid Valve -  Coralvue,4.71E+12,Coralvue,231900,29.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-dc-co2-solenoid-valve-coralvue.html,11839,6
+231897,Hydros Temp Sensor,4.71E+12,Coralvue,231897,24.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-temp-sensor-hydros.html,11805,10
+231896,Hydros Leak Sensor,4.71E+12,Coralvue,231896,39.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-leak-sensor-hydros.html,11804,2
+231894,Hydros Water Level Sensor,4.71E+12,Coralvue,231894,39.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-liquid-level-sensor-hydros.html,11802,85
+231893,Hydros ATO Kit,4.71E+12,Coralvue,231893,79.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-ato-kit-hydros.html,11801,69
+231895,Hydros Skimmer Sensor -  Coralvue,4.71E+12,Coralvue,231895,39.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-skimmer-sensor-hydros.html,11803,28
+231890,Hydros Sense Port 9ft Extension Cable,8.50E+11,Coralvue,231890,9.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-sense-port-9ft-extension-cable-hydros.html,11798,15
+231888,Hydros System Command Bus Cable,8.50E+11,Coralvue,231888,9.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-system-command-bus-cable-hydros.html,11796,36
+231886,Hydros Slim Temperature Probe,8.50E+11,Coralvue,231886,24.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-temperature-probe-hydros.html,11794,7
+231887,Hydros Rope Leak Sensor Kit,8.50E+11,Coralvue,231887,39.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-rope-leak-sensor-kit-hydros.html,11795,15
+231884,Hydros Smart Wifi Plug,8.50E+11,Coralvue,231884,23.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-smart-wifi-plug-hydros.html,11793,3
+231885,Hydros Wifi Power Strip,8.50E+11,Coralvue,231885,39.99,TRUE,FALSE,https://www.bulkreefsupply.com/hydros-wifi-power-strip-hydros.html,11792,16
+209786,Inline Probe Holder - Compression Fitting,,Coralvue,209786,25.99,TRUE,FALSE,https://www.bulkreefsupply.com/probe-holder.html,5080,4
+251838,Jumpguard MULTICO Cut Out Accessory Set - D-D The Aquarium Solution,5.06E+12,D-D The Aquarium Solution Ltd,251838,11.99,TRUE,FALSE,https://www.bulkreefsupply.com/jumpguard-multico-cut-out-accessory-set-d-d-the-aquarium-solution.html,15286,182
+251837,Jumpguard Replacement Mesh (39 x 79") - D-D The Aquarium Solution",5.06E+12,D-D The Aquarium Solution Ltd,251837,14.99,TRUE,FALSE,https://www.bulkreefsupply.com/jumpguard-replacement-mesh-39-x-79-d-d-the-aquarium-solution.html,15287,10
+251834,Jumpguard DIY Aquarium Cover (70.8 x 35.4 inches) - D-D The Aquarium Solution,5.06E+12,D-D The Aquarium Solution Ltd,251834,79,TRUE,FALSE,https://www.bulkreefsupply.com/jumpguard-diy-aquarium-cover-70-8-x-35-4-inches-d-d-the-aquarium-solution.html,15283,55
+251832,Jumpguard Feeding Portal - D-D The Aquarium Solution,5.06E+12,D-D The Aquarium Solution Ltd,251832,5,TRUE,FALSE,https://www.bulkreefsupply.com/jumpguard-feeding-portal-d-d-the-aquarium-solution.html,15281,792
+251836,Jumpguard FLEXICO Cut Out Accessory Set - D-D The Aquarium Solution,5.06E+12,D-D The Aquarium Solution Ltd,251836,12.99,TRUE,FALSE,https://www.bulkreefsupply.com/jumpguard-flexico-cut-out-accessory-set-d-d-the-aquarium-solution.html,15285,177
+251173,Radion G5 to G6 Upgrade Kit - XR30 Blue,7.04E+11,EcoTech Marine,251173,399.99,TRUE,FALSE,https://www.bulkreefsupply.com/radion-g5-to-g6-upgrade-kit-xr30-blue-ecotech-marine.html,14475,15
+251170,Radion G5 to G6 Upgrade Kit - XR15 Pro,7.04E+11,EcoTech Marine,251170,199.99,TRUE,FALSE,https://www.bulkreefsupply.com/radion-g5-to-g6-upgrade-kit-xr15-pro-ecotech-marine.html,14473,3
+251172,Radion G5 to G6 Upgrade Kit - XR30 Pro,7.04E+11,EcoTech Marine,251172,399.99,TRUE,FALSE,https://www.bulkreefsupply.com/radion-g5-to-g6-upgrade-kit-xr30-pro-ecotech-marine.html,14476,19
+251128,Radion XR15 G6 Blue LED Light Fixture,7.04E+11,EcoTech Marine,251128,499.99,TRUE,FALSE,https://www.bulkreefsupply.com/radion-xr15-g6-blue-led-light-fixture-ecotech-marine.html,14461,101
+251130,Radion XR30 G6 Blue LED Light Fixture,7.04E+11,EcoTech Marine,251130,949.99,TRUE,FALSE,https://www.bulkreefsupply.com/radion-xr30-g6-blue-led-light-fixture-ecotech-marine.html,14458,87
+251171,Radion G5 to G6 Upgrade Kit - XR15 Blue,7.04E+11,EcoTech Marine,251171,199.99,TRUE,FALSE,https://www.bulkreefsupply.com/radion-g5-to-g6-upgrade-kit-xr15-blue-ecotech-marine.html,14474,3
+251127,Radion XR15 G6 Pro LED Light Fixture,7.04E+11,EcoTech Marine,251127,499.99,TRUE,FALSE,https://www.bulkreefsupply.com/radion-xr15-g6-pro-led-light-fixture-ecotech-marine.html,14460,141
+251129,Radion XR30 G6 Pro LED Light Fixture,7.04E+11,EcoTech Marine,251129,949.99,TRUE,FALSE,https://www.bulkreefsupply.com/radion-xr30-g6-pro-led-light-fixture-ecotech-marine.html,14459,170
+250368,Radion XR15 G5 Freshwater LED Light Fixture,6.53E+11,EcoTech Marine,250368,499.99,TRUE,FALSE,https://www.bulkreefsupply.com/radion-xr15-g5-freshwater-led-light-fixture-ecotech-marine.html,13166,1
+250367,Radion XR30 G5 Freshwater LED Light Fixture,6.53E+11,EcoTech Marine,250367,949.99,TRUE,FALSE,https://www.bulkreefsupply.com/radion-xr30-g5-freshwater-led-light-fixture-ecotech-marine.html,13165,14
+212943,RMS XR30 G5 Adapter Kit,6.53E+11,EcoTech Marine,212943,11.55,TRUE,FALSE,https://www.bulkreefsupply.com/rms-xr30-g5-adapter-kit-ecotech-marine.html,11918,64
+212942,RMS XR15 G5 Adapter Kit,6.53E+11,EcoTech Marine,212942,11.55,TRUE,FALSE,https://www.bulkreefsupply.com/rms-xr15-g5-adapter-kit-ecotech-marine.html,11917,33
+212947B,RMS XR30 G4 Tank Mount with G5 Adapter Bundle (DISCONTINUED),,EcoTech Marine,212947B,103.95,FALSE,FALSE,https://www.bulkreefsupply.com/rms-xr30-g4-tank-mount-with-g5-adapter-bundle-ecotech-marine-bundle.html,11254,0
+212381B,XR30w G4 Pro Radion with FREE Diffuser Bundle (DISCONTINUED),,EcoTech Marine,212381B,672.01,FALSE,FALSE,https://www.bulkreefsupply.com/xr30w-g4-pro-radion-with-diffuser-bundle-ecotech-marine-bundle.html,11197,0
+212382B,XR15w G4 Pro Radion with FREE Diffuser Bundle (DISCONTINUED),,EcoTech Marine,212382B,335.99,FALSE,FALSE,https://www.bulkreefsupply.com/xr15w-g4-pro-radion-with-diffuser-bundle-ecotech-marine-bundle.html,11198,0
+213228,Vectra L2 - Mobius Ready DC Return Pump (3100 GPH),6.53E+11,EcoTech Marine,213228,549.99,TRUE,FALSE,https://www.bulkreefsupply.com/vectra-l2-mobius-ready-dc-return-pump-3100-gph-ecotech-marine.html,10711,50
+213224,VorTech MP40mQD - Mobius Ready QuietDrive Propeller Pump,6.53E+11,EcoTech Marine,213224,429.99,TRUE,FALSE,https://www.bulkreefsupply.com/vortech-mp40qd-mobius-ready-quietdrive-propeller-pump-ecotech-marine.html,10707,482
+213225,VorTech MP60mQD - Mobius Ready QuietDrive Propeller Pump,6.53E+11,EcoTech Marine,213225,819.99,TRUE,FALSE,https://www.bulkreefsupply.com/vortech-mp60qd-mobius-ready-quietdrive-propeller-pump-ecotech-marine.html,10708,75
+213227,Vectra M2 - Mobius Ready DC Return Pump (2000 GPH),6.53E+11,EcoTech Marine,213227,449.99,TRUE,FALSE,https://www.bulkreefsupply.com/vectra-m2-mobius-ready-dc-return-pump-2000-gph-ecotech-marine.html,10710,70
+213226,Vectra S2 - Mobius Ready DC Return Pump (1400 GPH),6.53E+11,EcoTech Marine,213226,349.99,TRUE,FALSE,https://www.bulkreefsupply.com/vectra-s2-mobius-ready-dc-return-pump-1400-gph-ecotech-marine.html,10709,66
+213223,VorTech MP10mQD - Mobius Ready QuietDrive Propeller Pump,6.53E+11,EcoTech Marine,213223,349.99,TRUE,FALSE,https://www.bulkreefsupply.com/vortech-mp10qd-mobius-ready-quietdrive-propeller-pump-ecotech-marine.html,10706,207
+213118,Radion XR15 G5 & G6 Diffuser Upgrade,6.53E+11,EcoTech Marine,213118,26.57,TRUE,FALSE,https://www.bulkreefsupply.com/radion-xr15-g5-g6-diffuser-upgrade-ecotech-marine.html,10695,80
+213119,Radion XR30 G5 & G6 Diffuser Upgrade,6.53E+11,EcoTech Marine,213119,38.12,TRUE,FALSE,https://www.bulkreefsupply.com/radion-xr30-g5-g6-diffuser-upgrade-ecotech-marine.html,10696,52
+212871,RMS XR15 G5 & G6 Tank Mount System,6.53E+11,EcoTech Marine,212871,107.93,TRUE,FALSE,https://www.bulkreefsupply.com/rms-xr15-g5-g6-tank-mount-system-ecotech-marine.html,10432,257
+212872,RMS XR30 G5 & G6 Tank Mount System,6.53E+11,EcoTech Marine,212872,120.06,TRUE,FALSE,https://www.bulkreefsupply.com/rms-xr30-g5-g6-tank-mount-system-ecotech-marine.html,10433,74
+212874,RMS Slide for Radion XR30 G5 & G6,6.53E+11,EcoTech Marine,212874,24.26,TRUE,FALSE,https://www.bulkreefsupply.com/rms-slide-for-radion-xr30-g5-g6-ecotech-marine.html,10435,185
+212873,RMS Slide for Radion XR15 G5 & G6,6.53E+11,EcoTech Marine,212873,24.26,TRUE,FALSE,https://www.bulkreefsupply.com/rms-slide-for-radion-xr15-g5-g6-ecotech-marine.html,10434,116
+212638,Versa Peristaltic Dosing Pump,6.53E+11,EcoTech Marine,212638,199.99,TRUE,FALSE,https://www.bulkreefsupply.com/versa-peristaltic-dosing-pump-ecotech-marine.html,10202,173
+212641,Vectra S2 Barb & Screen Kit,6.53E+11,EcoTech Marine,212641,11.54,TRUE,FALSE,https://www.bulkreefsupply.com/vectra-s2-barb-screen-kit-ecotech-marine.html,10130,16
+212640,Versa Pump 4 Pack with Base Station,6.53E+11,EcoTech Marine,212640,799.99,TRUE,FALSE,https://www.bulkreefsupply.com/versa-4-pack-with-base-station-ecotech-marine.html,10235,23
+212643,Vectra L2 Barb & Screen Kit,6.53E+11,EcoTech Marine,212643,11.54,TRUE,FALSE,https://www.bulkreefsupply.com/vectra-l2-barb-screen-kit-ecotech-marine.html,10132,16
+212642,Vectra M2 Barb & Screen Kit,6.53E+11,EcoTech Marine,212642,11.54,TRUE,FALSE,https://www.bulkreefsupply.com/vectra-m2-barb-screen-kit-ecotech-marine.html,10131,29
+210709,Power Supply Bracket,6.53E+11,EcoTech Marine,210709,19.64,TRUE,FALSE,https://www.bulkreefsupply.com/power-supply-bracket-ecotech-marine.html,6067,400
+210097,Vectra Battery Backup Booster,6.53E+11,EcoTech Marine,210097,35.17,FALSE,FALSE,https://www.bulkreefsupply.com/vectra-battery-backup-booster-ecotech-marine.html,5605,0
+210026,Vectra S1/M1 Barb & Screen Kit,6.53E+11,EcoTech Marine,210026,11.55,TRUE,FALSE,https://www.bulkreefsupply.com/vectra-m1-barb-screen-kit-ecotech-marine.html,5393,1
+210027,Vectra L1 Barb & Screen Kit,6.53E+11,EcoTech Marine,210027,13.86,TRUE,FALSE,https://www.bulkreefsupply.com/vectra-l1-barb-screen-kit-ecotech-marine.html,5394,8
+208938,Multi-Light RMS Track 20.5 - EcoTech Marine",,EcoTech Marine,208938,48.51,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-rms-track-ecotech-marine.html,4137,21
+209477,VorTech Driver Mount,19962011948,EcoTech Marine,209477,14.55,TRUE,FALSE,https://www.bulkreefsupply.com/vortech-driver-mount-ecotech-marine.html,4734,339
+209478,XR717 RMS Hanging Kit,19962011641,EcoTech Marine,209478,47.3,TRUE,FALSE,https://www.bulkreefsupply.com/xr717-rms-hanging-kit-ecotech-marine.html,4736,184
+208941,Multi-Light RMS Track 50.5 - EcoTech Marine",,EcoTech Marine,208941,84.89,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-rms-track-ecotech-marine.html,4140,37
+300284,VorTech MP60wQD Driver,19962010743,EcoTech Marine,300284,121.28,TRUE,FALSE,https://www.bulkreefsupply.com/mp60wqd-upgrade-driver.html,4153,3
+208944,Multi-Light RMS Track 80.5 - Ecotech Marine",,EcoTech Marine,208944,139.47,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-rms-track-ecotech-marine.html,4143,17
+208946,Multi-Light RMS Arm Kit,7.48E+11,EcoTech Marine,208946,151.59,TRUE,FALSE,https://www.bulkreefsupply.com/multi-light-rms-arm-kit.html,4145,112
+208942,Multi-Light RMS Track 60.5 - EcoTech Marine",,EcoTech Marine,208942,103.08,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-rms-track-ecotech-marine.html,4141,48
+208945,Multi-Light RMS Track 90.5 - EcoTech Marine",,EcoTech Marine,208945,156.44,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-rms-track-ecotech-marine.html,4144,21
+208943,Multi-Light RMS Track 70.5 - EcoTech Marine",,EcoTech Marine,208943,120.06,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-rms-track-ecotech-marine.html,4142,77
+208939,Multi-Light RMS Track 30.5 - EcoTech Marine",,EcoTech Marine,208939,60.64,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-rms-track-ecotech-marine.html,4138,45
+208940,Multi-Light RMS Track 40.5 - EcoTech Marine",,EcoTech Marine,208940,72.77,TRUE,TRUE,https://www.bulkreefsupply.com/multi-light-rms-track-ecotech-marine.html,4139,77
+300289,VorTech MP40wQD Wet Side Assembly,6.89E+11,EcoTech Marine,300289,90.96,TRUE,FALSE,https://www.bulkreefsupply.com/vortech-mp40wqd-wet-side-assembly-ecotech-marine.html,4201,141
+300286,VorTech MP10wQD Driver (RETIRED),19962010545,EcoTech Marine,300286,49.08,TRUE,FALSE,https://www.bulkreefsupply.com/mp10wqd-upgrade-driver.html,4151,31
+300285,VorTech MP40wQD Driver,19962010644,EcoTech Marine,300285,90.96,TRUE,FALSE,https://www.bulkreefsupply.com/mp40wqd-upgrade-driver.html,4152,26
+208222,Black Frag Plugs - 50 pack - Ecotech Marine,,EcoTech Marine,208222,31.99,TRUE,TRUE,https://www.bulkreefsupply.com/ecotech-marine-coral-frag-plugs.html,13104,2
+208093,ReefLink Wireless Controller,7.14E+11,EcoTech Marine,208093,199.99,TRUE,FALSE,https://www.bulkreefsupply.com/reeflink-wireless-controller-ecotech-marine.html,3054,23
+300244,75 mL Coral Glue - Ecotech Marine,,EcoTech Marine,300244,31.5,TRUE,TRUE,https://www.bulkreefsupply.com/ecotech-coral-glue.html,1633,22
+300245,295 mL Coral Glue - Ecotech Marine,,EcoTech Marine,300245,78.75,TRUE,TRUE,https://www.bulkreefsupply.com/ecotech-coral-glue.html,1632,9
+300247,Radion LED Hanging Kit,7.95E+11,EcoTech Marine,300247,54.57,TRUE,FALSE,https://www.bulkreefsupply.com/ecotech-marine-radion-led-hanging-kit-1-f1a706591e15f81814fac5184b29e7b5.html,1675,117
+300243,VorTech MP60w Foam Guards (2 Pack),7.36E+11,EcoTech Marine,300243,18.19,TRUE,FALSE,https://www.bulkreefsupply.com/vortech-mp60w-foam-guards-2-pack.html,1631,5
+300242,VorTech MP60wQD Wet Side Assembly,7.36E+11,EcoTech Marine,300242,181.91,TRUE,FALSE,https://www.bulkreefsupply.com/vortech-mp60w-wet-side-assembly.html,1630,43
+300233,VorTech Battery Back-up,6.89E+11,EcoTech Marine,300233,200.1,TRUE,FALSE,https://www.bulkreefsupply.com/vortech-battery-back-up.html,1319,143
+300236,VorTech MP20/MP40w Foam Guards (3 Pack),7.36E+11,EcoTech Marine,300236,14.55,TRUE,FALSE,https://www.bulkreefsupply.com/vortech-mp20-mp40w-foam-guards-3-pack.html,1323,27
+300241,VorTech MP10 Foam Guards (3 Pack),6.89E+11,EcoTech Marine,300241,14.55,TRUE,FALSE,https://www.bulkreefsupply.com/vortech-mp10-foam-guards-3-pack.html,1322,81
+300235,VorTech MP10QD Wet Side Assembly,6.89E+11,EcoTech Marine,300235,75.19,TRUE,FALSE,https://www.bulkreefsupply.com/vortech-mp10-wet-side-assembly.html,1321,159
+251520,Marine Monitor (pH/Salinity/Temperature),,Hanna Instruments,251520,249,TRUE,FALSE,https://www.bulkreefsupply.com/marine-monitor-ph-salinity-temperature-hanna-instruments.html,15296,39
+251162,HI784-25 Marine Ammonia Reagents (25 Pack),,Hanna Instruments,251162,20,TRUE,FALSE,https://www.bulkreefsupply.com/hi784-25-marine-ammonia-reagents-25-pack-hanna-instruments.html,14630,72
+251164,HALO2 Wireless pH Tester for Field,,Hanna Instruments,251164,135,TRUE,FALSE,https://www.bulkreefsupply.com/halo2-wireless-ph-tester-for-field-hanna-instruments.html,14884,8
+251163,HI784-11 Marine Ammonia Calibration Check Set for HI784,,Hanna Instruments,251163,22,TRUE,FALSE,https://www.bulkreefsupply.com/hi784-11-marine-ammonia-calibration-check-set-for-hi784-hanna-instruments.html,14631,17
+251158,Marine Magnesium Colorimeter HI783,,Hanna Instruments,251158,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/marine-magnesium-colorimeter-hi783-hanna-instruments.html,14521,370
+251160,HI783-11 Marine Magnesium Calibration Check Set for HI783,,Hanna Instruments,251160,22,TRUE,FALSE,https://www.bulkreefsupply.com/hi783-11-marine-magnesium-calibration-check-set-for-hi783-hanna-instruments.html,14642,26
+251161,Marine Ammonia Colorimeter HI784,,Hanna Instruments,251161,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/marine-ammonia-colorimeter-hi784-hanna-instruments.html,14628,114
+251159,HI783-25 Marine Magnesium Reagents (25 Pack),,Hanna Instruments,251159,17,TRUE,FALSE,https://www.bulkreefsupply.com/hi783-25-marine-magnesium-reagents-25-pack-hanna-instruments.html,14522,39
+232508,HI782-25 Nitrate HR Checker Reagents - Hanna,,Hanna Instruments,232508,16,TRUE,FALSE,https://www.bulkreefsupply.com/hi782-25-nitrate-hr-checker-reagents-hanna.html,13087,341
+232509,Nitrate High Range Colorimeter HI782 - Marine Water,,Hanna Instruments,232509,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/nitrate-high-range-colorimeter-hi782-marine-water-hanna-instruments.html,12563,241
+213316,HI781-11 Nitrate Calibration Check Set for HI781,,Hanna Instruments,213316,20,TRUE,FALSE,https://www.bulkreefsupply.com/hi781-11-nitrate-calibration-check-set-for-hi781-hanna-instruments.html,11905,12
+213318,HI780-25 Marine pH Checker HC Reagents (100 Tests),,Hanna Instruments,213318,16,TRUE,FALSE,https://www.bulkreefsupply.com/hi780-25-marine-ph-checker-hc-reagents-100-tests-hanna-instruments.html,11472,63
+213319,HI780-11 Marine pH Calibration Check Set,,Hanna Instruments,213319,18,TRUE,FALSE,https://www.bulkreefsupply.com/hi780-11-marine-ph-calibration-check-set.html,11473,1
+213317,Marine pH Colorimeter HI780 Hanna Checker,,Hanna Instruments,213317,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/marine-ph-colorimeter-hi780-hanna-checker-hanna-instruments.html,11471,107
+212120B,25-Pack HI70024P 35ppt Salinity Calibration Sachet,,Hanna Instruments,212120B,27,TRUE,FALSE,https://www.bulkreefsupply.com/25-pack-hi70024p-35ppt-salinity-calibration-sachet-hanna-instruments-bundle.html,11179,50
+208654B,10-Pack 1mL Graduated Syringe Set HI740142P (DISCONTINUED),,Hanna Instruments,208654B,16,TRUE,FALSE,https://www.bulkreefsupply.com/hi740142p-graduated-syringe-set-10-1-ml-bundle.html,11055,0
+212442,HIREEF2 Professional Reef Test Kit,,Hanna Instruments,212442,292,TRUE,FALSE,https://www.bulkreefsupply.com/hireef2-professional-reef-test-kit-hanna-instruments.html,9816,34
+212046,HI774-11 ULR Phosphate Standards for HI774 Hanna Checker,,Hanna Instruments,212046,15,TRUE,FALSE,https://www.bulkreefsupply.com/hi774-11-ulr-phosphate-standards-for-hi774-hanna-checker-hanna-instruments.html,9338,71
+212079,HI731339P Graduated Pipette,,Hanna Instruments,212079,25,TRUE,FALSE,https://www.bulkreefsupply.com/hi731339p-graduated-pipette-hanna-instruments.html,9026,11
+212077,Single 1mL Graduated Syringe HI740142P,,Hanna Instruments,212077,1.9,TRUE,FALSE,https://www.bulkreefsupply.com/single-1ml-graduated-syringe-set-hi740142p-hanna-instruments.html,9059,223
+212045,HI774-25 Phosphate ULR Reagents - Marine Water,,Hanna Instruments,212045,13,TRUE,FALSE,https://www.bulkreefsupply.com/hi774-25-phosphate-ppm-ulr-reagents-marine-water.html,8789,999
+212119,Single HI70024P 35ppt Salinity Calibration Sachet,,Hanna Instruments,212119,1.16,TRUE,FALSE,https://www.bulkreefsupply.com/single-hi70024p-35ppt-salinity-calibration-sachet-hanna-instruments.html,8982,999
+212118,HI98319 Marine Salinity Tester,,Hanna Instruments,212118,79.99,TRUE,FALSE,https://www.bulkreefsupply.com/hi98319-marine-salinity-tester-hanna-instruments.html,8981,92
+212044,Phosphate Ultra Low Range PPM Colorimeter HI774 Hanna Checker - Marine Water,,Hanna Instruments,212044,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/phosphate-ppm-ultra-low-range-colorimeter-hi774-hanna-checker-marine-water.html,8788,297
+211770,230mL Deionized Water HI70436M - Hanna Instruments,,Hanna Instruments,211770,14,TRUE,TRUE,https://www.bulkreefsupply.com/deionized-water-hanna-instruments.html,8197,45
+208649,3.78 L Deionized Water HI70436 - Hanna Instruments,,Hanna Instruments,208649,25,TRUE,TRUE,https://www.bulkreefsupply.com/deionized-water-hanna-instruments.html,3751,12
+211582,HI702-11 Copper Standards for HI702 Hanna Checker,,Hanna Instruments,211582,25,TRUE,FALSE,https://www.bulkreefsupply.com/hi702-11-copper-standards-for-hi702-hanna-checker-hanna-instruments.html,7611,4
+211580,Copper High Range Colorimeter HI702 Hanna Checker,,Hanna Instruments,211580,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/copper-high-range-colorimeter-hi702-hanna-checker-hanna-instruments.html,7609,99
+211581,HI702-25 Copper High Range Reagents (25 Pack),,Hanna Instruments,211581,13,TRUE,FALSE,https://www.bulkreefsupply.com/hi702-25-copper-high-range-reagents-25-pack-hanna-instruments.html,7610,307
+211429,HI98509 Checktemp 1 Digital Thermometer,,Hanna Instruments,211429,48,TRUE,FALSE,https://www.bulkreefsupply.com/hi98509-checktemp-1-digital-thermometer-hanna-instruments.html,7216,54
+211265,HI98108 Waterproof pHep+ Pocket Tester,,Hanna Instruments,211265,64,TRUE,FALSE,https://www.bulkreefsupply.com/hi98108-waterproof-phep-checker-hanna.html,6918,33
+211107,Low Range pH/Conductivity/TDS Combo Pen HI98129 - Hanna,7.99E+11,Hanna Instruments,211107,186,TRUE,FALSE,https://www.bulkreefsupply.com/low-range-ph-conductivity-tds-combo-pen-hi98129-hanna.html,6650,14
+210900,HI772-26 Alkalinity Checker Reagents - Hanna,,Hanna Instruments,210900,13,TRUE,FALSE,https://www.bulkreefsupply.com/hi772-26-alkalinity-checker-reagents-hanna.html,6656,999
+210981,Cuvettes & Caps (2-Pack) - Hanna,,Hanna Instruments,210981,13,TRUE,FALSE,https://www.bulkreefsupply.com/2-pack-testing-cuvettes-caps-hanna.html,6455,282
+210330,HI772-11 Alkalinity (DKH) Calibration Check Set,,Hanna Instruments,210330,25,TRUE,FALSE,https://www.bulkreefsupply.com/hi772-11-alkalinity-dkh-calibration-check-set.html,5785,10
+210018,Alkalinity DKH Colorimeter HI772 Hanna Checker - Marine Water,6.96E+11,Hanna Instruments,210018,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/alkalinity-dkh-colorimeter-hi772-hanna-checker-marine-water.html,5274,444
+208656,Cuvette Cleaning Solution HI93703-50 230 mL,,Hanna Instruments,208656,31,TRUE,FALSE,https://www.bulkreefsupply.com/hi93703-50-cuvette-cleaning-solution-230-ml.html,3758,7
+208650,Hanna General Purpose Cleaning Solution HI7061L 500 mL,,Hanna Instruments,208650,17,TRUE,FALSE,https://www.bulkreefsupply.com/hi7061l-general-purpose-cleaning-solution-500-ml.html,3752,13
+208653,Hanna Glass Cuvette Set HI731321 (4 Piece),,Hanna Instruments,208653,26,TRUE,FALSE,https://www.bulkreefsupply.com/hi731321-glass-cuvette-set-4pcs.html,3755,14
+208637,HI758-11 Marine Calcium Calibration Check Set for HI758 Checker,,Hanna Instruments,208637,20,TRUE,FALSE,https://www.bulkreefsupply.com/hi758-11-calcium-standards-for-hi758-hanna-checker-marine-water.html,3739,28
+208640,HI764-11 Nitrite Calibration Check Set for HI764 Checker,,Hanna Instruments,208640,15,TRUE,FALSE,https://www.bulkreefsupply.com/hi764-11-nitrite-ulr-standards-for-hi764-hanna-checker-marine-water.html,3742,6
+208647,HI775-25 Alkalinity Reagents - Fresh Water,,Hanna Instruments,208647,25,TRUE,FALSE,https://www.bulkreefsupply.com/hi775-25-alkalinity-fresh-water-reagents.html,3749,7
+208632,HI736-25 Phosphorus ULR Reagents - Marine Water,,Hanna Instruments,208632,13,TRUE,FALSE,https://www.bulkreefsupply.com/hi736-25-phosphorous-ulr-reagents-25-marine.html,3734,280
+208619,HI717-25 Phosphate HR Reagents,,Hanna Instruments,208619,11,TRUE,FALSE,https://www.bulkreefsupply.com/hi717-25-phosphate-hr-reagents-40.html,3721,13
+208610,HI713-11 Phosphate Calibration Check Set for HI713 Checker,,Hanna Instruments,208610,16,TRUE,FALSE,https://www.bulkreefsupply.com/hi713-11-phosphate-lr-standards-for-hi713-hanna-checker-fresh-marine-water.html,3712,22
+208605,HI707-25 Nitrite LR reagents - Fresh water,,Hanna Instruments,208605,16,TRUE,FALSE,https://www.bulkreefsupply.com/hi707-25-nitrite-lr-reagents-fresh-water.html,3707,2
+208603,Nitrite Low Range Colorimeter HI707 Hanna Checker - Fresh Water,,Hanna Instruments,208603,70.95,TRUE,FALSE,https://www.bulkreefsupply.com/nitrite-low-range-colorimeter-hi707-hanna-checker-hc-fresh-water.html,3705,4
+208648,Hanna Electrode Storage Solution HI70300M 230 mL,,Hanna Instruments,208648,25,TRUE,FALSE,https://www.bulkreefsupply.com/hi70300m-electrode-storage-solution-230-ml.html,3750,15
+208652,HI731318 Cuvette Cleaning Cloths,,Hanna Instruments,208652,17,TRUE,FALSE,https://www.bulkreefsupply.com/hi731318-cuvette-cleaning-cloths.html,3754,9
+208645,Alkalinity Colorimeter HI775 Hanna Checker - Fresh Water,,Hanna Instruments,208645,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/alkalinity-colorimeter-hi775-hanna-checker-hc-fresh-water.html,3747,1
+208641,HI764-25 Nitrite ULR Reagents for HI764 Checker - Marine Water,,Hanna Instruments,208641,13,TRUE,FALSE,https://www.bulkreefsupply.com/hi764-25-nitrite-ulr-reagents-for-hi764-checker-marine-water.html,3743,110
+208639,Nitrite Ultra Low Range Colorimeter HI764 Hanna Checker - Marine Water,,Hanna Instruments,208639,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/nitrite-ultra-low-range-colorimeter-hi764-hanna-checker-hc-marine-water.html,3741,23
+208631,HI736-11 Phosphorus Calibration Check Set for HI736 Checker,,Hanna Instruments,208631,15,TRUE,FALSE,https://www.bulkreefsupply.com/hi736-11-phosphorus-standards.html,3733,3
+208629,HI733-25 Ammonia HR Reagents - Fresh Water,,Hanna Instruments,208629,21.6,TRUE,FALSE,https://www.bulkreefsupply.com/hi733-25-ammonia-hr-reagents-freshwater.html,3731,1
+208636,HI755-11 Marine Alkalinity Calibration Check Set for HI755 Checker,,Hanna Instruments,208636,15,TRUE,FALSE,https://www.bulkreefsupply.com/hi755-11-alkalinity-standards-for-hi755-hanna-checker-marine-water.html,3738,18
+208630,Phosphorus Ultra Low Range Colorimeter HI736 Hanna Checker - Marine Water,,Hanna Instruments,208630,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/phosphorus-ultra-low-range-colorimeter-hi736-hanna-checker-hc-marine-water.html,3732,57
+208622,HI718-25 Iodine Reagents - Fresh water,,Hanna Instruments,208622,11,TRUE,FALSE,https://www.bulkreefsupply.com/hi718-25-iodine-reagents-25-fresh-water.html,3724,5
+208618,HI717-11 Phosphate HR Calibration Check Set,,Hanna Instruments,208618,16,TRUE,FALSE,https://www.bulkreefsupply.com/hi717-11-phosphate-hr-standards.html,3720,2
+208613,HI715-25 Ammonia MR reagents - Fresh Water,,Hanna Instruments,208613,25,TRUE,FALSE,https://www.bulkreefsupply.com/hi715-25-ammonia-mr-reagents-fresh-water.html,3715,8
+208172,Ammonia Low Range Colorimeter HI700 Hanna Checker - Fresh Water,,Hanna Instruments,208172,70.95,TRUE,FALSE,https://www.bulkreefsupply.com/ammonia-low-range-colorimeter-hi700-hanna-checker-hc-fresh-water.html,3145,25
+208173,Total Chlorine Ultra Low Range Colorimeter HI761 Hanna Checker - Fresh Water,,Hanna Instruments,208173,70.95,TRUE,FALSE,https://www.bulkreefsupply.com/total-chlorine-ultra-low-range-colorimeter-hi761-hanna-checker-hc-fresh-water.html,3146,11
+208234,HI761-25 Total Chlorine ULR Reagents - Fresh Water,,Hanna Instruments,208234,9,TRUE,FALSE,https://www.bulkreefsupply.com/hi761-total-chlorine-ultra-low-reagents-25-pack.html,3219,14
+208236,HI711-25 Total Chlorine Reagents - Marine & Fresh Water,,Hanna Instruments,208236,11,TRUE,FALSE,https://www.bulkreefsupply.com/reagents-for-hanna-total-chlorine-checker.html,3221,8
+208175,Total Chlorine Colorimeter HI711 Hanna Checker - Fresh Water,,Hanna Instruments,208175,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/total-chlorine-colorimeter-hi711-hanna-checker-hc-fresh-water.html,3148,4
+206222,HI758-26 Calcium Checker Reagents - Marine Water,,Hanna Instruments,206222,27,TRUE,FALSE,https://www.bulkreefsupply.com/reagents-for-hanna-calcium-checker.html,1617,492
+206201,Alkalinity PPM Colorimeter HI755 Hanna Checker - Marine Water,7.99E+11,Hanna Instruments,206201,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/alkalinity-colorimeter-hi755-hanna-checker-hc-marine-water.html,1459,27
+206220,HI713-25 Phosphate Checker Reagents - Marine & Fresh Water,,Hanna Instruments,206220,13,TRUE,FALSE,https://www.bulkreefsupply.com/reagents-for-hanna-phosphate-checker.html,1336,385
+206200,Phosphate Low Range Colorimeter HI713 Hanna Checker - Fresh & Marine Water,5.04E+12,Hanna Instruments,206200,63.95,TRUE,FALSE,https://www.bulkreefsupply.com/phosphate-low-range-colorimeter-hi713-hanna-checker-hc-fresh-marine-water.html,1182,144
+252078,UV Sterilizer Replacement Lamp (27w) - IceCap,,IceCap,252078,20,TRUE,TRUE,https://www.bulkreefsupply.com/uv-sterilizer-replacement-lamp-icecap.html,15928,16
+252076,ATO EZ Auto Top Off System,6.97E+12,IceCap,252076,89.99,TRUE,FALSE,https://www.bulkreefsupply.com/ato-ez-auto-top-off-system-icecap.html,15933,45
+252079,UV Sterilizer Replacement Lamp (40w) - IceCap,,IceCap,252079,30,TRUE,TRUE,https://www.bulkreefsupply.com/uv-sterilizer-replacement-lamp-icecap.html,15927,12
+252080,UV Sterilizer Replacement Lamp (90w) - IceCap,,IceCap,252080,40,TRUE,TRUE,https://www.bulkreefsupply.com/uv-sterilizer-replacement-lamp-icecap.html,15926,8
+251950,Pro External Algae Turf Scrubber - Medium (24 Watt),6.97E+12,IceCap,251950,359.99,TRUE,FALSE,https://www.bulkreefsupply.com/pro-external-algae-turf-scrubber-medium-24-watt-icecap.html,15602,38
+251951,Pro External Algae Turf Scrubber - Large (30 Watt),6.97E+12,IceCap,251951,629.99,TRUE,FALSE,https://www.bulkreefsupply.com/pro-external-algae-turf-scrubber-large-30-watt-icecap.html,15603,20
+251949,Pro External Algae Turf Scrubber - Small (12 Watt),6.97E+12,IceCap,251949,264.99,TRUE,FALSE,https://www.bulkreefsupply.com/pro-external-algae-turf-scrubber-small-12-watt-icecap.html,15562,25
+250393,Gravity ATO,6.97E+12,IceCap,250393,17.99,TRUE,FALSE,https://www.bulkreefsupply.com/gravity-ato-icecap.html,14063,10
+250398,Algae Scrubber PRO - Large (36 Watt),6.97E+12,IceCap,250398,629.99,TRUE,FALSE,https://www.bulkreefsupply.com/algae-scrubber-pro-large-36-watt-icecap.html,14059,7
+250632,4K Gyre Flow Pump (4000 GPH) with WaveEngine LE Controller,6.97E+12,IceCap,250632,329.99,TRUE,FALSE,https://www.bulkreefsupply.com/4k-gyre-flow-pump-4000-gph-with-waveengine-le-controller-icecap.html,14039,38
+250629,40 Watt High Output UV Sterilizer,6.97E+12,IceCap,250629,279.99,TRUE,FALSE,https://www.bulkreefsupply.com/40-watt-high-output-uv-sterilizer-icecap.html,14077,1
+250630,90 Watt High Output UV Sterilizer,6.97E+12,IceCap,250630,449.99,TRUE,FALSE,https://www.bulkreefsupply.com/90-watt-high-output-uv-sterilizer-icecap.html,14078,11
+250628,27 Watt High Output UV Sterilizer,6.97E+12,IceCap,250628,249.99,TRUE,FALSE,https://www.bulkreefsupply.com/27-watt-high-output-uv-sterilizer-icecap.html,14076,24
+250399,Algae Scrubber PRO - Hang On (6 Watt),6.97E+12,IceCap,250399,189.99,TRUE,FALSE,https://www.bulkreefsupply.com/algae-scrubber-pro-hang-on-6-watt-icecap.html,14060,9
+250395,Dual Magnetic Heater Mount,,IceCap,250395,49.99,TRUE,FALSE,https://www.bulkreefsupply.com/dual-magnetic-heater-mount-icecap.html,14061,32
+250397,Algae Scrubber PRO - Medium (29 Watt),6.97E+12,IceCap,250397,359.99,TRUE,FALSE,https://www.bulkreefsupply.com/algae-scrubber-pro-medium-29-watt-icecap.html,14058,2
+250396,Algae Scrubber PRO - Small (14 Watt),6.97E+12,IceCap,250396,264.99,TRUE,FALSE,https://www.bulkreefsupply.com/algae-scrubber-pro-small-14-watt-icecap.html,14057,13
+250631,2K Gyre Flow Pump (2000 GPH) with WaveEngine LE Controller,6.97E+12,IceCap,250631,299.99,TRUE,FALSE,https://www.bulkreefsupply.com/2k-gyre-flow-pump-2000-gph-with-waveengine-le-controller-icecap.html,14038,19
+232723,Algae Scrubber - Large (120 Watt),6.92E+12,IceCap,232723,571.99,TRUE,FALSE,https://www.bulkreefsupply.com/icecap-algae-scrubber-large-120-watt.html,12920,4
+232721,Algae Scrubber - Small (20 Watt),6.92E+12,IceCap,232721,247.49,TRUE,FALSE,https://www.bulkreefsupply.com/icecap-algae-scrubber-small-20-watt.html,12918,10
+232719,Medium (23 Hole) PRO Magnetic Frag Rack - IceCap,,IceCap,232719,63.99,TRUE,TRUE,https://www.bulkreefsupply.com/pro-magnetic-frag-racks-icecap.html,12912,3
+232718,Small (8 Hole) PRO Magnetic Frag Rack - IceCap,,IceCap,232718,34.99,TRUE,TRUE,https://www.bulkreefsupply.com/pro-magnetic-frag-racks-icecap.html,12911,22
+232722,Algae Scrubber - Medium (60 Watt),6.92E+12,IceCap,232722,318.99,TRUE,FALSE,https://www.bulkreefsupply.com/icecap-algae-scrubber-medium-60-watt.html,12919,26
+250198,Salinity/Temperature Digital Pocket Tester,8.51E+11,IceCap,250198,74.99,TRUE,FALSE,https://www.bulkreefsupply.com/icecap-salinity-temperature-digital-pocket-tester.html,12915,8
+214003,4 inch Felt Filter Sock With Plastic Ring,6.80E+11,IceCap,214003,5.97,TRUE,FALSE,https://www.bulkreefsupply.com/4-inch-felt-filter-sock-with-plastic-ring-icecap.html,11906,144
+213995,1.5 Liter Liquid Dosing Container - IceCap,,IceCap,213995,39.99,TRUE,TRUE,https://www.bulkreefsupply.com/liquid-dosing-containers-icecap.html,11899,92
+213998,Small (7 x 6) Adjustable Skimmer Stand - IceCap,,IceCap,213998,28.99,TRUE,TRUE,https://www.bulkreefsupply.com/adjustable-skimmer-stand-icecap.html,11908,27
+213997,5 Liter Liquid Dosing Container - IceCap,,IceCap,213997,63.99,TRUE,TRUE,https://www.bulkreefsupply.com/liquid-dosing-containers-icecap.html,11901,13
+213999,Medium (9 x 7) Adjustable Skimmer Stand - IceCap,,IceCap,213999,31.99,TRUE,TRUE,https://www.bulkreefsupply.com/adjustable-skimmer-stand-icecap.html,11909,18
+214000,Large (11 x 9) Adjustable Skimmer Stand - IceCap,,IceCap,214000,34.99,TRUE,TRUE,https://www.bulkreefsupply.com/adjustable-skimmer-stand-icecap.html,11910,43
+214004,7 Inch Felt Filter Sock With Plastic Ring,,IceCap,214004,9.09,TRUE,FALSE,https://www.bulkreefsupply.com/7-inch-felt-filter-sock-with-plastic-ring-icecap.html,11907,119
+213996,2.5 Liter Liquid Dosing Container - IceCap,,IceCap,213996,51.99,TRUE,TRUE,https://www.bulkreefsupply.com/liquid-dosing-containers-icecap.html,11900,75
+231946,Battery Backup v3,8.51E+11,IceCap,231946,169.99,TRUE,FALSE,https://www.bulkreefsupply.com/battery-backup-v3-icecap.html,11852,50
+213967,Reef Sump 48XL,6.92E+12,IceCap,213967,829.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-sump-48xl-icecap.html,10959,48
+213964,Reef Sump 30,6.92E+12,IceCap,213964,389.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-sump-30-icecap.html,10956,18
+213965,Reef Sump 36,6.92E+12,IceCap,213965,539.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-sump-36-icecap.html,10957,47
+213867,2.2lbs Color Changing CO2 Absorbent Media,6.97E+12,IceCap,213867,12,TRUE,FALSE,https://www.bulkreefsupply.com/2-2lbs-color-changing-co2-absorbent-media-icecap.html,10832,83
+213966,Reef Sump 36XL,6.92E+12,IceCap,213966,574.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-sump-36xl-icecap.html,10958,45
+213962,Reef Sump 15,6.92E+12,IceCap,213962,230.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-sump-15-icecap.html,10954,60
+213866,Large CO2 Scrubber (4.4lb Capacity),6.97E+12,IceCap,213866,142.99,TRUE,FALSE,https://www.bulkreefsupply.com/large-co2-scrubber-4-4lb-capacity-icecap.html,10831,22
+213864,Small CO2 Scrubber (1.1lb Capacity),6.97E+12,IceCap,213864,76.99,TRUE,FALSE,https://www.bulkreefsupply.com/small-co2-scrubber-1-1lb-capacity-icecap.html,10829,6
+213865,Medium CO2 Scrubber (2.2lb Capacity),6.97E+12,IceCap,213865,98.99,TRUE,FALSE,https://www.bulkreefsupply.com/medium-co2-scrubber-2-2lb-capacity-icecap.html,10830,77
+212674,2K Gyre Flow Pump Only (2000 GPH),6.97E+12,IceCap,212674,119.99,TRUE,FALSE,https://www.bulkreefsupply.com/2k-gyre-flow-pump-only-2000-gph-icecap.html,10623,23
+212676,4K Gyre Flow Pump Only (4000 GPH),6.97E+12,IceCap,212676,159.99,TRUE,FALSE,https://www.bulkreefsupply.com/4k-gyre-flow-pump-only-4000-gph-icecap.html,10624,19
+212574,KM-150 Magnetic Kalkwasser Mixing Reactor,6.92E+12,IceCap,212574,381.14,TRUE,FALSE,https://www.bulkreefsupply.com/km-150-magnetic-kalkwasser-mixing-reactor-icecap.html,9953,12
+212573,KM-120 Magnetic Kalkwasser Mixing Reactor,6.92E+12,IceCap,212573,311.84,TRUE,FALSE,https://www.bulkreefsupply.com/km-120-magnetic-kalkwasser-mixing-reactor-icecap.html,9952,16
+212575,KM-200 Magnetic Kalkwasser Mixing Reactor,6.92E+12,IceCap,212575,438.89,TRUE,FALSE,https://www.bulkreefsupply.com/km-200-magnetic-kalkwasser-mixing-reactor-icecap.html,9954,9
+212137,Clip-On Photo Lens Kit,8.51E+11,IceCap,212137,34.99,TRUE,FALSE,https://www.bulkreefsupply.com/clip-on-photo-lens-kit-icecap.html,9246,114
+211934,Medium Fish Trap - IceCap,,IceCap,211934,51.99,TRUE,TRUE,https://www.bulkreefsupply.com/fish-trap-icecap.html,8732,27
+211933,Small Fish Trap - IceCap,,IceCap,211933,39.99,TRUE,TRUE,https://www.bulkreefsupply.com/fish-trap-icecap.html,8731,5
+211935,Large Fish Trap - IceCap,,IceCap,211935,63.99,TRUE,TRUE,https://www.bulkreefsupply.com/fish-trap-icecap.html,8733,20
+211936,15 Coral Feeder - IceCap",,IceCap,211936,8.99,TRUE,TRUE,https://www.bulkreefsupply.com/coral-feeder-icecap.html,8726,25
+211937,19 Coral Feeder - IceCap",,IceCap,211937,9.99,TRUE,TRUE,https://www.bulkreefsupply.com/coral-feeder-icecap.html,8727,58
+211939,39 Coral Feeder - IceCap",,IceCap,211939,11.99,TRUE,TRUE,https://www.bulkreefsupply.com/coral-feeder-icecap.html,8729,5
+210453,Y Module Cable,,IceCap,210453,15.59,TRUE,FALSE,https://www.bulkreefsupply.com/y-module-cable-icecap.html,6018,45
+209416,Alternate Gyre Mode Modified Cable for Gyre Interface Module,8.51E+11,IceCap,209416,15.59,TRUE,FALSE,https://www.bulkreefsupply.com/alternate-gyre-mode-modified-cable-for-gyre-interface-module-icecap.html,4718,27
+251865,15 Nuvo Fusion SafeScreen Mesh Screen Lid,6.94E+12,Innovative Marine,251865,29.99,TRUE,FALSE,https://www.bulkreefsupply.com/15-nuvo-fusion-safescreen-mesh-screen-lid-innovative-marine.html,15852,15
+251864,15 NUVO Fusion AIO Cube Aquarium,6.94E+12,Innovative Marine,251864,99.99,TRUE,FALSE,https://www.bulkreefsupply.com/15-nuvo-fusion-aio-cube-aquarium-innovative-marine.html,15508,107
+251876,CustomCradle Pro Tube Holder,6.94E+12,Innovative Marine,251876,29.99,TRUE,FALSE,https://www.bulkreefsupply.com/customcradle-pro-tube-holder-innovative-marine.html,15515,36
+251875,CustomCradle Pro Probe Holder,6.94E+12,Innovative Marine,251875,29.99,TRUE,FALSE,https://www.bulkreefsupply.com/customcradle-pro-probe-holder-innovative-marine.html,15514,19
+251870,MightyJet XL DC Return Pump (2656 GPH),6.94E+12,Innovative Marine,251870,274.99,TRUE,FALSE,https://www.bulkreefsupply.com/mightyjet-xl-dc-return-pump-2656-gph-innovative-marine.html,15513,9
+251869,MightyJet Mini Universal AIO DC Return Pump (266 GPH),6.94E+12,Innovative Marine,251869,99.99,TRUE,FALSE,https://www.bulkreefsupply.com/mightyjet-mini-universal-aio-dc-return-pump-266-gph-innovative-marine.html,15512,19
+251868,30 Watt Mini Helio PTC Smart Heater,6.94E+12,Innovative Marine,251868,69.99,TRUE,FALSE,https://www.bulkreefsupply.com/30-watt-mini-helio-ptc-smart-heater-innovative-marine.html,15511,53
+251867,High Tide Water Risers for Fusion Pro 2 Desktop Aquariums,6.94E+12,Innovative Marine,251867,9.99,TRUE,FALSE,https://www.bulkreefsupply.com/high-tide-water-risers-for-fusion-pro-2-desktop-aquariums-innovative-marine.html,15510,1
+251866,NUVO Dual Flow Return Nozzle,6.94E+12,Innovative Marine,251866,19.99,TRUE,FALSE,https://www.bulkreefsupply.com/nuvo-dual-flow-return-nozzle-innovative-marine.html,15509,12
+251299B,40L NUVO Fusion PRO 2 AIO Aquarium with White APS Stand,,Innovative Marine,251299B,1089.99,TRUE,FALSE,https://www.bulkreefsupply.com/40l-nuvo-fusion-pro-2-aio-aquarium-with-white-aps-stand-innovative-marine.html,14812,16
+251298B,40L NUVO Fusion PRO 2 AIO Aquarium with Black APS Stand,,Innovative Marine,251298B,1089.99,TRUE,FALSE,https://www.bulkreefsupply.com/40l-nuvo-fusion-pro-2-aio-aquarium-with-black-aps-stand-innovative-marine.html,14811,16
+250957B,SR-120 NUVO PRO 2 AIO Aquarium with White APS Stand  (DISCONTINUED),,Innovative Marine,250957B,3544.99,FALSE,FALSE,https://www.bulkreefsupply.com/sr-120-nuvo-pro-2-aio-aquarium-with-white-aps-stand-innovative-marine.html,14372,0
+250954B,SR-80 NUVO PRO 2 AIO Aquarium with Black APS Stand,,Innovative Marine,250954B,1811.99,FALSE,FALSE,https://www.bulkreefsupply.com/sr-80-nuvo-pro-2-aio-aquarium-with-black-aps-stand-innovative-marine.html,14367,0
+250955B,SR-80 NUVO PRO 2 AIO Aquarium with White APS Stand,,Innovative Marine,250955B,1811.99,FALSE,FALSE,https://www.bulkreefsupply.com/sr-80-nuvo-pro-2-aio-aquarium-with-white-aps-stand-innovative-marine.html,14368,0
+250950B,SR-60 NUVO PRO 2 AIO Aquarium with Black APS Stand,,Innovative Marine,250950B,1540.19,FALSE,FALSE,https://www.bulkreefsupply.com/sr-60-nuvo-pro-2-aio-aquarium-with-black-aps-stand-innovative-marine.html,14369,0
+250951B,SR-60 NUVO PRO 2 AIO Aquarium with White APS Stand,,Innovative Marine,250951B,1540.19,FALSE,FALSE,https://www.bulkreefsupply.com/sr-60-nuvo-pro-2-aio-aquarium-with-white-aps-stand-innovative-marine.html,14370,0
+250953B,40 NUVO Mini Fusion Lagoon PRO 2 AIO Aquarium with White APS Stand,,Innovative Marine,250953B,1089.99,TRUE,FALSE,https://www.bulkreefsupply.com/40-nuvo-mini-fusion-lagoon-pro-2-aio-aquarium-with-white-aps-stand-innovative-marine.html,14365,16
+250952B,40 NUVO Mini Fusion Lagoon PRO 2 AIO Aquarium with Black APS Stand,,Innovative Marine,250952B,1089.99,TRUE,FALSE,https://www.bulkreefsupply.com/40-nuvo-mini-fusion-lagoon-pro-2-aio-aquarium-with-black-aps-stand-innovative-marine.html,14364,17
+250596,20 NUVO Fusion PRO 2 AIO Aquarium Bundle,,Innovative Marine,250596,399.99,TRUE,FALSE,https://www.bulkreefsupply.com/20-nuvo-fusion-pro-2-aio-aquarium-bundle-innovative-marine.html,14029,3
+250597,14 NUVO Fusion Peninsula PRO 2 AIO Aquarium Bundle,,Innovative Marine,250597,333.99,TRUE,FALSE,https://www.bulkreefsupply.com/14-nuvo-fusion-peninsula-pro-2-aio-aquarium-bundle-innovative-marine.html,14030,9
+250737B,Nuvo EXT 112 Aquarium with Black APS Stand (DISCONTINUED),,Innovative Marine,250737B,2979.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-112-aquarium-with-black-aps-stand-innovative-marine.html,14023,0
+250772B,50 NUVO Fusion Lagoon PRO 2 AIO Aquarium with Black APS Stand,,Innovative Marine,250772B,1282.99,FALSE,FALSE,https://www.bulkreefsupply.com/50-nuvo-fusion-lagoon-pro-2-aio-aquarium-with-black-aps-stand-innovative-marine.html,14155,0
+250773B,50 NUVO Fusion Lagoon PRO 2 AIO Aquarium with White APS Stand,,Innovative Marine,250773B,1282.99,FALSE,FALSE,https://www.bulkreefsupply.com/50-nuvo-fusion-lagoon-pro-2-aio-aquarium-with-white-aps-stand-innovative-marine.html,14156,0
+250735B,Nuvo EXT 150 Aquarium with White APS Stand (DISCONTINUED),,Innovative Marine,250735B,3314.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-150-aquarium-with-white-aps-stand-innovative-marine.html,14020,0
+250731B,Nuvo  INT 170 Aquarium with White APS Stand (DISCONTINUED),,Innovative Marine,250731B,4452.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-int-170-aquarium-with-white-aps-stand-innovative-marine.html,14017,0
+250599,25 NUVO Fusion Lagoon PRO 2 AIO Aquarium Bundle,,Innovative Marine,250599,466.99,TRUE,FALSE,https://www.bulkreefsupply.com/25-nuvo-fusion-lagoon-pro-2-aio-aquarium-bundle-innovative-marine.html,14032,16
+250738B,30L Nuvo Fusion PRO 2 AIO Aquarium with Black APS Stand (DISCONTINUED),,Innovative Marine,250738B,1023.99,FALSE,FALSE,https://www.bulkreefsupply.com/30l-nuvo-fusion-pro-2-aio-aquarium-with-black-aps-stand-innovative-marine.html,14024,0
+250595,10 NUVO Fusion PRO 2 AIO Aquarium Bundle,,Innovative Marine,250595,266.99,TRUE,FALSE,https://www.bulkreefsupply.com/10-nuvo-fusion-pro-2-aio-aquarium-bundle-innovative-marine.html,14028,12
+250736B,Nuvo EXT 112 Aquarium with White APS Stand (DISCONTINUED),,Innovative Marine,250736B,2979.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-112-aquarium-with-white-aps-stand-innovative-marine.html,14022,0
+250734B,Nuvo EXT 150 Aquarium with Black APS Stand (DISCONTINUED),,Innovative Marine,250734B,3314.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-150-aquarium-with-black-aps-stand-innovative-marine.html,14021,0
+250733B,Nuvo EXT 170 Aquarium with White APS Stand (DISCONTINUED),,Innovative Marine,250733B,4452.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-170-aquarium-with-white-aps-stand-innovative-marine.html,14019,0
+250732B,Nuvo EXT 170 Aquarium with Black APS Stand (DISCONTINUED),,Innovative Marine,250732B,4452.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-170-aquarium-with-black-aps-stand-innovative-marine.html,14018,0
+250730B,Nuvo  INT 170 Aquarium with Black APS Stand (DISCONTINUED),,Innovative Marine,250730B,4452.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-int-170-aquarium-with-black-aps-stand-innovative-marine.html,14016,0
+250390B,Nuvo INT 112 Aquarium with White APS Stand (DISCONTINUED),"6940005107349, 6940005107806",Innovative Marine,250390B,2979.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-int-112-aquarium-with-white-aps-stand-innovative-marine.html,13177,0
+250391B,Nuvo INT 150 Aquarium with White APS Stand (DISCONTINUED),"6940005107356, 6940005107813",Innovative Marine,250391B,3314.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-int-150-aquarium-with-white-aps-stand-innovative-marine.html,13178,0
+250392B,Nuvo INT 200 Aquarium with White APS Stand (DISCONTINUED),"6940005107639, 6940005107820",Innovative Marine,250392B,5059.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-int-200-aquarium-with-white-aps-stand-innovative-marine.html,13179,0
+206915,AccuDrip Acclimator - One Pack - Auqa Gadget,6.94E+12,Innovative Marine,206915,9.99,TRUE,FALSE,https://www.bulkreefsupply.com/aqua-gadget-accudrip-acclimator-one-pack.html,12891,182
+232116,24 x 24" Aqua Gadget Safescreen DIY Mesh Lid Kit - Innovative Marine",,Innovative Marine,232116,39.99,TRUE,TRUE,https://www.bulkreefsupply.com/aqua-gadget-safescreen-diy-mesh-lid-kit-innovative-marine.html,12882,25
+232117,36 x 24" Aqua Gadget Safescreen DIY Mesh Lid Kit - Innovative Marine",,Innovative Marine,232117,49.99,TRUE,TRUE,https://www.bulkreefsupply.com/aqua-gadget-safescreen-diy-mesh-lid-kit-innovative-marine.html,12883,30
+232118,48 x 24" Aqua Gadget Safescreen DIY Mesh Lid Kit - Innovative Marine",,Innovative Marine,232118,59.99,TRUE,TRUE,https://www.bulkreefsupply.com/aqua-gadget-safescreen-diy-mesh-lid-kit-innovative-marine.html,12884,16
+232286,100 Watt Helio PTC Smart Heating Element - Innovative Marine,,Innovative Marine,232286,59.99,FALSE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heating-element-innovative-marine.html,12595,0
+232285,200 Watt Helio PTC Smart Heating Element - Innovative Marine,,Innovative Marine,232285,69.99,TRUE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heating-element-innovative-marine.html,12596,1
+232287,Helio PTC Heating Element Holder,6.94E+12,Innovative Marine,232287,29.99,TRUE,FALSE,https://www.bulkreefsupply.com/helio-ptc-heating-element-holder-innovative-marine.html,12594,22
+232284,350 Watt Helio PTC Smart Heating Element - Innovative Marine,,Innovative Marine,232284,79.99,TRUE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heating-element-innovative-marine.html,12597,16
+232283,500 Watt Helio PTC Smart Heating Element - Innovative Marine,,Innovative Marine,232283,99.99,TRUE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heating-element-innovative-marine.html,12598,11
+232277,400 Watt Helio PTC Smart Heater - Innovative Marine,,Innovative Marine,232277,197.99,FALSE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heaters-innovative-marine.html,12590,0
+232281,200 Watt (Single Element) Helio PTC Smart Heater - Innovative Marine,,Innovative Marine,232281,119.99,FALSE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heaters-innovative-marine.html,12277,0
+232279,500 Watt Helio PTC Smart Heater - Innovative Marine,,Innovative Marine,232279,162.99,FALSE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heaters-innovative-marine.html,12279,0
+232278,200 Watt (Dual Element) Helio PTC Smart Heater - Innovative Marine,,Innovative Marine,232278,187.99,TRUE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heaters-innovative-marine.html,12881,14
+232282,100 Watt Helio PTC Smart Heater - Innovative Marine,,Innovative Marine,232282,99.99,TRUE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heaters-innovative-marine.html,12276,36
+232280,350 Watt Helio PTC Smart Heater - Innovative Marine,,Innovative Marine,232280,149.99,TRUE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heaters-innovative-marine.html,12278,34
+232275,1000 Watt Helio PTC Smart Heater - Innovative Marine,,Innovative Marine,232275,268.99,FALSE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heaters-innovative-marine.html,12592,0
+232276,700 Watt Helio PTC Smart Heater - Innovative Marine,,Innovative Marine,232276,240.99,TRUE,TRUE,https://www.bulkreefsupply.com/helio-ptc-smart-heaters-innovative-marine.html,12591,28
+212933B,Nuvo INT 200 Aquarium with Black APS Stand (DISCONTINUED),"6940005107639, 6940005107646",Innovative Marine,212933B,5059.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-int-200-aquarium-with-black-aps-stand-innovative-marine-bundle.html,11251,0
+212934B,Nuvo EXT 200 Aquarium with Black APS Stand (DISCONTINUED),"6940005107622 , 6940005107646",Innovative Marine,212934B,5062.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-200-aquarium-with-black-aps-stand-innovative-marine-bundle.html,11252,0
+212009B,Nuvo EXT 75 Aquarium with Wood APS Stand (DISCONTINUED),,Innovative Marine,212009B,1500,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-75-aquarium-with-wood-aps-stand-innovative-marine-bundle.html,11175,0
+211997B,Nuvo EXT 30 Long Aquarium with Black APS Stand (DISCONTINUED),,Innovative Marine,211997B,850,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-30-long-aquarium-with-black-aps-stand-innovative-marine-bundle.html,11166,0
+211998B,Nuvo EXT 30 Long Aquarium with Wood APS Stand (DISCONTINUED),,Innovative Marine,211998B,850,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-30-long-aquarium-with-wood-aps-stand-innovative-marine-bundle.html,11167,0
+212178B,Nuvo INT 112 Aquarium with Black APS Stand (DISCONTINUED),"6940005107349, 6940005107366",Innovative Marine,212178B,2979.99,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-int-112-aquarium-with-black-aps-stand-innovative-marine-bundle.html,11182,0
+212011B,Nuvo EXT 100 Aquarium with Wood APS Stand (DISCONTINUED),,Innovative Marine,212011B,2000,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-100-aquarium-with-wood-aps-stand-innovative-marine-bundle.html,11177,0
+212007B,Nuvo EXT 50 Lagoon Aquarium with Wood APS Stand (DISCONTINUED),,Innovative Marine,212007B,999.98,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-50-lagoon-aquarium-with-wood-aps-stand-innovative-marine-bundle.html,11173,0
+212004B,Nuvo EXT 25 Lagoon Aquarium with Black APS Stand (DISCONTINUED),,Innovative Marine,212004B,750,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-25-lagoon-aquarium-with-black-aps-stand-innovative-marine-bundle.html,11170,0
+212005B,Nuvo EXT 25 Lagoon Aquarium with Wood APS Stand (DISCONTINUED),,Innovative Marine,212005B,750,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-25-lagoon-aquarium-with-wood-aps-stand-innovative-marine-bundle.html,11171,0
+211999B,Nuvo EXT 40 Mini Aquarium with Black APS Stand (DISCONTINUED),,Innovative Marine,211999B,950,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-40-mini-aquarium-with-black-aps-stand-innovative-marine-bundle.html,11168,0
+212003B,Nuvo EXT 40 Mini Aquarium with Wood APS Stand (DISCONTINUED),,Innovative Marine,212003B,950,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-ext-40-mini-aquarium-with-wood-aps-stand-innovative-marine-bundle.html,11169,0
+211651B,Nuvo INT 100 Aquarium with Wood APS Stand (DISCONTINUED),,Innovative Marine,211651B,2000,FALSE,FALSE,https://www.bulkreefsupply.com/nuvo-int-100-aquarium-with-wood-aps-stand-innovative-marine-bundle.html,11161,0
+212923,20 Nuvo Concept Encore PRO AIO Aquarium Bundle,6.94E+12,Innovative Marine,212923,326.99,TRUE,FALSE,https://www.bulkreefsupply.com/20-nuvo-concept-encore-pro-aio-aquarium-bundle-innovative-marine.html,10545,7
+212541,Auqa Gadget Gourmet Grazer Pro,6.94E+12,Innovative Marine,212541,24.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-gourmet-grazer-pro-innovative-marine.html,9867,86
+212542,Auqa Gadget ChaetoMax 2-n-1 Refugium LED (18 Watt),6.94E+12,Innovative Marine,212542,109.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-chaetomax-2-n-1-refugium-led-18-watt-innovative-marine.html,9868,5
+212540,Auqa Gadget Gourmet Defroster Pro,6.94E+12,Innovative Marine,212540,24.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-gourmet-defroster-pro-innovative-marine.html,9866,82
+211911,Auqa Gadget Desktop Minimax Pro Media Reactor,6.94E+12,Innovative Marine,211911,65.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-desktop-minimax-pro-media-reactor-innovative-marine.html,8857,17
+212090,Desktop NuvoSkim DC Protein Skimmer,6.94E+12,Innovative Marine,212090,153.99,TRUE,FALSE,https://www.bulkreefsupply.com/desktop-nuvoskim-dc-protein-skimmer-innovative-marine.html,9076,15
+211913,Auqa Gadget Sump Minimax Pro Media Reactor,6.94E+12,Innovative Marine,211913,98.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-sump-minimax-pro-media-reactor-innovative-marine.html,8859,13
+211912,Auqa Gadget Midsize Minimax Pro Media Reactor,6.94E+12,Innovative Marine,211912,87.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-midsize-minimax-pro-media-reactor-innovative-marine.html,8858,30
+211659,Auqa Shield UV Sterilizer Midsize,6.94E+12,Innovative Marine,211659,65.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-shield-uv-sterilizer-midsize-innovative-marine.html,7877,19
+211534,MightyJet Desktop AIO DC Return Pump (326 GPH),6.94E+12,Innovative Marine,211534,120.99,TRUE,FALSE,https://www.bulkreefsupply.com/mighty-jet-desktop-aio-dc-return-pump-326-gph-innovative-marine.html,7692,32
+211545,Auqa Gadget CustomCaddy (Fullsize),"6,940,005,106,326,940,000,000,000",Innovative Marine,211545,84.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-fullsize-customcaddy-innovative-marine.html,7538,6
+211656,Auqa Shield UV Sterilizer Desktop,6.94E+12,Innovative Marine,211656,54.99,FALSE,FALSE,https://www.bulkreefsupply.com/auqa-shield-uv-sterilizer-desktop-innovative-marine.html,7876,0
+211540,Auqa Gadget PurityPack Filter Media (Desktop),6.94E+12,Innovative Marine,211540,9.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-puritypack-filter-media-desktop-innovative-marine.html,7533,32
+211657,Auqa Shield Replacement 9W UV-C Lamp Desktop - Innovative Marine,,Innovative Marine,211657,24.99,TRUE,TRUE,https://www.bulkreefsupply.com/replacement-auqa-shield-uv-lamp-innovative-marine.html,7878,8
+211541,Auqa Gadget PurityPack Filter Media (Midsize),6.94E+12,Innovative Marine,211541,14.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-puritypack-filter-media-midsize-innovative-marine.html,7534,25
+211661,Auqa Shield 2-Pack Replacement Sponges - Midsize - Innovative Marine,,Innovative Marine,211661,7.99,TRUE,TRUE,https://www.bulkreefsupply.com/auqa-shield-uv-replacement-foam-sponges-innovative-marine.html,7881,24
+211658,Auqa Shield 2-Pack Replacement Sponges - Desktop - Innovative Marine,,Innovative Marine,211658,7.99,TRUE,TRUE,https://www.bulkreefsupply.com/auqa-shield-uv-replacement-foam-sponges-innovative-marine.html,7880,27
+211660,Auqa Shield Replacement 11W UV-C Lamp Midsize - Innovative Marine,,Innovative Marine,211660,34.99,TRUE,TRUE,https://www.bulkreefsupply.com/replacement-auqa-shield-uv-lamp-innovative-marine.html,7879,12
+211510,Auqa Gadget MidSize WaveLink DC Powerhead (253 - 2300 GPH),6.94E+12,Innovative Marine,211510,133.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-midsize-wavelink-aio-powerhead-253-2300-gph-innovative-marine.html,7477,18
+211509,Auqa Gadget Desktop WaveLink DC Powerhead (165 - 1500 GPH),6.94E+12,Innovative Marine,211509,120.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-desktop-wavelink-aio-powerhead-165-1500-gph-innovative-marine.html,7476,29
+211535,MightyJet Midsize AIO DC Return Pump (538 GPH),6.94E+12,Innovative Marine,211535,131.99,TRUE,FALSE,https://www.bulkreefsupply.com/mightyjet-midsize-aio-dc-return-pump-538-gph-innovative-marine.html,7693,28
+211414,SR-80 APS Stand (Black) - Innovative Marine (DISCONTINUED),,Innovative Marine,211414,200,FALSE,TRUE,https://www.bulkreefsupply.com/sr-80-aps-cabinet-aquarium-stand-innovative-marine.html,7287,0
+211547,Auqa Gadget 36 DIY Mesh Screen Lid Kit Pro - Innovative Marine",,Innovative Marine,211547,38.24,FALSE,TRUE,https://www.bulkreefsupply.com/auqa-gadget-diy-mesh-screen-lid-kit-pro-innovative-marine.html,7544,0
+211544,Auqa Gadget CustomCaddy (Midsize),6.94E+12,Innovative Marine,211544,49.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-midsize-customcaddy-innovative-marine.html,7537,15
+211542,Auqa Gadget PurityPack Filter Media (Fullsize),6.94E+12,Innovative Marine,211542,19.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-puritypack-filter-media-fullsize-innovative-marine.html,7535,41
+211354,Fusion 20 APS Cabinet Aquarium Stand,6.94E+12,Innovative Marine,211354,363,TRUE,FALSE,https://www.bulkreefsupply.com/fusion-20-aps-cabinet-aquarium-stand-innovative-marine.html,7053,2
+211355,Peninsula 20 APS Cabinet Aquarium Stand,6.94E+12,Innovative Marine,211355,363,TRUE,FALSE,https://www.bulkreefsupply.com/peninsula-20-aps-cabinet-aquarium-stand-innovative-marine.html,7054,8
+211352,Fusion 10 APS Cabinet Aquarium Stand,6.94E+12,Innovative Marine,211352,303,TRUE,FALSE,https://www.bulkreefsupply.com/fusion-10-aps-cabinet-aquarium-stand-innovative-marine.html,7051,3
+211353,Peninsula 14 APS Cabinet Aquarium Stand,6.94E+12,Innovative Marine,211353,303,TRUE,FALSE,https://www.bulkreefsupply.com/peninsula-14-aps-cabinet-aquarium-stand-innovative-marine.html,7052,5
+210696,Auqa Gadget 5 Gallon Hydrofill Reservoir,6.94E+12,Innovative Marine,210696,142.99,TRUE,FALSE,https://www.bulkreefsupply.com/5-gallon-hydrofill-reservoir-auqa-gadget-innovative-marine.html,6211,30
+209834,Replacement Screen Frame Corners,6.94E+12,Innovative Marine,209834,10,TRUE,FALSE,https://www.bulkreefsupply.com/replacement-screen-frame-corners-innovative-marine.html,5144,21
+209835,24 x 24" Adhesive Leveling Rubber Mat - Innovative Marine",,Innovative Marine,209835,19.99,TRUE,TRUE,https://www.bulkreefsupply.com/auqa-gadget-leveling-adhesive-rubber-mat-innovative-marine.html,5146,23
+209836,36 x 24" Adhesive Leveling Rubber Mat - Innovative Marine",,Innovative Marine,209836,24.99,TRUE,TRUE,https://www.bulkreefsupply.com/auqa-gadget-leveling-adhesive-rubber-mat-innovative-marine.html,5147,25
+209837,48 x 24" Adhesive Leveling Rubber Mat - Innovative Marine",,Innovative Marine,209837,29.99,FALSE,TRUE,https://www.bulkreefsupply.com/auqa-gadget-leveling-adhesive-rubber-mat-innovative-marine.html,5148,0
+209831,Auqa Gadget Screen Top Clips 4 pack - 10mm,6.94E+12,Innovative Marine,209831,8.49,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-screen-top-clips-4-pack-10mm-innocative-marine.html,5141,5
+209829,Auqa Gadget Screen Top Clips 4 pack - 6mm,6.94E+12,Innovative Marine,209829,8.49,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-screen-top-clips-4-pack-6mm-innocative-marine.html,5139,23
+209619,Auqa Gadget ReefRack 50 Expandable Frag Rack,6.94E+12,Innovative Marine,209619,29.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqagadget-reefrack-50-expandable-frag-rack.html,4902,15
+209833,Auqa Gadget Screen Top Clips 4 pack - 15mm,6.94E+12,Innovative Marine,209833,8.49,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-screen-top-clips-4-pack-15mm-innocative-marine.html,5143,13
+209830,Auqa Gadget Screen Top Clips 4 pack - 8mm,6.94E+12,Innovative Marine,209830,8.49,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-screen-top-clips-4-pack-8mm-innocative-marine.html,5140,11
+209829,Auqa Gadget Screen Top Clips 4 pack - 6mm - Innovative Marine,,Innovative Marine,209829,8.49,TRUE,TRUE,https://www.bulkreefsupply.com/auqa-gadget-screen-top-suspension-clips-innovative-marine.html,5139,23
+209832,Auqa Gadget Screen Top Clips 4 pack - 12mm,6.94E+12,Innovative Marine,209832,8.49,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-screen-top-clips-4-pack-12mm-innocative-marine.html,5142,23
+209832,Auqa Gadget Screen Top Clips 4 pack - 12mm - Innovative Marine,,Innovative Marine,209832,8.49,TRUE,TRUE,https://www.bulkreefsupply.com/auqa-gadget-screen-top-suspension-clips-innovative-marine.html,5142,23
+209831,Auqa Gadget Screen Top Clips 4 pack - 10mm - Innovative Marine,,Innovative Marine,209831,8.49,TRUE,TRUE,https://www.bulkreefsupply.com/auqa-gadget-screen-top-suspension-clips-innovative-marine.html,5141,5
+209833,Auqa Gadget Screen Top Clips 4 pack - 15mm - Innovative Marine,,Innovative Marine,209833,8.49,TRUE,TRUE,https://www.bulkreefsupply.com/auqa-gadget-screen-top-suspension-clips-innovative-marine.html,5143,13
+209830,Auqa Gadget Screen Top Clips 4 pack - 8mm - Innovative Marine,,Innovative Marine,209830,8.49,TRUE,TRUE,https://www.bulkreefsupply.com/auqa-gadget-screen-top-suspension-clips-innovative-marine.html,5140,11
+209444,Auqa Gadget - Fish Guard - Desktop,6.94E+12,Innovative Marine,209444,15.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqagadget-intake-fish-guard-desktop-innovative-marine.html,4723,20
+209449,MidSize 30/40  Filter Sock w/ Custom Holder,6.94E+12,Innovative Marine,209449,9.99,TRUE,FALSE,https://www.bulkreefsupply.com/midsize-30-40-filter-sock-w-custom-holder-innovative-marine.html,4727,78
+209618,Auqa Gadget ReefRack 32 Magnetic Frag Rack,6.94E+12,Innovative Marine,209618,48.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqagadget-reefrack-32-magnetic-frag-rack.html,4903,33
+209620,Auqa Gadget ReefRack 102 Expandable Frag Rack,6.94E+12,Innovative Marine,209620,39.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqagadget-reefrack-102-expandable-frag-rack.html,4901,6
+209446,4鈥 x 12鈥 Felt Filter Sock with Plastic Ring - Innovative Marine,,Innovative Marine,209446,10.99,TRUE,TRUE,https://www.bulkreefsupply.com/4-x-12-felt-filter-sock-with-plastic-ring-innovative-marine.html,4729,136
+209447,7鈥 x 14鈥 Felt Filter Sock with Plastic Ring - Innovative Marine,,Innovative Marine,209447,11.99,TRUE,TRUE,https://www.bulkreefsupply.com/4-x-12-felt-filter-sock-with-plastic-ring-innovative-marine.html,4730,92
+207984,MiniMax MidSize Media Reactor Sponge - 4 Pack - Innovative Marine,,Innovative Marine,207984,3.39,TRUE,TRUE,https://www.bulkreefsupply.com/minimax-media-reactor-sponge-4-pack-innovative-marine.html,3004,33
+209157,Gourmet Grinder - Auqa Gadget,6.94E+12,Innovative Marine,209157,12.99,TRUE,FALSE,https://www.bulkreefsupply.com/gourmetgrinder-flake-pellet-feeder-auqagadget.html,4406,8
+207983,MiniMax Desktop Media Reactor Sponge - 4 Pack - Innovative Marine,,Innovative Marine,207983,2.49,TRUE,TRUE,https://www.bulkreefsupply.com/minimax-media-reactor-sponge-4-pack-innovative-marine.html,3003,43
+206914,Auqa Gadget Spin Stream Nozzle,6.94E+12,Innovative Marine,206914,22.99,TRUE,FALSE,https://www.bulkreefsupply.com/auqa-gadget-spin-stream-nozzle.html,2312,107
+232273,K-Link Extension Cable - 10 ft,92145344408,Kessil,232273,25,TRUE,FALSE,https://www.bulkreefsupply.com/k-link-extension-cable-10-ft-kessil.html,12038,12
+232123,A500X Controllable LED Aquarium Light - Tuna Blue,92145345221,Kessil,232123,769,TRUE,FALSE,https://www.bulkreefsupply.com/a500x-controllable-led-aquarium-light-tuna-blue-kessil.html,12035,13
+213972B,A360X LED Aquarium Light With A-Series Mounting Arm - Tuna Blue,,Kessil,213972B,528,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-led-aquarium-light-with-a-series-mounting-arm-tuna-blue-kessil-bundle.html,11503,5
+213973B,A360X LED Aquarium Light With Wifi Dongle & A-Series Mounting Arm - Tuna Blue,,Kessil,213973B,627,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-led-aquarium-light-with-wifi-dongle-a-series-mounting-arm-tuna-blue-kessil-bundle.html,11504,5
+213974B,A360X Refugium LED Grow Light With A-Series Mounting Arm,,Kessil,213974B,528,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-refugium-led-grow-light-with-a-series-mounting-arm-kessil-bundle.html,11505,6
+213975B,A360X Refugium LED Grow Light With Wifi Dongle & A-Series Mounting Arm,,Kessil,213975B,627,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-refugium-led-grow-light-with-wifi-dongle-a-series-mounting-arm-kessil.html,11506,6
+212829B,A360X LED Aquarium Light With Gooseneck Mount - Tuna Blue,,Kessil,212829B,483.95,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-led-aquarium-light-with-gooseneck-mount-tuna-blue-kessil-bundle.html,11242,5
+212621B,A360X LED Aquarium Light With WiFi Dongle - Tuna Blue,,Kessil,212621B,548,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-led-aquarium-light-with-wifi-dongle-tuna-blue-kessil-bundle.html,11228,5
+212832B,A360X LED Aquarium Light With Wifi Dongle & Gooseneck Mount - Tuna Blue,,Kessil,212832B,582.95,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-led-aquarium-light-with-wifi-dongle-gooseneck-mount-tuna-blue-kessil-bundle.html,11245,5
+212827B,A360X Refugium LED Grow Light With Gooseneck Mount,,Kessil,212827B,483.95,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-refugium-led-grow-light-with-gooseneck-mount-kessil-bundle.html,11240,6
+212830B,A360X Refugium LED Grow Light With Wifi Dongle & Gooseneck Mount,,Kessil,212830B,582.95,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-refugium-led-grow-light-with-wifi-dongle-gooseneck-mount-kessil-bundle.html,11243,6
+212620B,A360X LED Aquarium Light With WiFi Dongle - Tuna Sun,,Kessil,212620B,548,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-led-aquarium-light-with-wifi-dongle-tuna-sun-kessil-bundle.html,11227,6
+213019,AP9X LED Lighting Panel,92145344613,Kessil,213019,869,TRUE,FALSE,https://www.bulkreefsupply.com/ap9x-led-lighting-panel-kessil.html,10729,30
+213020,AP9X Mounting Arm,92145344637,Kessil,213020,99,TRUE,FALSE,https://www.bulkreefsupply.com/ap9x-mounting-arm-kessil.html,10730,18
+212686,Full Angle LED Adapter,92145343982,Kessil,212686,30,TRUE,FALSE,https://www.bulkreefsupply.com/full-angle-led-adapter-kessil.html,10363,23
+212823,A360X Refugium LED Grow Light,92145344705,Kessil,212823,449,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-refugium-led-grow-light-kessil.html,10276,6
+212550,A360X / A500X WiFi Dongle,92145344101,Kessil,212550,99,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-wifi-dongle-kessil.html,9799,49
+212164,A360X Narrow Reflector,92145344057,Kessil,212164,29,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-narrow-reflector-kessil.html,9191,54
+212056,90掳 Gooseneck Bracket,92145343814,Kessil,212056,20,TRUE,FALSE,https://www.bulkreefsupply.com/90-gooseneck-bracket-kessil.html,8790,7
+212057,90 Degree K-Link Cable - 10 ft,92145343784,Kessil,212057,25,TRUE,FALSE,https://www.bulkreefsupply.com/90-degree-k-link-cable-10-ft-kessil.html,8780,36
+211867,A360X Controllable LED Aquarium Light - Tuna Sun,92145343760,Kessil,211867,449,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-controllable-led-aquarium-light-tuna-sun-kessil.html,8586,6
+211873,Spectral Controller X,92145343722,Kessil,211873,99,TRUE,FALSE,https://www.bulkreefsupply.com/spectral-controller-x-kessil.html,8587,38
+211866,A360X Controllable LED Aquarium Light - Tuna Blue,92145343746,Kessil,211866,449,TRUE,FALSE,https://www.bulkreefsupply.com/a360x-controllable-led-aquarium-light-tuna-blue-kessil.html,8585,5
+211515,H160 Tuna Flora LED Algae Grow Light,92145342916,Kessil,211515,259,TRUE,FALSE,https://www.bulkreefsupply.com/h160-tuna-flora-led-algae-grow-light-kessil.html,7680,7
+210781,H80 Tuna Flora Refugium LED Light,92145341926,Kessil,210781,139,TRUE,FALSE,https://www.bulkreefsupply.com/h80-tuna-sun-flora-refugium-led-light-kessil.html,6257,54
+210367,90 Degree Unit Link Cable,92145341216,Kessil,210367,20,TRUE,FALSE,https://www.bulkreefsupply.com/90-degree-unit-link-cable-kessil.html,6259,17
+210366,Mini A-Series Gooseneck,92145341162,Kessil,210366,25,TRUE,FALSE,https://www.bulkreefsupply.com/mini-a-series-gooseneck-kessil.html,5740,64
+210363,A80 Tuna Blue Nano LED Light,92145341148,Kessil,210363,139,TRUE,FALSE,https://www.bulkreefsupply.com/a80-tuna-blue-nano-led-light-kessil.html,5738,44
+210365,A80 Tuna Sun Nano LED Light,92145341254,Kessil,210365,139,TRUE,FALSE,https://www.bulkreefsupply.com/a80-tuna-sun-nano-led-light-kessil.html,5739,17
+210228,Extension Slide Bar,92145340554,Kessil,210228,29,TRUE,FALSE,https://www.bulkreefsupply.com/extension-slide-bar-kessil.html,5630,9
+209579,A-Series Mounting Arm,92145340325,Kessil,209579,79,TRUE,FALSE,https://www.bulkreefsupply.com/a-series-mounting-arm-kessil.html,5053,91
+209580,Extension Mount,92145340332,Kessil,209580,55,TRUE,FALSE,https://www.bulkreefsupply.com/extension-mount-kessil.html,5056,11
+209582,LED Light Panel Hanging Kit,92145339947,Kessil,209582,40,TRUE,FALSE,https://www.bulkreefsupply.com/ap700-hanging-kit.html,4769,6
+208935,A160WE Tuna Sun LED Light,92145339220,Kessil,208935,259,TRUE,FALSE,https://www.bulkreefsupply.com/kessil-a160we-tuna-sun-led-light.html,4102,10
+208934,A160WE Tuna Blue LED Light,92145339244,Kessil,208934,259,TRUE,FALSE,https://www.bulkreefsupply.com/kessil-a160we-tuna-blue-led-light.html,4101,24
+207969,A-Series Gooseneck (Tank Mount),6.54E+11,Kessil,207969,35,TRUE,FALSE,https://www.bulkreefsupply.com/kessil-a-series-gooseneck.html,2987,72
+207970,Kessil to Neptune Apex Control Cable,92145336779,Kessil,207970,20,TRUE,FALSE,https://www.bulkreefsupply.com/kessil-a360-control-cable-type-1-neptune-apex.html,2988,36
+207973,Unit Link Extension Cable,92145336762,Kessil,207973,20,TRUE,FALSE,https://www.bulkreefsupply.com/kessil-a360-control-extension-cable.html,2991,8
+207507,6 Ft. AquaBus Cable - Neptune Systems,,Neptune Systems,207507,15.95,TRUE,TRUE,https://www.bulkreefsupply.com/aquabus-cable-neptune-systems.html,2377,8
+252143B,EB4 & A3 Apex Jr. Controller System Bundle,,Neptune Systems,252143B,419.9,TRUE,FALSE,https://www.bulkreefsupply.com/neptune-a3-apex-jr-eb4-bundle.html,15790,1
+252142B,DOS & A3 Apex Jr. Automatic Water Change Bundle,,Neptune Systems,252142B,629.9,TRUE,FALSE,https://www.bulkreefsupply.com/dos-a3-apex-jr-automatic-water-change-bundle-neptune-systems.html,15794,1
+251253,MOS Magnetic Optical Sensor,6.53E+11,Neptune Systems,251253,39.95,FALSE,FALSE,https://www.bulkreefsupply.com/mos-magnetic-optical-sensor-neptune-systems.html,14775,0
+251343,A3 Apex Pro Controller System,6.53E+11,Neptune Systems,251343,899.95,TRUE,FALSE,https://www.bulkreefsupply.com/apex-a3-pro-controller-system-neptune-systems.html,14816,86
+251249,LLS Liquid Level Sensor - 15 Inch - Neptune Systems,,Neptune Systems,251249,59.95,FALSE,TRUE,https://www.bulkreefsupply.com/lls-liquid-level-sensor-neptune-systems.html,14777,0
+251248,LLS Liquid Level Sensor - 4 Inch - Neptune Systems,,Neptune Systems,251248,44.95,TRUE,TRUE,https://www.bulkreefsupply.com/lls-liquid-level-sensor-neptune-systems.html,14776,106
+251246,A3 Apex Controller System,6.53E+11,Neptune Systems,251246,599.95,TRUE,FALSE,https://www.bulkreefsupply.com/a3-apex-controller-system-neptune-systems.html,14772,81
+251250,LLS Liquid Level Sensor - 23 Inch - Neptune Systems,,Neptune Systems,251250,79.95,TRUE,TRUE,https://www.bulkreefsupply.com/lls-liquid-level-sensor-neptune-systems.html,14778,118
+251251,LLS Liquid Level Sensor - 35 Inch - Neptune Systems,,Neptune Systems,251251,104.95,TRUE,TRUE,https://www.bulkreefsupply.com/lls-liquid-level-sensor-neptune-systems.html,14779,57
+251252,LD-3 Optical Multi-Surface Leak Sensor,6.53E+11,Neptune Systems,251252,39.95,TRUE,FALSE,https://www.bulkreefsupply.com/ld-3-optical-multi-surface-leak-sensor-neptune-systems.html,14773,122
+232330,SKY LED Aquarium Light,6.53E+11,Neptune Systems,232330,869.95,TRUE,FALSE,https://www.bulkreefsupply.com/sky-led-aquarium-light-neptune-systems.html,12340,64
+232479,SKY Diffused Shimz,,Neptune Systems,232479,14.95,TRUE,FALSE,https://www.bulkreefsupply.com/sky-diffused-shimz-neptune.html,12341,18
+232203,GRO Refugium Light with Pipe Mount,6.53E+11,Neptune Systems,232203,144.95,TRUE,FALSE,https://www.bulkreefsupply.com/gro-refugium-light-with-pipe-mount-neptune-systems.html,11985,85
+232478,SKY Hanging Kit,,Neptune Systems,232478,34.95,TRUE,FALSE,https://www.bulkreefsupply.com/sky-hanging-kit-neptune.html,12342,92
+232204,GRO Refugium Light with Flat Tank Mount Bracket,6.53E+11,Neptune Systems,232204,144.95,TRUE,FALSE,https://www.bulkreefsupply.com/gro-refugium-light-with-flat-bracket-mount.html,11986,22
+212613B,Trident & Apex Controller System Dream Bundle (DISCONTINUED),,Neptune Systems,212613B,2846.45,FALSE,FALSE,https://www.bulkreefsupply.com/trident-apex-controller-system-dream-bundle-neptune-systems-bundle.html,11226,0
+212612B,Trident & A3 Apex Controller System Bundle,,Neptune Systems,212612B,1239.9,TRUE,FALSE,https://www.bulkreefsupply.com/trident-a3-apex-controller-system-bundle-neptune-systems.html,11225,81
+212611B,Trident & A3 Apex Pro Controller System Bundle,,Neptune Systems,212611B,1539.9,TRUE,FALSE,https://www.bulkreefsupply.com/trident-a3-apex-pro-controller-system-bundle-neptune-systems.html,11224,86
+210423B,WAV Pump 2 Pack,,Neptune Systems,210423B,369.9,FALSE,FALSE,https://www.bulkreefsupply.com/wav-pump-2-pack-neptune-systems-bundle.html,11104,0
+212298B,Apex Controller System Dream Bundle (DISCONTINUED),,Neptune Systems,212298B,2129.6,FALSE,FALSE,https://www.bulkreefsupply.com/apex-controller-system-dream-bundle-neptune-systems-bundle.html,11190,0
+212299B,Apex Controller Upgrade Kit,"696859111334, 748252989802, 019962170157",Neptune Systems,212299B,594.85,TRUE,FALSE,https://www.bulkreefsupply.com/apex-controller-upgrade-kit-neptune-systems-bundle.html,11191,5
+212297B,A3 Apex Controller System with Extra Energy Bar 832,,Neptune Systems,212297B,889.9,TRUE,FALSE,https://www.bulkreefsupply.com/a3-apex-controller-system-with-extra-energy-bar-832-neptune-systems-bundle.html,11189,49
+212296B,A3 Apex Pro Controller System with Extra Energy Bar 832,,Neptune Systems,212296B,1189.9,TRUE,FALSE,https://www.bulkreefsupply.com/a3-apex-pro-controller-with-extra-energy-bar-832-neptune-systems-bundle.html,11188,49
+210424B,Apex Controller & WAV Pump 2 Pack (DISCONTINUED),"748252988805, 019962174650",Neptune Systems,210424B,1249.85,FALSE,FALSE,https://www.bulkreefsupply.com/apex-controller-wav-pump-2-pack-neptune-systems-bundle.html,11105,0
+210158B,DOS & DDR Dosing System Package,"748252989802, 748252989703",Neptune Systems,210158B,479.95,TRUE,FALSE,https://www.bulkreefsupply.com/dos-ddr-dosing-package-neptune-systems-bundle.html,11087,14
+212437,6-Month Trident Reagent Kit,,Neptune Systems,212437,104.95,TRUE,FALSE,https://www.bulkreefsupply.com/trident-6-month-reagent-kit-neptune-systems.html,9625,954
+212317,ATK V2 Auto Top Off Kit,6.53E+11,Neptune Systems,212317,224.95,TRUE,FALSE,https://www.bulkreefsupply.com/atk-v2-auto-top-off-kit-neptune-systems.html,9481,123
+212318,PMUP v2 Practical Multi-Purpose Utility Pump,19962174155,Neptune Systems,212318,44.95,TRUE,FALSE,https://www.bulkreefsupply.com/pmup-v2-practical-multi-purpose-utility-pump-neptune-systems.html,9482,87
+212436,2-Month Trident Reagent Kit,,Neptune Systems,212436,44.95,TRUE,FALSE,https://www.bulkreefsupply.com/2-month-trident-reagent-kit-neptune-systems.html,9624,218
+212319,PMUP-T v2 with Power Supply - Practical Multi-Purpose Utility Pump,6.53E+11,Neptune Systems,212319,59.95,TRUE,FALSE,https://www.bulkreefsupply.com/pmup-t-v2-with-power-supply-practical-multi-purpose-utility-pump-neptune-systems.html,9483,36
+212065,"Probe Calibration Kit - ph 7.0, ph 10.0, & Salinity 53000uS",6.53E+11,Neptune Systems,212065,6.85,TRUE,FALSE,https://www.bulkreefsupply.com/probe-calibration-kit-ph-7-0-ph-10-0-salinity-53000us-neptune-systems.html,8941,162
+212271,Trident - Marine Aquarium Water Analyzer,6.53E+11,Neptune Systems,212271,639.95,TRUE,FALSE,https://www.bulkreefsupply.com/trident-cal-alk-mag-monitoring-system-neptune-systems.html,7497,169
+211356,COR-15 Intelligent Return Pump (1500 GPH),6.53E+11,Neptune Systems,211356,314.95,TRUE,FALSE,https://www.bulkreefsupply.com/cor-15-intelligent-return-pump-neptune-systems.html,6892,20
+211357,COR-20 Intelligent Return Pump (2000 GPH),6.53E+11,Neptune Systems,211357,374.95,TRUE,FALSE,https://www.bulkreefsupply.com/cor-20-intelligent-return-pump-neptune-systems.html,6893,30
+211104,LDK Leak Detection Kit,19962170157,Neptune Systems,211104,154.95,TRUE,FALSE,https://www.bulkreefsupply.com/ldk-leak-detection-kit-neptune-systems.html,6608,5
+210145,30 Ft AquaBus Extension Cable - Neptune Systems,,Neptune Systems,210145,32.95,TRUE,TRUE,https://www.bulkreefsupply.com/aquabus-extension-cable-neptune-systems.html,6230,3
+207509,15 Ft AquaBus Extension Cable - Neptune Systems,,Neptune Systems,207509,21.95,TRUE,TRUE,https://www.bulkreefsupply.com/aquabus-extension-cable-neptune-systems.html,2379,136
+210692,SV-1 Solenoid Valve,19962172250,Neptune Systems,210692,31.95,TRUE,FALSE,https://www.bulkreefsupply.com/sv-1-solenoid-valve-neptune-systems.html,6050,164
+210691,OS-1 Optical Level Sensor V2,19962172359,Neptune Systems,210691,27.95,TRUE,FALSE,https://www.bulkreefsupply.com/os-1-optical-level-sensor-neptune-systems.html,6049,112
+210146,Replacement WAV Pump Propeller,19962174957,Neptune Systems,210146,49.95,TRUE,FALSE,https://www.bulkreefsupply.com/replacement-wav-pump-propeller-neptune-systems.html,6232,29
+210690,LD-2 Solid Surface Leak Detection Probe,19962171956,Neptune Systems,210690,31.95,TRUE,FALSE,https://www.bulkreefsupply.com/ld-2-leak-detection-probe-neptune-systems.html,6048,86
+210688,1/4 Flow Sensor FS25",19962172755,Neptune Systems,210688,20.95,TRUE,FALSE,https://www.bulkreefsupply.com/1-4-flow-sensor-fs25-neptune-systems.html,6046,10
+210839,DC24V Power Supply,19962171758,Neptune Systems,210839,22.95,TRUE,FALSE,https://www.bulkreefsupply.com/pmup-24v-power-supply-neptune-systems.html,6224,26
+210693,36W 24VDC Power Supply,19962172151,Neptune Systems,210693,31.95,TRUE,FALSE,https://www.bulkreefsupply.com/fmm-power-supply-neptune-systems.html,6051,27
+210685,2 Flow Sensor FS200",19962172458,Neptune Systems,210685,104.95,FALSE,FALSE,https://www.bulkreefsupply.com/2-flow-sensor-fs200-neptune-systems.html,6043,0
+210689,LD-1 Low Profile Leak Detection Probe,19962172052,Neptune Systems,210689,31.95,TRUE,FALSE,https://www.bulkreefsupply.com/ld-1-leak-detection-probe-neptune-systems.html,6047,56
+210687,1/2 Flow Sensor FS50",19962172656,Neptune Systems,210687,31.95,TRUE,FALSE,https://www.bulkreefsupply.com/1-2-flow-sensor-fs50-neptune-systems.html,6045,26
+210683,FMK Flow Monitoring Kit,19962172953,Neptune Systems,210683,209.95,TRUE,FALSE,https://www.bulkreefsupply.com/fmk-flow-monitoring-kit-neptune-systems.html,6041,16
+210684,FMM Fluid Monitoring Module,19962171857,Neptune Systems,210684,104.95,TRUE,FALSE,https://www.bulkreefsupply.com/fmm-fluid-monitoring-module-neptune-systems.html,6042,90
+210364,1Link Extension Cable,19962173455,Neptune Systems,210364,21.95,TRUE,FALSE,https://www.bulkreefsupply.com/1link-extension-cable-neptune-systems.html,5780,45
+210224,Lab Grade Double Junction ORP Probe,19962173851,Neptune Systems,210224,99.95,TRUE,FALSE,https://www.bulkreefsupply.com/lab-grade-double-junction-orp-probe-neptune-systems.html,5611,38
+210186,DC24 Extension Cable,19962173554,Neptune Systems,210186,18.95,TRUE,FALSE,https://www.bulkreefsupply.com/dc24-10-extension-cable-neptune-systems.html,5779,13
+210187,DOS Replacement Pump Head,7.48E+11,Neptune Systems,210187,34.95,TRUE,FALSE,https://www.bulkreefsupply.com/dos-replacement-pump-head.html,5753,99
+210184,DC24 to Bare Wire Accessory Cable,19962174551,Neptune Systems,210184,18.95,TRUE,FALSE,https://www.bulkreefsupply.com/dc24-to-bare-wire-accessory-cable-neptune-systems.html,5563,24
+210185,1Link Male x Male 4 Pin Cable,19962174452,Neptune Systems,210185,21.95,TRUE,FALSE,https://www.bulkreefsupply.com/1link-male-x-male-4-pin-cable-neptune-systems.html,5562,69
+210220,Apex Display Module,19962174254,Neptune Systems,210220,109.95,TRUE,FALSE,https://www.bulkreefsupply.com/apex-display-module-neptune-systems.html,5626,16
+210223,Lab Grade Double Junction pH Probe,19962173950,Neptune Systems,210223,89.95,TRUE,FALSE,https://www.bulkreefsupply.com/lab-grade-double-junction-ph-probe-neptune-systems.html,5610,202
+210221,EB832 Energy Bar 832,19962174353,Neptune Systems,210221,289.95,TRUE,FALSE,https://www.bulkreefsupply.com/energybar-832-neptune-systems.html,5604,48
+209872,Replacement Dissolved Oxygen Probe Membrane Kit,6.97E+11,Neptune Systems,209872,74.95,TRUE,FALSE,https://www.bulkreefsupply.com/replacement-dissolved-oxygen-probe-membrane-kit-neptune-systems.html,5188,2
+209622,1LINK Power and Communication Module w/ Power Supply,,Neptune Systems,209622,159.95,TRUE,FALSE,https://www.bulkreefsupply.com/1link-power-and-communication-module-w-power-supply-neptune-systems.html,4917,15
+209672,Lab Grade Dissolved Oxygen Probe,,Neptune Systems,209672,749.95,TRUE,FALSE,https://www.bulkreefsupply.com/lab-grade-dissolved-oxygen-probe-neptune-systems.html,4919,7
+209671,PM3 Dissolved Oxygen Module,6.97E+11,Neptune Systems,209671,99.95,TRUE,FALSE,https://www.bulkreefsupply.com/dissolved-oxygen-module-pm3-neptune-systems.html,4918,13
+209623,1LINK Module Replacement Power Supply,19962174759,Neptune Systems,209623,54.95,TRUE,FALSE,https://www.bulkreefsupply.com/replacement-power-supply-for-1link-module-neptune-systems.html,4916,6
+209133,DOS Replacement Tubing - 4 Meter - Neptune Systems,,Neptune Systems,209133,4.95,FALSE,TRUE,https://www.bulkreefsupply.com/dos-replacement-tubing-neptune-systems-1.html,4379,0
+209137,DOS Replacement Tubing - 16 Meter - Neptune Systems,,Neptune Systems,209137,17.95,TRUE,TRUE,https://www.bulkreefsupply.com/dos-replacement-tubing-neptune-systems-1.html,4378,38
+209193,PMK PAR Monitoring Kit,7.48E+11,Neptune Systems,209193,324.95,TRUE,FALSE,https://www.bulkreefsupply.com/par-monitoring-kit-pmk-neptune-systems.html,4349,9
+208869,DOS Dosing and Fluid Metering System,7.48E+11,Neptune Systems,208869,329.95,TRUE,FALSE,https://www.bulkreefsupply.com/dos-dosing-and-fluid-metering-system-neptune-systems.html,4120,143
+209104,DDR DOS Dual Reservoir,7.48E+11,Neptune Systems,209104,204.95,TRUE,FALSE,https://www.bulkreefsupply.com/dos-dual-reservoir-ddr-neptune-systems.html,4214,14
+208405,MPR Magnetic Probe Rack,,Neptune Systems,208405,44.95,TRUE,FALSE,https://www.bulkreefsupply.com/magnetic-probe-rack-neptune-systems.html,3332,6
+208406,12V Power Supply,6.53E+11,Neptune Systems,208406,15.95,TRUE,FALSE,https://www.bulkreefsupply.com/12v-power-supply-neptune-systems.html,3333,17
+208190,CD Crossover Diet Fish & Coral Food,7.48E+11,Neptune Systems,208190,13.95,TRUE,FALSE,https://www.bulkreefsupply.com/cd-crossover-diet-fish-coral-food-neptune-systems.html,3159,264
+207506,3 Ft. AquaBus Cable - Neptune Systems,,Neptune Systems,207506,13.95,FALSE,TRUE,https://www.bulkreefsupply.com/aquabus-cable-neptune-systems.html,2376,0
+207979,AFS Automatic Feeding System,6.97E+11,Neptune Systems,207979,109.95,TRUE,FALSE,https://www.bulkreefsupply.com/automatic-feeding-system-neptune-systems.html,2999,180
+207499,Solid Surface Advanced Leak Detection Probe,6.97E+11,Neptune Systems,207499,29.95,TRUE,FALSE,https://www.bulkreefsupply.com/solid-surface-advanced-leak-detection-probe-neptune-systems.html,2635,30
+210225,1 Ft. AquaBus Cable - Neptune Systems,,Neptune Systems,210225,10.95,TRUE,TRUE,https://www.bulkreefsupply.com/aquabus-cable-neptune-systems.html,5595,26
+207508,15 Ft. AquaBus Cable - Neptune Systems,,Neptune Systems,207508,21.95,TRUE,TRUE,https://www.bulkreefsupply.com/aquabus-cable-neptune-systems.html,2378,16
+210144,30 Ft. AquaBus Cable - Neptune Systems,,Neptune Systems,210144,32.95,TRUE,TRUE,https://www.bulkreefsupply.com/aquabus-cable-neptune-systems.html,6229,9
+207523,Neptune Systems Conductivity Calibration Solution - 53000 Microsiemens,6.97E+11,Neptune Systems,207523,2.95,TRUE,FALSE,https://www.bulkreefsupply.com/neptune-systems-conductivity-calibration-solution-53-0-ms.html,2394,312
+207521,Lab Grade Conductivity/Salinity Probe,6.97E+11,Neptune Systems,207521,197.95,TRUE,FALSE,https://www.bulkreefsupply.com/neptune-systems-lab-grade-conductivity-probe.html,2392,125
+207500,VDM LED & Pumps Control Module,6.97E+11,Neptune Systems,207500,104.95,TRUE,FALSE,https://www.bulkreefsupply.com/led-pumps-control-module-vdm-neptune-systems.html,2370,22
+207520,10.00 pH Calibration Fluid,6.97E+11,Neptune Systems,207520,1.95,TRUE,FALSE,https://www.bulkreefsupply.com/neptune-systems-10-00-calibration-fluid.html,2390,274
+207511,2 Channel Apex to Light Dimming Cable,6.97E+11,Neptune Systems,207511,15.95,TRUE,FALSE,https://www.bulkreefsupply.com/2-channel-apex-to-light-dimming-cable-neptune-systems.html,2382,12
+207517,Temperature Probe,6.97E+11,Neptune Systems,207517,32.95,TRUE,FALSE,https://www.bulkreefsupply.com/temperature-probe-neptune-systems.html,2387,142
+207510,I/O Breakout Box,6.97E+11,Neptune Systems,207510,44.95,TRUE,FALSE,https://www.bulkreefsupply.com/neptune-systems-i-o-breakout-box.html,2380,30
+207498,Low-Profile Advanced Leak Detection Probe,6.97E+11,Neptune Systems,207498,29.95,TRUE,FALSE,https://www.bulkreefsupply.com/low-profile-advanced-leak-detection-probe-neptune-systems.html,2634,25
+207492,EB4 Energy Bar 4,8.96E+11,Neptune Systems,207492,119.95,TRUE,FALSE,https://www.bulkreefsupply.com/energy-bar-4-neptune-systems.html,2324,28
+207502,Lunar Simulator 2-String LED - Neptune Systems,,Neptune Systems,207502,32.95,TRUE,TRUE,https://www.bulkreefsupply.com/lunar-simulator-module-lsm-lunar-led-string.html,2372,8
+207504,Lunar Simulator 4-String LED - Neptune Systems,,Neptune Systems,207504,54.95,TRUE,TRUE,https://www.bulkreefsupply.com/lunar-simulator-module-lsm-lunar-led-string.html,2374,7
+207522,Neptune Systems Conductivity Calibration Solution - 447 Microsiemens,7.07E+11,Neptune Systems,207522,2.95,TRUE,FALSE,https://www.bulkreefsupply.com/neptune-systems-conductivity-calibration-solution-447-ms.html,2393,6
+207503,Lunar Simulator 3-String LED - Neptune Systems,,Neptune Systems,207503,44.95,TRUE,TRUE,https://www.bulkreefsupply.com/lunar-simulator-module-lsm-lunar-led-string.html,2373,6
+207505,Lunar Simulator 5-String LED - Neptune Systems,,Neptune Systems,207505,64.95,TRUE,TRUE,https://www.bulkreefsupply.com/lunar-simulator-module-lsm-lunar-led-string.html,2375,8
+207519,7.00 pH Calibration Fluid,,Neptune Systems,207519,1.95,TRUE,FALSE,https://www.bulkreefsupply.com/neptune-systems-7-00-calibration-fluid.html,2389,33
+207501,LSM Lunar Simulator Module,6.97E+11,Neptune Systems,207501,69.95,TRUE,FALSE,https://www.bulkreefsupply.com/lunar-simulator-module-lsm-neptune-systems.html,2371,20
+207494,PM1 pH/ORP Probe Module,6.97E+11,Neptune Systems,207494,89.95,TRUE,FALSE,https://www.bulkreefsupply.com/ph-orp-probe-module-pm1-neptune-systems.html,2328,38
+207495,PM2 Salinity Module,,Neptune Systems,207495,89.95,TRUE,FALSE,https://www.bulkreefsupply.com/salinity-module-pm2-neptune-systems.html,2327,40
+250335,Medic Parasite Treatment,19962013904,PolypLab,250335,36.99,TRUE,FALSE,https://www.bulkreefsupply.com/medic-parasite-treatment-polyplab.html,13276,135
+212182,Coral View Lens V2,19962973239,PolypLab,212182,29.99,TRUE,FALSE,https://www.bulkreefsupply.com/coral-view-lens-v2-polyplab.html,9231,56
+212126,Scope Blue LED Flashlight,19962014109,PolypLab,212126,24.99,TRUE,FALSE,https://www.bulkreefsupply.com/scope-blue-flashlight-polyplab.html,9078,16
+211886,Premium Coral Frag Glue - 7 Pack - Polyplab,,PolypLab,211886,12.99,TRUE,TRUE,https://www.bulkreefsupply.com/premium-coral-frag-glue-polyplab.html,8425,21
+211887,Premium Coral Frag Glue - Grenade 25 Pack - Polyplab,,PolypLab,211887,34.99,TRUE,TRUE,https://www.bulkreefsupply.com/premium-coral-frag-glue-polyplab.html,8426,18
+210140,Polyp-Booster,6.97E+11,PolypLab,210140,21.99,TRUE,FALSE,https://www.bulkreefsupply.com/polyp-booster-polyplab.html,6228,90
+250954,37 Gram Reef-Roids - Polyp Lab,,PolypLab,250954,14.99,TRUE,TRUE,https://www.bulkreefsupply.com/polyp-lab-reef-roids-coral-food.html,14819,124
+207802,75 Gram Reef-Roids - Polyp Lab,,PolypLab,207802,21.99,TRUE,TRUE,https://www.bulkreefsupply.com/polyp-lab-reef-roids-coral-food.html,2777,314
+207078,Coral Pro Salt Mix 55 Gallon,,Red Sea,207078,34.99,TRUE,TRUE,https://www.bulkreefsupply.com/red-sea-coral-pro-salt.html,1554,61
+214039,Coral Pro Salt Mix 160 Gallon Box,,Red Sea,214039,79.99,TRUE,TRUE,https://www.bulkreefsupply.com/red-sea-coral-pro-salt.html,11913,74
+232323,25cm Slide-Out Control Panel,,Red Sea,232323,110,TRUE,TRUE,https://www.bulkreefsupply.com/slide-out-control-panel-red-sea.html,12982,1
+252136,Reefer 3XL 900 G2+ System (192 Gal) w/ 3x RL160 - Black - Red Sea,,Red Sea,252136,7849,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-3xl-900-g2-plus-deluxe-system-192-gal-w-3x-reefled-160-red-sea.html,15760,10
+252137,Reefer 3XL 900 G2+ System (192 Gal) w/ 3x RL160 - White - Red Sea,,Red Sea,252137,7849,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-3xl-900-g2-plus-deluxe-system-192-gal-w-3x-reefled-160-red-sea.html,15761,10
+252146,Reefer Peninsula 700 G2+ Aquarium System (150 Gal) - Black - Red Sea,,Red Sea,252146,5899,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-700-g2-aquarium-system-150-gal-red-sea.html,15832,5
+252107,Reefer-S 1000 G2+ System (210 Gal) - White - Red Sea,,Red Sea,252107,6999,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-1000-g2-plus-system-210-gal-red-sea.html,15739,1
+252152,Reefer Peninsula Deluxe 500 G2+ System w/ 3x ReefLED 90 (109 Gal) - Black - Red Sea,,Red Sea,252152,4899,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-deluxe-500-g2-system-105-gal-red-sea.html,15824,5
+252106,Reefer-S 1000 G2+ System (210 Gal) - Black - Red Sea,,Red Sea,252106,6999,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-1000-g2-plus-system-210-gal-red-sea.html,15738,1
+252153,Reefer Peninsula Deluxe 500 G2+ System w/ 3x ReefLED 90 (109 Gal) - White - Red Sea,,Red Sea,252153,4899,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-deluxe-500-g2-system-105-gal-red-sea.html,15823,5
+252150,Reefer Peninsula Deluxe 350 G2+ System w/ 2x ReefLED 90 (73 Gal) - Black - Red Sea,,Red Sea,252150,3949,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-deluxe-350-g2-system-w-2x-reefled-90-73-gal-red-sea.html,15849,5
+252147,Reefer Peninsula 700 G2+ Aquarium System (150 Gal) - White - Red Sea,,Red Sea,252147,5899,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-700-g2-aquarium-system-150-gal-red-sea.html,15831,5
+252151,Reefer Peninsula Deluxe 350 G2+ System w/ 2x ReefLED 90 (73 Gal) - White - Red Sea,,Red Sea,252151,3949,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-deluxe-350-g2-system-w-2x-reefled-90-73-gal-red-sea.html,15850,5
+252131,Reefer Deluxe XXL 750 G2+ System (160 Gal) w/ 4x ReefLED 90 - White - Red Sea,,Red Sea,252131,6299,FALSE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xxl-750-g2-plus-system-160-gal-w-4x-reefled-90-red-sea.html,15764,0
+252130,Reefer Deluxe XXL 750 G2+ System (160 Gal) w/ 4x ReefLED 90 - Black - Red Sea,,Red Sea,252130,6299,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xxl-750-g2-plus-system-160-gal-w-4x-reefled-90-red-sea.html,15763,5
+252135,Reefer 3XL 900 G2+ System (192 Gal) w/ 4x RL90 - White - Red Sea,,Red Sea,252135,7599,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-3xl-900-g2-plus-deluxe-system-192-gal-w-4x-reefled-90-red-sea.html,15758,10
+252117,Reefer Deluxe 350 G2+ System - White - Red Sea,,Red Sea,252117,3349,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-350-g2-plus-system-72-gal-red-sea.html,14303,19
+252134,Reefer 3XL 900 G2+ System (192 Gal) w/ 4x RL90 - Black - Red Sea,,Red Sea,252134,7599,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-3xl-900-g2-plus-deluxe-system-192-gal-w-4x-reefled-90-red-sea.html,15757,10
+252114,Reefer Deluxe XL 300 G2+ System (65 Gal) - Black,,Red Sea,252114,3149,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-300-g2-plus-system-65-gal-red-sea.html,15702,10
+252119,Reefer Deluxe XL 425 G2+ System (91 Gal) w/ 2x RL90 - White - Red Sea,,Red Sea,252119,3949,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-425-g2-plus-system-91-gal-w-2x-reefled-90-red-sea.html,15726,5
+252118,Reefer Deluxe XL 425 G2+ System (91 Gal) w/ 2x RL90 - Black - Red Sea,,Red Sea,252118,3949,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-425-g2-plus-system-91-gal-w-2x-reefled-90-red-sea.html,15725,20
+252092,Reefer 350 G2+ System - Black - Red Sea,,Red Sea,252092,2499,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-350-g2-system-72-gal-red-sea.html,15705,20
+252115,Reefer Deluxe XL 300 G2+ System (65 Gal) - White,,Red Sea,252115,3149,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-300-g2-plus-system-65-gal-red-sea.html,15703,9
+252085,Reefer 170 G2+ System - White,,Red Sea,252085,1499,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-170-g2-system-33-gal-red-sea.html,15688,19
+252116,Reefer Deluxe 350 G2+ System - Black - Red Sea,,Red Sea,252116,3349,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-350-g2-plus-system-72-gal-red-sea.html,15723,20
+252089,Reefer 250 G2+ System - White,,Red Sea,252089,2099,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-250-g2-plus-system-54-gal-red-sea.html,15694,18
+252093,Reefer 350 G2+ System - White - Red Sea,,Red Sea,252093,2499,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-350-g2-system-72-gal-red-sea.html,15706,20
+252084,Reefer 170 G2+ System - Black,,Red Sea,252084,1499,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-170-g2-system-33-gal-red-sea.html,15687,20
+252088,Reefer 250 G2+ System - Black,,Red Sea,252088,2099,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-250-g2-plus-system-54-gal-red-sea.html,15693,20
+252142,Reefer Peninsula 350 G2+ Aquarium System (73 Gal) - Black - Red Sea,,Red Sea,252142,3049,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-350-g2-system-73-gal-red-sea.html,15845,5
+252156,Reefer Peninsula Deluxe 700 G2+ System w/ 3x ReefLED 160 (150 Gal) - Black - Red Sea,,Red Sea,252156,7209,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-700-g2-system-w-3x-reefled-160-150-gal-red-sea.html,15835,5
+252143,Reefer Peninsula 350 G2+ Aquarium System (73 Gal) - White - Red Sea,,Red Sea,252143,3049,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-350-g2-system-73-gal-red-sea.html,15846,5
+252149,Reefer Peninsula 950 G2+ Aquarium System (200 Gal) - White - Red Sea,,Red Sea,252149,6999,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-peninsula-950-g2-system-200-gal-red-sea.html,15839,10
+252155,Reefer Peninsula Deluxe 500 G2+ System w/ 2x ReefLED 160 (109 Gal) - White - Red Sea,,Red Sea,252155,4999,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-deluxe-500-g2-system-w-2x-reefled-160-109-gal-red-sea.html,15827,5
+252158,Reefer Peninsula Deluxe 950 G2+ System w/ 4x ReefLED 160 (200 Gal) - Black - Red Sea,,Red Sea,252158,9029,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-peninsula-deluxe-950-g2-system-w-4x-reefled-160-200-gal-red-sea.html,15841,10
+252159,Reefer Peninsula Deluxe 950 G2+ System w/ 4x ReefLED 160 (200 Gal) - White - Red Sea,,Red Sea,252159,9029,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-peninsula-deluxe-950-g2-system-w-4x-reefled-160-200-gal-red-sea.html,15842,10
+252145,Reefer Peninsula 500 G2+ Aquarium System (109 Gal) - White - Red Sea,,Red Sea,252145,3599,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-500-g2-aquarium-system-109-gal-red-sea.html,15830,5
+252148,Reefer Peninsula 950 G2+ Aquarium System (200 Gal) - Black - Red Sea,,Red Sea,252148,6999,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-peninsula-950-g2-system-200-gal-red-sea.html,15838,10
+252144,Reefer Peninsula 500 G2+ Aquarium System (109 Gal) - Black - Red Sea,,Red Sea,252144,3599,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-500-g2-aquarium-system-109-gal-red-sea.html,15829,5
+252154,Reefer Peninsula Deluxe 500 G2+ System w/ 2x ReefLED 160 (109 Gal) - Black - Red Sea,,Red Sea,252154,4999,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-deluxe-500-g2-system-w-2x-reefled-160-109-gal-red-sea.html,15826,5
+252157,Reefer Peninsula Deluxe 700 G2+ System w/ 3x ReefLED 160 (150 Gal) - White - Red Sea,,Red Sea,252157,7209,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-peninsula-700-g2-system-w-3x-reefled-160-150-gal-red-sea.html,15836,5
+252133,Reefer Deluxe XXL 750 G2+ System (160 Gal) w/ 3x ReefLED 160 - White - Red Sea,,Red Sea,252133,6549,FALSE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xxl-750-g2-plus-system-160-gal-w-3x-reefled-160-red-sea-1.html,14336,0
+252132,Reefer Deluxe XXL 750 G2+ System (160 Gal) w/ 3x ReefLED 160 - Black - Red Sea,,Red Sea,252132,6549,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xxl-750-g2-plus-system-160-gal-w-3x-reefled-160-red-sea-1.html,15769,5
+252138,Reefer-S 850 G2+ Deluxe System (180 Gal) w/ 3x ReefLED 160 - Black - Red Sea,,Red Sea,252138,8149,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-850-g2-plus-deluxe-system-180-gal-w-3x-reefled-160-red-sea.html,15765,1
+252139,Reefer-S 850 G2+ Deluxe System (180 Gal) w/ 3x ReefLED 160 - White - Red Sea,,Red Sea,252139,8149,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-850-g2-plus-deluxe-system-180-gal-w-3x-reefled-160-red-sea.html,15767,1
+252140,Reefer-S 1000 G2+ Deluxe System (210 Gal) w/ 3x ReefLED 160 - Black - Red Sea,,Red Sea,252140,8949,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-1000-g2-plus-deluxe-system-210-gal-w-3x-reefled-160-red-sea.html,15771,1
+252126,Reefer Deluxe XXL 625 G2+ System (132 Gal) w/ 3x RL90 - Black - Red Sea,,Red Sea,252126,5269,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xxl-625-g2-plus-system-132-gal-w-3x-reefled-90-red-sea.html,15750,4
+252110,Reefer Deluxe XL 200 G2+ System (42 Gal) - Black,,Red Sea,252110,2019,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-200-g2-plus-system-42-gal-red-sea.html,15753,9
+252108,Reefer 170 Deluxe G2+ System - Black,,Red Sea,252108,1919,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-170-g2-system-34-gal-red-sea.html,15747,20
+252111,Reefer Deluxe XL 200 G2+ System (42 Gal) - White,,Red Sea,252111,2019,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-200-g2-plus-system-42-gal-red-sea.html,15754,9
+252120,Reefer Deluxe XL 425 G2+ System (91 Gal) w/ 2x RL160 - Black - Red Sea,,Red Sea,252120,4399,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-425-g2-plus-system-91-gal-w-2x-reefled-160-red-sea.html,15729,10
+252109,Reefer 170 Deluxe G2+ System - White,,Red Sea,252109,1919,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-170-g2-system-34-gal-red-sea.html,15748,10
+252127,Reefer Deluxe XXL 625 G2+ System (132 Gal)  w/ 3x RL90 - White - Red Sea,,Red Sea,252127,5269,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xxl-625-g2-plus-system-132-gal-w-3x-reefled-90-red-sea.html,15751,10
+252141,Reefer-S 1000 G2+ Deluxe System (210 Gal) w/ 3x ReefLED 160 - White - Red Sea,,Red Sea,252141,8949,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-1000-g2-plus-deluxe-system-210-gal-w-3x-reefled-160-red-sea.html,15772,1
+252124,Reefer Deluxe XL 525 G2+ System (112 Gal) w/ 2x ReefLED 160 - Black - Red Sea,,Red Sea,252124,4899,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-525-g2-plus-system-112-gal-w-2x-reefled-160-red-sea.html,15744,10
+252125,Reefer Deluxe XL 525 G2+ System (112 Gal) w/ 2x ReefLED 160 - White - Red Sea,,Red Sea,252125,4899,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-525-g2-plus-system-112-gal-w-2x-reefled-160-red-sea.html,15745,10
+252122,Reefer Deluxe XL 525 G2+ System (112 Gal) w/ 3x ReefLED 90 - Black - Red Sea,,Red Sea,252122,4869,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-525-g2-plus-system-112-gal-w-3x-reefled-90-red-sea.html,15741,10
+252123,Reefer Deluxe XL 525 G2+ System (112 Gal) w/ 3x ReefLED 90 - White - Red Sea,,Red Sea,252123,4869,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-525-g2-plus-system-112-gal-w-3x-reefled-90-red-sea.html,15742,10
+252121,Reefer Deluxe XL 425 G2+ System (91 Gal) w/ 2x RL160 - White - Red Sea,,Red Sea,252121,4399,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-425-g2-plus-system-91-gal-w-2x-reefled-160-red-sea.html,15730,10
+252104,Reefer-S 850 G2+ System (180 Gal) - Black - Red Sea,,Red Sea,252104,6199,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-850-g2-plus-system-180-gal-red-sea.html,15734,1
+252105,Reefer-S 850 G2+ System (180 Gal) - White - Red Sea,,Red Sea,252105,6199,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-s-850-g2-plus-system-180-gal-red-sea.html,15735,1
+252102,Reefer 3XL 900 G2+ System (192 Gal) - Black - Red Sea,,Red Sea,252102,5899,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-3xl-900-g2-plus-system-192-gal-red-sea.html,15720,9
+252099,Reefer XXL 625 G2+ System (132 Gal) - White - Red Sea,,Red Sea,252099,3999,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-xxl-625-g2-plus-system-133-gal-red-sea.html,15715,10
+252103,Reefer 3XL 900 G2+ System (192 Gal) - White - Red Sea,,Red Sea,252103,5899,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-3xl-900-g2-plus-system-192-gal-red-sea.html,15721,10
+252098,Reefer XXL 625 G2+ System (132 Gal) - Black - Red Sea,,Red Sea,252098,3999,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-xxl-625-g2-plus-system-133-gal-red-sea.html,15714,4
+252097,Reefer XL 525 G2+ System (112 Gal) - White - Red Sea,,Red Sea,252097,3599,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-xl-525-g2-plus-system-112-gal-red-sea.html,15712,9
+252091,Reefer XL 300 G2+ System (65 Gal) - White,,Red Sea,252091,2299,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-xl-300-g2-plus-system-65-gal-red-sea.html,15700,10
+252095,Reefer XL 425 G2+ System (91 Gal) - White - Red Sea,,Red Sea,252095,3099,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-xl-425-g2-plus-system-91-gal-red-sea.html,15709,5
+252096,Reefer XL 525 G2+ System (112 Gal) - Black - Red Sea,,Red Sea,252096,3599,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-xl-525-g2-plus-system-112-gal-red-sea.html,15711,10
+252113,Reefer Deluxe 250 G2+ System - White,,Red Sea,252113,2949,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-250-g2-plus-system-red-sea.html,15696,19
+252087,Reefer XL 200 G2+ System (42 Gal) - White,,Red Sea,252087,1599,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-xl-200-g2-plus-system-42-gal-red-sea.html,15691,5
+252094,Reefer XL 425 G2+ System (91 Gal) - Black - Red Sea,,Red Sea,252094,3099,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-xl-425-g2-plus-system-91-gal-red-sea.html,15708,20
+252112,Reefer Deluxe 250 G2+ System - Black,,Red Sea,252112,2949,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-250-g2-plus-system-red-sea.html,15695,19
+252086,Reefer XL 200 G2+ System (42 Gal) - Black,,Red Sea,252086,1599,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-xl-200-g2-plus-system-42-gal-red-sea.html,15690,8
+252090,Reefer XL 300 G2+ System (65 Gal) - Black,,Red Sea,252090,2299,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-xl-300-g2-plus-system-65-gal-red-sea.html,15699,9
+251236,Max NANO Peninsula Complete Reef System (26 Gal) - Pearl White,,Red Sea,251236,1099,FALSE,TRUE,https://www.bulkreefsupply.com/max-nano-peninsula-complete-reef-system-26-gal-red-sea.html,14704,0
+251235,Max NANO Peninsula Complete Reef System (26 Gal) - Black,,Red Sea,251235,1099,TRUE,TRUE,https://www.bulkreefsupply.com/max-nano-peninsula-complete-reef-system-26-gal-red-sea.html,14705,12
+251157,ReefMat Sump Modification Kit,,Red Sea,251157,15.7,TRUE,FALSE,https://www.bulkreefsupply.com/reefmat-sump-modification-kit-red-sea.html,14603,67
+250997,Reefer Deluxe XL 425 G2 System (91 Gal) w/ 2x RL160 - Black - Red Sea (DISCONTINUED),,Red Sea,250997,4229,FALSE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xl-425-g2-system-91-gal-w-2x-reefled-160-red-sea.html,14309,0
+252117,Reefer Deluxe 350 G2+ System - White - Red Sea,,Red Sea,252117,3349,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-350-g2-system-72-gal-red-sea.html,14303,19
+233003,ReefMat 1200 Replacement Roll,,Red Sea,233003,31.99,TRUE,FALSE,https://www.bulkreefsupply.com/reefmat-1200-replacement-roll-red-sea.html,14374,93
+233002,ReefMat 500 Replacement Roll,,Red Sea,233002,17.99,TRUE,FALSE,https://www.bulkreefsupply.com/reefmat-500-replacement-roll-red-sea.html,14373,222
+252128,Reefer Deluxe XXL 625 G2+ System (132 Gal) w/ 2x RL160 - Black - Red Sea,,Red Sea,252128,5299,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xxl-625-g2-plus-system-132-gal-w-2x-reefled-160-red-sea.html,15756,5
+252129,Reefer Deluxe XXL 625 G2+ System (132 Gal) w/ 2x RL160 - White - Red Sea,,Red Sea,252129,5299,TRUE,TRUE,https://www.bulkreefsupply.com/reefer-deluxe-xxl-625-g2-plus-system-132-gal-w-2x-reefled-160-red-sea.html,14333,10
+233000,ReefMat 500 Fleece Roller Filter,,Red Sea,233000,379,TRUE,FALSE,https://www.bulkreefsupply.com/reefmat-500-fleece-roller-filter-red-sea.html,13617,131
+233001,ReefMat 1200 Fleece Roller Filter,,Red Sea,233001,429,TRUE,FALSE,https://www.bulkreefsupply.com/reefmat-1200-fleece-roller-filter-red-sea.html,13616,82
+323417,DipX Coral Bath 500 mL - Red Sea,,Red Sea,323417,21.99,TRUE,TRUE,https://www.bulkreefsupply.com/dipx-coral-bath-red-sea.html,13418,28
+323418,DipX Coral Bath 5L - Red Sea,,Red Sea,323418,134,TRUE,TRUE,https://www.bulkreefsupply.com/dipx-coral-bath-red-sea.html,13419,1
+214036,ReefLED 160 Suspension Kit,7.31E+11,Red Sea,214036,28,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-160-suspension-kit-red-sea.html,13221,65
+323416,DipX Coral Bath 250 mL - Red Sea,,Red Sea,323416,15.99,TRUE,TRUE,https://www.bulkreefsupply.com/dipx-coral-bath-red-sea.html,13417,10
+214037,ReefLED 160S Adapter Tray for Pendant,7.31E+11,Red Sea,214037,20,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-160s-adapter-tray-for-pendant-red-sea.html,13275,29
+232324,60cm Slide-Out Control Panel,,Red Sea,232324,139,TRUE,TRUE,https://www.bulkreefsupply.com/slide-out-control-panel-red-sea.html,12983,1
+232317,ReefDose 4 Tube Holder,7.31E+11,Red Sea,232317,15.99,TRUE,FALSE,https://www.bulkreefsupply.com/reefdose-4-tube-holder-red-sea.html,12757,16
+232319,ReefDose Tube Tip Set (4 pack),7.31E+11,Red Sea,232319,5.99,TRUE,FALSE,https://www.bulkreefsupply.com/reefdose-tube-tip-set-4-pack-red-sea.html,12759,3
+232318,ReefDose Tube Organizer Clips (3 pack),7.31E+11,Red Sea,232318,15.99,TRUE,FALSE,https://www.bulkreefsupply.com/reefdose-tube-organizer-clips-3-pack-red-sea.html,12758,45
+232314,ReefDose Deluxe 4-Color Tubing & Accessories Kit - Blue-Green Kit,,Red Sea,232314,31.99,TRUE,TRUE,https://www.bulkreefsupply.com/reefdose-deluxe-4-color-tubing-accessories-kit-red-sea.html,12600,23
+232315,ReefDose Deluxe 4-Color Tubing & Accessories Kit - Red-Yellow Kit,,Red Sea,232315,31.99,TRUE,TRUE,https://www.bulkreefsupply.com/reefdose-deluxe-4-color-tubing-accessories-kit-red-sea.html,12601,59
+232316,ReefDose 5 mL Measuring Cylinder,7.31E+11,Red Sea,232316,10.99,TRUE,FALSE,https://www.bulkreefsupply.com/reefdose-5-ml-measuring-cylinder-red-sea.html,12603,4
+232312,ReefDose 2 Dosing Pump,7.31E+11,Red Sea,232312,269,TRUE,FALSE,https://www.bulkreefsupply.com/reefdose-2-dosing-pump-red-sea.html,12296,9
+213011,250ml Reef Energy Plus,,Red Sea,213011,20.49,TRUE,TRUE,https://www.bulkreefsupply.com/reef-energy-plus-ab-all-in-one-coral-superfood-red-sea.html,10631,73
+232313,ReefDose 4 - Dosing Pump,7.31E+11,Red Sea,232313,429,TRUE,FALSE,https://www.bulkreefsupply.com/reefdose-4-dosing-pump-red-sea.html,12298,49
+232245,ReefLED 90 Universal Mounting Arm,7.31E+11,Red Sea,232245,85,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-90-universal-mounting-arm-red-sea.html,12275,36
+213935,Media Bag 2-Pack (10 x 5.5")",7.31E+11,Red Sea,213935,7.99,TRUE,FALSE,https://www.bulkreefsupply.com/media-bag-2-pack-10-x-5-5-red-sea.html,11915,88
+213377,ReefLED 90 Suspension Kit,7.31E+11,Red Sea,213377,28,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-90-suspension-kit-red-sea.html,11488,14
+213376,ReefLED 50 Suspension Kit,7.31E+11,Red Sea,213376,28,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-50-suspension-kit-red-sea.html,11487,5
+213012,500mL Reef Energy Plus,,Red Sea,213012,27.99,TRUE,TRUE,https://www.bulkreefsupply.com/reef-energy-plus-ab-all-in-one-coral-superfood-red-sea.html,10632,218
+214035,ReefLED 160s Universal Mounting Arm,7.31E+11,Red Sea,214035,85,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-160s-universal-mounting-arm-red-sea.html,11434,18
+212500B,ReefLED 90 Pendant for 49 - 60" Tanks - Black",7.31E+11,Red Sea,212500B,170,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-90-pendant-for-49-60-tanks-black-red-sea-bundle.html,11203,1
+212503B,ReefLED 90 Pendant for 61 - 72" Tanks - White",7.31E+11,Red Sea,212503B,200,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-90-pendant-for-61-72-tanks-white-red-sea-bundle.html,11209,4
+212502B,ReefLED 90 Pendant for 61 - 72" Tanks - Black",7.31E+11,Red Sea,212502B,190,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-90-pendant-for-61-72-tanks-black-red-sea-bundle.html,11207,5
+212501B,ReefLED 90 Pendant for 49 - 60" Tanks - White",7.31E+11,Red Sea,212501B,180,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-90-pendant-for-49-60-tanks-white-red-sea-bundle.html,11205,6
+213013,1L Reef Energy Plus,,Red Sea,213013,39.99,TRUE,TRUE,https://www.bulkreefsupply.com/reef-energy-plus-ab-all-in-one-coral-superfood-red-sea.html,10633,343
+213014,5L Reef Energy Plus,,Red Sea,213014,155,TRUE,TRUE,https://www.bulkreefsupply.com/reef-energy-plus-ab-all-in-one-coral-superfood-red-sea.html,10634,26
+212955,ReefWave 45 Pump with Controller (3960 GPH),7.31E+11,Red Sea,212955,369,TRUE,FALSE,https://www.bulkreefsupply.com/reefwave-45-pump-with-controller-3960-gph-red-sea.html,10619,33
+212954,ReefWave 25 Pump with Controller (1980 GPH),7.31E+11,Red Sea,212954,319,TRUE,FALSE,https://www.bulkreefsupply.com/reefwave-25-pump-with-controller-1980-gph-red-sea.html,10618,42
+212342,ReefLED 50 LED Light Fixture,7.31E+11,Red Sea,212342,249,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-50-led-light-fixture-red-sea.html,9634,22
+212332,ReefLED Pendant for 30 - 39" Tanks - Black",7.31E+11,Red Sea,212332,144,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-pendant-for-30-39-tanks-black-red-sea.html,9592,5
+212340,ReefLED 90 Adapter Tray for Pendant,7.31E+11,Red Sea,212340,15,TRUE,FALSE,https://www.bulkreefsupply.com/adapter-tray-for-reefled-90-pendants-red-sea.html,9719,51
+212343,ReefLED 50 Universal Mounting Arm,7.31E+11,Red Sea,212343,45,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-50-mounting-arm-red-sea.html,9635,12
+212159,RSK 600 Reefer Internal Protein Skimmer,7.31E+11,Red Sea,212159,469,TRUE,FALSE,https://www.bulkreefsupply.com/rsk-600-reefer-internal-protein-skimmer-red-sea.html,9248,15
+212335,ReefLED Pendant for 39 - 48" Tanks - White",,Red Sea,212335,209,TRUE,TRUE,https://www.bulkreefsupply.com/reefled-pendant-system-for-39-48-tanks-red-sea.html,9595,2
+212334,ReefLED Pendant for 39 - 48" Tanks - Black",,Red Sea,212334,209,TRUE,TRUE,https://www.bulkreefsupply.com/reefled-pendant-system-for-39-48-tanks-red-sea.html,9594,2
+212332,ReefLED Pendant for 30 - 39" Tanks - Black",,Red Sea,212332,144,TRUE,TRUE,https://www.bulkreefsupply.com/reefled-pendant-system-for-30-39-tanks-red-sea.html,9592,5
+212333,ReefLED Pendant for 30 - 39" Tanks - White",,Red Sea,212333,157.5,TRUE,TRUE,https://www.bulkreefsupply.com/reefled-pendant-system-for-30-39-tanks-red-sea.html,9593,14
+212333,ReefLED Pendant for 30 - 39" Tanks - White",7.31E+11,Red Sea,212333,157.5,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-pendant-for-30-39-tanks-white-red-sea.html,9593,14
+212158,RSK 300 Reefer Internal Protein Skimmer,7.31E+11,Red Sea,212158,369,TRUE,FALSE,https://www.bulkreefsupply.com/rsk-300-reefer-internal-protein-skimmer-red-sea.html,9247,32
+212327,ReefLED 90 LED Light Fixture,7.31E+11,Red Sea,212327,389,TRUE,FALSE,https://www.bulkreefsupply.com/reefled-90-led-light-fixture-red-sea.html,9512,20
+212160,RSK 900 Reefer Internal Protein Skimmer,7.31E+11,Red Sea,212160,579,TRUE,FALSE,https://www.bulkreefsupply.com/rsk-900-reefer-internal-protein-skimmer-red-sea.html,9249,19
+211940,Dosing Cap Tube (2-Pack),7.31E+11,Red Sea,211940,7.99,TRUE,FALSE,https://www.bulkreefsupply.com/dosing-cap-tube-2-pack-red-sea.html,8735,83
+211571,72 Tank Net Screen Profile Sections",,Red Sea,211571,36.99,TRUE,TRUE,https://www.bulkreefsupply.com/tank-net-screen-profile-sections-red-sea.html,8296,3
+211570,36 Tank Net Screen Profile Sections",,Red Sea,211570,28.99,TRUE,TRUE,https://www.bulkreefsupply.com/tank-net-screen-profile-sections-red-sea.html,8295,3
+211424,DIY Aquarium Screen Top Hanging Clips,7.31E+11,Red Sea,211424,7.99,TRUE,FALSE,https://www.bulkreefsupply.com/diy-aquarium-screen-top-hanging-clips-red-sea.html,7547,30
+211568,DIY Aquarium Screen Top Cut Outs,7.31E+11,Red Sea,211568,7.99,TRUE,FALSE,https://www.bulkreefsupply.com/diy-aquarium-screen-top-cut-outs-red-sea.html,7549,118
+211639,4 Filter Media Cup",7.31E+11,Red Sea,211639,15.99,TRUE,FALSE,https://www.bulkreefsupply.com/4-filter-media-cup-red-sea.html,7868,104
+214038,Aquarium Salt Mix 160 Gallon Box,,Red Sea,214038,79.99,TRUE,TRUE,https://www.bulkreefsupply.com/aquarium-salt-mix-red-sea.html,11914,73
+211511,Aquarium Salt Mix 55 Gallon,,Red Sea,211511,34.99,TRUE,TRUE,https://www.bulkreefsupply.com/aquarium-salt-mix-red-sea.html,7617,60
+207077,Aquarium Salt Mix 175 Gallon,,Red Sea,207077,84.99,TRUE,TRUE,https://www.bulkreefsupply.com/aquarium-salt-mix-red-sea.html,1638,228
+211875,Aquarium Salt Mix 200 Gallon Sack,,Red Sea,211875,84.99,TRUE,TRUE,https://www.bulkreefsupply.com/aquarium-salt-mix-red-sea.html,8487,182
+211569,DIY Aquarium Screen Top Universal Cut Out Kit,7.31E+11,Red Sea,211569,9.99,TRUE,FALSE,https://www.bulkreefsupply.com/diy-aquarium-screen-top-universal-cut-out-kit-red-sea.html,7550,39
+211419,R42080 24 x 24" Customizable DIY Aquarium Net Cover",,Red Sea,211419,57.99,TRUE,TRUE,https://www.bulkreefsupply.com/customizable-diy-aquarium-net-cover-kit-red-sea.html,7323,23
+211421,R42082 48 x 31" Customizable DIY Aquarium Net Cover",,Red Sea,211421,73.99,TRUE,TRUE,https://www.bulkreefsupply.com/customizable-diy-aquarium-net-cover-kit-red-sea.html,7325,59
+211420,R42081 36 x 24" Customizable DIY Aquarium Net Cover",,Red Sea,211420,62.99,TRUE,TRUE,https://www.bulkreefsupply.com/customizable-diy-aquarium-net-cover-kit-red-sea.html,7324,17
+211422,R42083 60 x 31" Customizable DIY Aquarium Net Cover",,Red Sea,211422,89.99,TRUE,TRUE,https://www.bulkreefsupply.com/customizable-diy-aquarium-net-cover-kit-red-sea.html,7326,14
+211423,R42084 72 x 31" Customizable DIY Aquarium Net Cover",,Red Sea,211423,99.99,TRUE,TRUE,https://www.bulkreefsupply.com/customizable-diy-aquarium-net-cover-kit-red-sea.html,7327,10
+207451,500mL Reef Energy A (Carbs Nutrition) (DISCONTINUED),,Red Sea,207451,18.99,FALSE,TRUE,https://www.bulkreefsupply.com/reef-energy-a-carbs-nutrition-red-sea.html,2234,0
+207445,500 mL Reef Foundation B (Alk),,Red Sea,207445,19.99,TRUE,TRUE,https://www.bulkreefsupply.com/reef-foundation-b-alk-red-sea.html,2193,34
+210931,1000mL Reef Foundation B (Alk),,Red Sea,210931,28.99,TRUE,TRUE,https://www.bulkreefsupply.com/reef-foundation-b-alk-red-sea.html,6432,159
+210936,5000mL Reef Foundation B (Alk),,Red Sea,210936,109,TRUE,TRUE,https://www.bulkreefsupply.com/reef-foundation-b-alk-red-sea.html,6433,19
+210932,1000mL Reef Foundation C (Mg),,Red Sea,210932,28.99,TRUE,TRUE,https://www.bulkreefsupply.com/reef-foundation-c-mg-red-sea.html,6434,49
+207446,500mL Reef Foundation C (Mg),,Red Sea,207446,19.99,TRUE,TRUE,https://www.bulkreefsupply.com/reef-foundation-c-mg-red-sea.html,2194,40
+210937,5000mL Reef Foundation C (Mg),,Red Sea,210937,109,TRUE,TRUE,https://www.bulkreefsupply.com/reef-foundation-c-mg-red-sea.html,6435,11
+210935,5000mL Reef Foundation A (Ca/Sr),,Red Sea,210935,109,TRUE,TRUE,https://www.bulkreefsupply.com/reef-foundation-a-ca-sr-red-sea.html,6431,16
+207444,500 mL Reef Foundation A (Ca/Sr),,Red Sea,207444,19.99,TRUE,TRUE,https://www.bulkreefsupply.com/reef-foundation-a-ca-sr-red-sea.html,2192,23
+210930,1000mL Reef Foundation A (Ca/Sr),,Red Sea,210930,28.99,TRUE,TRUE,https://www.bulkreefsupply.com/reef-foundation-a-ca-sr-red-sea.html,6430,90
+210749,250mL Reef Foundation Package (Ca/Alk/Mag),7.31E+11,Red Sea,210749,28.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-foundation-ca-alk-mag-package-red-sea.html,6169,39
+210445,Max NANO Cube Complete Reef System (20 Gal) Black,,Red Sea,210445,999,TRUE,TRUE,https://www.bulkreefsupply.com/max-nano-complete-reef-system-red-sea.html,5965,13
+210446,Max NANO Cube Complete Reef System (20 Gal) - Pearl White,,Red Sea,210446,999,TRUE,TRUE,https://www.bulkreefsupply.com/max-nano-complete-reef-system-red-sea.html,5966,4
+210086,Max S-400 LED Complete Reef System (Black),,Red Sea,210086,4999,TRUE,TRUE,https://www.bulkreefsupply.com/max-s-400-led-complete-reef-system-red-sea.html,5708,1
+210087,Max S-400 LED Complete Reef System (White),,Red Sea,210087,4999,TRUE,TRUE,https://www.bulkreefsupply.com/max-s-400-led-complete-reef-system-red-sea.html,5709,5
+210090,Max S-650 LED Complete Reef System (Black),,Red Sea,210090,6599,TRUE,TRUE,https://www.bulkreefsupply.com/max-s-650-led-complete-reef-system-red-sea.html,5714,5
+210091,Max S-650 LED Complete Reef System (White),,Red Sea,210091,6599,TRUE,TRUE,https://www.bulkreefsupply.com/max-s-650-led-complete-reef-system-red-sea.html,5715,20
+210362,REEF SPEC Carbon 1000 g,,Red Sea,210362,38.99,TRUE,TRUE,https://www.bulkreefsupply.com/reef-spec-carbon-red-sea.html,5778,14
+210360,REEF SPEC Carbon 250 g,,Red Sea,210360,14.99,TRUE,TRUE,https://www.bulkreefsupply.com/reef-spec-carbon-red-sea.html,5776,32
+210361,REEF SPEC Carbon 500 g,,Red Sea,210361,23.99,TRUE,TRUE,https://www.bulkreefsupply.com/reef-spec-carbon-red-sea.html,5777,25
+210257,Max E-260 LED Complete Reef System - Pearl White,,Red Sea,210257,2899,TRUE,TRUE,https://www.bulkreefsupply.com/max-e-260-led-complete-reef-system-red-sea.html,5682,9
+210254,Max E-170 LED Complete Reef System - Black,,Red Sea,210254,1899,TRUE,TRUE,https://www.bulkreefsupply.com/max-e-170-led-complete-reef-system-red-sea.html,5679,10
+210255,Max E-170 LED Complete Reef System - Pearl White,,Red Sea,210255,1899,TRUE,TRUE,https://www.bulkreefsupply.com/max-e-170-led-complete-reef-system-red-sea.html,5680,10
+210256,Max E-260 LED Complete Reef System - Black,,Red Sea,210256,2899,TRUE,TRUE,https://www.bulkreefsupply.com/max-e-260-led-complete-reef-system-red-sea.html,5681,10
+209825,Felt Filter Sock with Plastic Ring,7.31E+11,Red Sea,209825,10.99,TRUE,FALSE,https://www.bulkreefsupply.com/felt-filter-sock-with-plastic-ring-red-sea.html,5167,549
+209826,Mesh Filter Sock with Plastic Ring,7.31E+11,Red Sea,209826,10.99,TRUE,FALSE,https://www.bulkreefsupply.com/mesh-filter-sock-with-plastic-ring-red-sea.html,5166,197
+208299,RedSea Ammonia Test Kit,7.31E+11,Red Sea,208299,23.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-ammonia-test-kit.html,3308,32
+208300,RedSea Nitrate / Nitrite Test Kit,7.31E+11,Red Sea,208300,26.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-nitrate-nitrite-test-kit.html,3309,9
+208298,RedSea pH / Alkalinity Test Kit,7.31E+11,Red Sea,208298,23.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-ph-alkalinity-test-kit.html,3307,37
+208301,RedSea Marine Care Test Kit,7.31E+11,Red Sea,208301,74.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-marine-care-test-kit.html,3310,77
+210940,5000mL NO3:PO4-X Reducer,,Red Sea,210940,129,TRUE,TRUE,https://www.bulkreefsupply.com/red-sea-nitrate-phosphate-reducer.html,6439,33
+208218,500mL NO3:PO4-X Reducer,,Red Sea,208218,23.99,TRUE,TRUE,https://www.bulkreefsupply.com/red-sea-nitrate-phosphate-reducer.html,3199,95
+208219,1000mL NO3:PO4-X Reducer,,Red Sea,208219,35.99,TRUE,TRUE,https://www.bulkreefsupply.com/red-sea-nitrate-phosphate-reducer.html,3200,159
+208217,RedSea Reef Mature Pro Kit,7.31E+11,Red Sea,208217,38.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-reef-mature-pro-kit.html,3197,18
+208216,RedSea Trace Colors ABCD 4-Pack,7.31E+11,Red Sea,208216,27.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-coral-colors-abcd-4-pack.html,3196,65
+207456,1 kg Reef Foundation A (Ca/Sr),7.31E+11,Red Sea,207456,31.99,TRUE,FALSE,https://www.bulkreefsupply.com/1-kg-red-sea-reef-foundation-a-ca-sr.html,2204,26
+207457,1 kg Reef Foundation B (Alk),7.31E+11,Red Sea,207457,31.99,TRUE,FALSE,https://www.bulkreefsupply.com/1-kg-red-sea-reef-foundation-b-alk.html,2205,31
+207448,RedSea Trace Colors B (Potassium) - 500 mL,7.31E+11,Red Sea,207448,19.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-coral-colors-b-potassium-500ml.html,2196,47
+207449,RedSea Trace Colors C (Iron/Trace) - 500 mL,7.31E+11,Red Sea,207449,19.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-coral-colors-c-iron-trace-500ml.html,2197,40
+207455,5 kg Reef Foundation ABC+,7.31E+11,Red Sea,207455,74.99,TRUE,FALSE,https://www.bulkreefsupply.com/5-kg-red-sea-reef-foundation-abc.html,2202,7
+207450,RedSea Trace Colors D (Trace) - 500 mL,7.31E+11,Red Sea,207450,19.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-coral-colors-d-trace-500ml.html,2198,31
+207080,Aiptasia-X 500 mL Refill,,Red Sea,207080,59.99,TRUE,TRUE,https://www.bulkreefsupply.com/red-sea-aiptasia-x.html,1558,43
+205235,Aiptasia-X 2 oz (60mL),,Red Sea,205235,19.99,TRUE,TRUE,https://www.bulkreefsupply.com/red-sea-aiptasia-x.html,1370,58
+207453,RedSea KH Coralline Gro - 500 mL,7.31E+11,Red Sea,207453,19.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-coralline-gro-500-ml.html,2200,16
+207454,1 kg Reef Foundation ABC+,7.31E+11,Red Sea,207454,31.99,TRUE,FALSE,https://www.bulkreefsupply.com/1-kg-red-sea-reef-foundation-abc.html,2201,9
+207447,RedSea Trace Colors A (Iodine/Halogens) - 500 mL,7.31E+11,Red Sea,207447,19.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-reef-colors-a-iodine-halogens-500ml.html,2195,47
+207079,Coral Pro Salt Mix 175 Gallon,,Red Sea,207079,84.99,TRUE,TRUE,https://www.bulkreefsupply.com/red-sea-coral-pro-salt.html,1555,206
+211876,Coral Pro Salt Mix 200 Gallon Sack,,Red Sea,211876,84.99,TRUE,TRUE,https://www.bulkreefsupply.com/red-sea-coral-pro-salt.html,8486,579
+207084,RedSea Nitrate Pro Reagent Refill Kit,7.31E+11,Red Sea,207084,30.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-nitrate-pro-reagent-refill-kit.html,1548,25
+207081,RedSea Calcium Pro Reagent Refill Kit,7.31E+11,Red Sea,207081,24.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-calcium-pro-reagent-refill-kit.html,1545,77
+207094,RedSea Iodine Pro (I2) test kit,7.31E+11,Red Sea,207094,54.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-iodine-pro-i2-test-kit.html,1540,13
+207097,"RedSea Trace Colors Pro Multi Test Kit (I2,K,Fe)",7.31E+11,Red Sea,207097,84.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-reef-colors-pro-multi-test-kit-i2-k-fe.html,1542,16
+207092,RedSea Nitrate Pro (NO3) Test Kit,7.31E+11,Red Sea,207092,54.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-nitrate-pro-no3-test-kit.html,1538,2
+207089,RedSea Calcium Pro Test Kit,7.31E+11,Red Sea,207089,41.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-calcium-pro-test-kit.html,1535,35
+207083,RedSea Magnesium Pro Reagent Refill Kit,7.31E+11,Red Sea,207083,24.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-magnesium-pro-reagent-refill-kit.html,1547,29
+207086,RedSea Iodine Pro Reagent Refill Kit,7.31E+11,Red Sea,207086,25.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-iodine-pro-reagent-refill-kit.html,1550,14
+207082,RedSea Alkalinity Pro Reagent Refill Kit,7.31E+11,Red Sea,207082,24.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-alkalinity-pro-reagent-refill-kit.html,1546,12
+207085,RedSea Phosphate Pro Reagent Refill Kit,7.31E+11,Red Sea,207085,30.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-phosphate-pro-reagent-refill-kit.html,1549,67
+207099,RedSea Algae Control Multi Test Kit (NO3/PO4),7.31E+11,Red Sea,207099,74.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-algae-control-multi-test-kit-no3-po4.html,1543,16
+207093,RedSea Phosphate Pro (PO4) test kit,7.31E+11,Red Sea,207093,54.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-phosphate-pro-po4-test-kit.html,1539,12
+207096,"RedSea Reef Foundation Pro Multi Test Kit (Ca, Alk, Mg)",7.31E+11,Red Sea,207096,74.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-reef-foundation-pro-multi-test-kit-ca-alk-mg.html,1544,55
+207091,RedSea Magnesium Pro Test Kit,7.31E+11,Red Sea,207091,41.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-magnesium-pro-test-kit.html,1537,18
+207090,RedSea Alkalinity Pro Test Kit,7.31E+11,Red Sea,207090,41.99,TRUE,FALSE,https://www.bulkreefsupply.com/red-sea-alkalinity-pro-test-kit.html,1536,17
+207458,1 kg Reef Foundation C (Mg),7.31E+11,Red Sea,207458,31.99,TRUE,FALSE,https://www.bulkreefsupply.com/1-kg-red-sea-reef-foundation-c-mg.html,2206,16
+251945,6 CO2 Scrubber Skimmer Lid - Reef Octopus",,Reef Octopus,251945,34.99,FALSE,TRUE,https://www.bulkreefsupply.com/co2-scrubber-skimmer-lid-reef-octopus.html,15549,0
+251946,8 CO2 Scrubber Skimmer Lid - Reef Octopus",,Reef Octopus,251946,39.99,TRUE,TRUE,https://www.bulkreefsupply.com/co2-scrubber-skimmer-lid-reef-octopus.html,15550,8
+252075,VarioS 10 DC Advanced Controllable Pump (4220 GPH),,Reef Octopus,252075,999.99,TRUE,FALSE,https://www.bulkreefsupply.com/varios-10-dc-advanced-controllable-pump-4220-gph-reef-octopus.html,15925,19
+251944,4 CO2 Scrubber Skimmer Lid - Reef Octopus",,Reef Octopus,251944,29.99,TRUE,TRUE,https://www.bulkreefsupply.com/co2-scrubber-skimmer-lid-reef-octopus.html,15548,16
+251947,10 CO2 Scrubber Skimmer Lid - Reef Octopus",,Reef Octopus,251947,44.99,TRUE,TRUE,https://www.bulkreefsupply.com/co2-scrubber-skimmer-lid-reef-octopus.html,15551,10
+251948,12 CO2 Scrubber Skimmer Lid - Reef Octopus",,Reef Octopus,251948,49.99,TRUE,TRUE,https://www.bulkreefsupply.com/co2-scrubber-skimmer-lid-reef-octopus.html,15552,8
+251953,Octo Pulse 4+ Wave Pump (4500 GPH),6.95E+12,Reef Octopus,251953,399.99,TRUE,FALSE,https://www.bulkreefsupply.com/octo-pulse-4-wave-pump-4500-gph-reef-octopus.html,15610,13
+251952,Octo Pulse 2+ Wave Pump (1600 GPH),6.95E+12,Reef Octopus,251952,349.99,TRUE,FALSE,https://www.bulkreefsupply.com/octo-pulse-2-wave-pump-1600-gph-reef-octopus.html,15606,17
+251943,Universal CO2 Scrubber,6.95E+12,Reef Octopus,251943,174.99,FALSE,FALSE,https://www.bulkreefsupply.com/universal-co2-scrubber-reef-octopus.html,15546,0
+250634,Octo Pulse 4 Wave Pump (4500 GPH) with WaveEngine LE Controller,,Reef Octopus,250634,359.99,TRUE,FALSE,https://www.bulkreefsupply.com/octo-pulse-4-wave-pump-4500-gph-with-waveengine-le-controller-reef-octopus.html,14037,17
+250633,Octo Pulse 2 Wave Pump (1600 GPH) with WaveEngine LE Controller,,Reef Octopus,250633,319.99,TRUE,FALSE,https://www.bulkreefsupply.com/octo-pulse-2-wave-pump-1600-gph-with-waveengine-le-controller-reef-octopus.html,14035,20
+250040,AF80 USB Smart Fan - 3 inch - Reef Octopus,,Reef Octopus,250040,39.19,FALSE,TRUE,https://www.bulkreefsupply.com/usb-smart-fan-reef-octopus.html,12896,0
+250039,AF120 USB Smart Fan - 4inch - Reef Octopus,,Reef Octopus,250039,51.96,TRUE,TRUE,https://www.bulkreefsupply.com/usb-smart-fan-reef-octopus.html,12897,16
+205622B,BR-140 Biopellet Combo Pack,,Reef Octopus,205622B,388.99,TRUE,FALSE,https://www.bulkreefsupply.com/br-140-reef-octopus-biopellet-combo-pack-bundle.html,11049,9
+205620B,BR-70 Biopellet Combo Pack,,Reef Octopus,205620B,209.99,TRUE,FALSE,https://www.bulkreefsupply.com/br-70-reef-octopus-biopellet-combo-pack-bundle.html,11047,5
+205621B,BR-110 Biopellet Combo Pack,,Reef Octopus,205621B,287.99,TRUE,FALSE,https://www.bulkreefsupply.com/br-110-reef-octopus-biopellet-combo-pack-bundle.html,11048,1
+213856,Octo LUX T90 Aquarium System (48 Gal) - Black - Reef Octopus,,Reef Octopus,213856,2079,TRUE,TRUE,https://www.bulkreefsupply.com/octo-lux-t90-aquarium-system-48-gal-reef-octopus.html,10771,1
+213858,Octo Reef Sump 15A,6.95E+12,Reef Octopus,213858,311.84,TRUE,FALSE,https://www.bulkreefsupply.com/octo-reef-sump-15a-reef-octopus.html,10789,7
+213859,Octo Reef Sump 24A,6.95E+12,Reef Octopus,213859,438.89,TRUE,FALSE,https://www.bulkreefsupply.com/octo-reef-sump-24a-reef-octopus.html,10790,15
+213857,Octo LUX T90 Aquarium System (48 Gal) - White - Reef Octopus,,Reef Octopus,213857,2079,FALSE,TRUE,https://www.bulkreefsupply.com/octo-lux-t90-aquarium-system-48-gal-reef-octopus.html,10772,0
+213861,Octo Reef Sump 36A,6.95E+12,Reef Octopus,213861,729.99,TRUE,FALSE,https://www.bulkreefsupply.com/octo-reef-sump-36a-reef-octopus.html,10792,34
+213855,Octo LUX T60 Aquarium System (32 Gal) - White - Reef Octopus,,Reef Octopus,213855,1645.88,TRUE,TRUE,https://www.bulkreefsupply.com/octo-lux-t60-aquarium-system-32-gal-reef-octopus.html,10769,4
+213860,Octo Reef Sump 30A,6.95E+12,Reef Octopus,213860,599.99,TRUE,FALSE,https://www.bulkreefsupply.com/octo-reef-sump-30a-reef-octopus.html,10791,23
+213854,Octo LUX T60 Aquarium System (32 Gal) - Black - Reef Octopus,,Reef Octopus,213854,1645.88,TRUE,TRUE,https://www.bulkreefsupply.com/octo-lux-t60-aquarium-system-32-gal-reef-octopus.html,10768,9
+212595,VarioS-4S Controllable DC Skimmer Pump,6.95E+12,Reef Octopus,212595,386.91,TRUE,FALSE,https://www.bulkreefsupply.com/varios-4s-controllable-dc-skimmer-pump-reef-octopus.html,10051,19
+212594,VarioS-2S Controllable DC Skimmer Pump,6.95E+12,Reef Octopus,212594,286.43,TRUE,FALSE,https://www.bulkreefsupply.com/varios-2s-controllable-dc-skimmer-pump-reef-octopus.html,10050,6
+212596,VarioS-6S Controllable DC Skimmer Pump,6.95E+12,Reef Octopus,212596,430.8,TRUE,FALSE,https://www.bulkreefsupply.com/varios-6s-controllable-dc-skimmer-pump-reef-octopus.html,10052,17
+212075,Elite 200SSS 8 Super Space Saver Cone Protein Skimmer",6.95E+12,Reef Octopus,212075,851.92,TRUE,FALSE,https://www.bulkreefsupply.com/elite-200sss-8-super-space-saver-cone-protein-skimmer-reef-octopus.html,8915,8
+212076,Elite 220SSS 9 Super Space Saver Cone Protein Skimmer",6.95E+12,Reef Octopus,212076,970.19,TRUE,FALSE,https://www.bulkreefsupply.com/elite-220sss-9-super-space-saver-cone-protein-skimmer-reef-octopus.html,8916,4
+212074,Elite 150SSS 6 Super Space Saver Cone Protein Skimmer",6.95E+12,Reef Octopus,212074,702.23,TRUE,FALSE,https://www.bulkreefsupply.com/elite-150sss-6-super-space-saver-cone-protein-skimmer-reef-octopus.html,8914,3
+212071,Elite 150-INT 6 Super Cone Protein Skimmer",6.95E+11,Reef Octopus,212071,529.44,TRUE,FALSE,https://www.bulkreefsupply.com/elite-150-int-6-super-cone-protein-skimmer-reef-octopus.html,8911,5
+212073,Elite 220-INT 9 Super Cone Protein Skimmer",6.95E+12,Reef Octopus,212073,725.33,TRUE,FALSE,https://www.bulkreefsupply.com/elite-220-int-9-super-cone-protein-skimmer-reef-octopus.html,8913,10
+212072,Elite 200-INT 8 Super Cone Protein Skimmer",6.95E+12,Reef Octopus,212072,626.46,TRUE,FALSE,https://www.bulkreefsupply.com/elite-200-int-8-super-cone-protein-skimmer-reef-octopus.html,8912,9
+211244,eSsence S-130 Internal Protein Skimmer,6.95E+12,Reef Octopus,211244,299.99,TRUE,FALSE,https://www.bulkreefsupply.com/essence-s-130-internal-protein-skimmer-reef-octopus.html,6827,13
+210821,VarioS CR200 8 DC Calcium Reactor",6.95E+12,Reef Octopus,210821,729.99,TRUE,FALSE,https://www.bulkreefsupply.com/varios-cr200-8-dc-calcium-reactor-reef-octopus.html,6315,8
+210822,VarioS CR220 9 DC Calcium Reactor",6.95E+12,Reef Octopus,210822,859.99,TRUE,FALSE,https://www.bulkreefsupply.com/varios-cr220-9-dc-calcium-reactor-reef-octopus.html,6316,3
+210959,Regal 150SSS 6 Space Saving Protein Skimmer (VarioS)",6.95E+12,Reef Octopus,210959,479.99,TRUE,FALSE,https://www.bulkreefsupply.com/regal-150sss-6-space-saving-protein-skimmer-varios-reef-octopus.html,6447,32
+210820,VarioS CR140 5.5 DC Calcium Reactor",6.95E+12,Reef Octopus,210820,649.99,TRUE,FALSE,https://www.bulkreefsupply.com/varios-cr140-5-5-inch-calcium-reactor.html,6314,5
+210549,VarioS-8 Controllable DC Pump (2700 GPH),6.95E+12,Reef Octopus,210549,479.31,TRUE,FALSE,https://www.bulkreefsupply.com/varios-8-controllable-dc-pump-2700-gph-reef-octopus.html,6068,73
+210202,Regal 200EXT 8 Recirculating Protein Skimmer (VarioS)",6.95E+12,Reef Octopus,210202,780.77,TRUE,FALSE,https://www.bulkreefsupply.com/regal-200ext-8-recirculating-protein-skimmer-varios-reef-octopus.html,5722,6
+300260,20mm to 1/2 Metric to Standard PVC Adapter",,Reef Octopus,300260,9.2,TRUE,TRUE,https://www.bulkreefsupply.com/metric-to-standard-pvc-adapters.html,4129,34
+210199,Regal 200SSS 8 Space Saving Protein Skimmer (VarioS)",6.95E+12,Reef Octopus,210199,639.99,TRUE,FALSE,https://www.bulkreefsupply.com/regal-200sss-space-saving-protein-skimmer-reef-octopus.html,5695,24
+210204,Regal 300EXT 12 Recirculating Protein Skimmer (VarioS)",6.95E+12,Reef Octopus,210204,1016.39,TRUE,FALSE,https://www.bulkreefsupply.com/regal-300ext-12-recirculating-protein-skimmer-varios-reef-octopus.html,5724,10
+210203,Regal 250EXT 10 Recirculating Protein Skimmer (VarioS)",6.95E+12,Reef Octopus,210203,850.07,TRUE,FALSE,https://www.bulkreefsupply.com/regal-250ext-10-recirculating-protein-skimmer-varios-reef-octopus.html,5723,5
+210201,Regal 300SSS 12 Space Saving Protein Skimmer (VarioS)",6.95E+12,Reef Octopus,210201,799.99,TRUE,FALSE,https://www.bulkreefsupply.com/regal-300sss-12-space-saving-protein-skimmer-varios-reef-octopus.html,5719,13
+210206,Regal 200INT 8 Internal Protein Skimmer (VarioS)",6.95E+12,Reef Octopus,210206,583.99,TRUE,FALSE,https://www.bulkreefsupply.com/regal-200int-8-internal-protein-skimmer-varios-reef-octopus.html,5720,30
+210205,Regal 150INT 6 Internal Protein Skimmer (VarioS)",6.95E+12,Reef Octopus,210205,439.99,TRUE,FALSE,https://www.bulkreefsupply.com/regal-150int-6-internal-protein-skimmer-varios-reef-octopus.html,5721,64
+210208,Regal 300INT 12 Internal Protein Skimmer (VarioS)",6.95E+12,Reef Octopus,210208,735.99,TRUE,FALSE,https://www.bulkreefsupply.com/regal-300int-12-internal-protein-skimmer-varios-reef-octopus.html,5698,19
+210207,Regal 250INT 10 Internal Protein Skimmer (VarioS)",6.95E+12,Reef Octopus,210207,671.99,TRUE,FALSE,https://www.bulkreefsupply.com/regal-250int-10-internal-protein-skimmer-varios-reef-octopus.html,5697,36
+210200,Regal 250SSS 10 Space Saving Protein Skimmer (VarioS)",6.95E+12,Reef Octopus,210200,735.99,TRUE,FALSE,https://www.bulkreefsupply.com/regal-250sss-space-saving-protein-skimmer-varios-reef-octopus.html,5696,18
+210231,VarioS-6 Controllable DC Pump (1720 GPH),6.95E+12,Reef Octopus,210231,375.36,TRUE,FALSE,https://www.bulkreefsupply.com/varios-6-controllable-dc-pump-1720-gph-reef-octopus.html,5662,39
+210229,VarioS-2 Controllable DC Pump (792 GPH),6.95E+12,Reef Octopus,210229,259.99,TRUE,FALSE,https://www.bulkreefsupply.com/varios-2-controllable-dc-pump-792-gph-reef-octopus.html,5660,44
+210230,VarioS-4 Controllable DC Pump (1050 GPH),6.95E+12,Reef Octopus,210230,339.99,TRUE,FALSE,https://www.bulkreefsupply.com/varios-4-controllable-dc-pump-1050-gph-reef-octopus.html,5661,50
+209588,Reef Octopus Classic 150SSS 6 Internal Space Saving Protein Skimmer",6.95E+12,Reef Octopus,209588,271.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-classic-150sss-6-internal-space-saving-skimmer.html,4812,23
+209568,Classic 202-S 8 Internal Protein Skimmer",6.95E+12,Reef Octopus,209568,431.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-classic-202ss-internal-protein-skimmer.html,4813,19
+209567,Classic 152-S 6 Internal Protein Skimmer",6.95E+12,Reef Octopus,209567,339.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-classic-152-s-6-internal-protein-skimmer.html,4814,10
+300261,25mm to 3/4 Metric to Standard PVC Adapter",,Reef Octopus,300261,9.2,TRUE,TRUE,https://www.bulkreefsupply.com/metric-to-standard-pvc-adapters.html,4130,12
+209587,Classic 110SSS 5 Internal Space Saving Protein Skimmer",6.95E+12,Reef Octopus,209587,231.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-classic-110sss-5-internal-space-saving-protein-skimmer.html,4855,43
+209164,Protein Skimmer Delay Timer,,Reef Octopus,209164,51.96,TRUE,FALSE,https://www.bulkreefsupply.com/protein-skimmer-delay-timer-reef-octopus.html,4721,4
+209118,ROP-SST3 Skimmer Stand 3 - Reef Octopus,,Reef Octopus,209118,79.99,TRUE,TRUE,https://www.bulkreefsupply.com/adjustable-protein-skimmer-stand-reef-octopus.html,4440,11
+209116,ROP-SST1 Skimmer Stand 1 - Reef Octopus,,Reef Octopus,209116,69.99,TRUE,TRUE,https://www.bulkreefsupply.com/adjustable-protein-skimmer-stand-reef-octopus.html,4438,16
+209117,ROP-SST2 Skimmer Stand 2 - Reef Octopus,,Reef Octopus,209117,74.99,TRUE,TRUE,https://www.bulkreefsupply.com/adjustable-protein-skimmer-stand-reef-octopus.html,4439,14
+300262,75mm to 2 1/2 Metric to Standard PVC Adapter",,Reef Octopus,300262,11.99,FALSE,TRUE,https://www.bulkreefsupply.com/metric-to-standard-pvc-adapters.html,4131,0
+300259,63mm to 2 Metric to Standard PVC Adapter",,Reef Octopus,300259,11.5,TRUE,TRUE,https://www.bulkreefsupply.com/metric-to-standard-pvc-adapters.html,4128,6
+300258,50mm to 1 1/2 Metric to Standard PVC Adapter",,Reef Octopus,300258,11.5,TRUE,TRUE,https://www.bulkreefsupply.com/metric-to-standard-pvc-adapters.html,4127,29
+300207,40mm to 1 1/4 Metric to Standard PVC Adapter",,Reef Octopus,300207,9.2,TRUE,TRUE,https://www.bulkreefsupply.com/metric-to-standard-pvc-adapters.html,4123,288
+300257,32mm to 1 Metric to Standard PVC Adapter",,Reef Octopus,300257,9.2,TRUE,TRUE,https://www.bulkreefsupply.com/metric-to-standard-pvc-adapters.html,4126,108
+208134,Reef Octopus 4 Waste Collector with Auto Shut Off",6.95E+12,Reef Octopus,208134,279.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-4-waste-collector-with-auto-shut-off.html,3213,9
+208135,6 Waste Collector with Auto Shut Off",6.95E+12,Reef Octopus,208135,299.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-6-waste-collector-with-auto-shut-off.html,3214,12
+207847,NS80 Hang-on-Back Nano Skimmer,6.95E+12,Reef Octopus,207847,71.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-ns80-nano-skimmer.html,2827,14
+207882,CR100 4 Calcium Reactor",6.95E+12,Reef Octopus,207882,369.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-cr100-4-calcium-reactor.html,2861,5
+209094,Automatic Skimmer Cleaner (ANC) with 300 Lid - Reef Octopus,,Reef Octopus,209094,300.29,TRUE,TRUE,https://www.bulkreefsupply.com/reef-octopus-automatic-protein-skimmer-neck-cleaner-lid.html,4310,2
+207872,Automatic Skimmer Cleaner (ANC) with 250 Lid - Reef Octopus,,Reef Octopus,207872,288.74,TRUE,TRUE,https://www.bulkreefsupply.com/reef-octopus-automatic-protein-skimmer-neck-cleaner-lid.html,2851,2
+211147,Automatic Skimmer Cleaner (ANC) with 250 Float Switch Lid - Reef Octopus,,Reef Octopus,211147,294.51,TRUE,TRUE,https://www.bulkreefsupply.com/reef-octopus-automatic-protein-skimmer-neck-cleaner-lid.html,6699,1
+207869,Automatic Skimmer Cleaner (ANC) with 200 Lid - Reef Octopus,,Reef Octopus,207869,242.54,TRUE,TRUE,https://www.bulkreefsupply.com/reef-octopus-automatic-protein-skimmer-neck-cleaner-lid.html,2848,7
+207866,Automatic Skimmer Cleaner (ANC) with 150 Lid - Reef Octopus,,Reef Octopus,207866,225.21,TRUE,TRUE,https://www.bulkreefsupply.com/reef-octopus-automatic-protein-skimmer-neck-cleaner-lid.html,2845,6
+207865,Automatic Skimmer Cleaner (ANC) with 110 Lid - Reef Octopus,,Reef Octopus,207865,202.11,TRUE,TRUE,https://www.bulkreefsupply.com/reef-octopus-automatic-protein-skimmer-neck-cleaner-lid.html,2844,2
+211148,Automatic Skimmer Cleaner (ANC) with 300 Float Switch Lid - Reef Octopus,,Reef Octopus,211148,306.06,TRUE,TRUE,https://www.bulkreefsupply.com/reef-octopus-automatic-protein-skimmer-neck-cleaner-lid.html,6700,6
+207887,BioChurn 120R Recirculating Biopellet Reactor,6.95E+12,Reef Octopus,207887,415.79,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-biochurn-120r-recirculating-biopellet-reactor.html,2955,3
+207849,Reef Octopus Classic 90 Hang-on-Back Protein Skimmer,6.95E+12,Reef Octopus,207849,259.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-bh90-hang-on-back-protein-skimmer.html,2949,24
+207884,BioChurn 90EXT HOB Biopellet Reactor,6.95E+12,Reef Octopus,207884,323.39,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-biochurn-90ext-hob-reactor.html,2863,3
+207885,Reef Octopus BioChurn 120INT Biopellet Reactor,6.95E+12,Reef Octopus,207885,265.64,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-biochurn-120int-reactor.html,2864,4
+207883,BioChurn 90INT Biopellet Reactor with HOB Bracket,6.95E+12,Reef Octopus,207883,230.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-biochurn-90int-reactor-with-hob-bracket.html,2862,6
+207880,Super Reef Octopus CR5000D 8 Calcium Reactor",6.95E+12,Reef Octopus,207880,969.99,TRUE,FALSE,https://www.bulkreefsupply.com/super-reef-octopus-cr5000d-8-calcium-reactor.html,2859,7
+207878,SRO CR3000D 7 Calcium Reactor",6.95E+12,Reef Octopus,207878,799.99,TRUE,FALSE,https://www.bulkreefsupply.com/super-reef-octopus-cr3000d-8-calcium-reactor.html,2857,2
+205611,BR-1000ss Biopellet Reactor,6.95E+12,Reef Octopus,205611,469.99,TRUE,FALSE,https://www.bulkreefsupply.com/br-1000ss-reef-octopus-biopellet-reactor.html,1751,4
+205612,BR-2000ss Biopellet Reactor,6.95E+12,Reef Octopus,205612,549.99,TRUE,FALSE,https://www.bulkreefsupply.com/br-2000ss-reef-octopus-biopellet-reactor.html,1752,3
+205608,BR-70 Biopellet Reactor,6.95E+12,Reef Octopus,205608,181.99,TRUE,FALSE,https://www.bulkreefsupply.com/br-70-reef-octopus-biopellet-reactor.html,1466,5
+204058,Reef Octopus Classic 1000 Hang-on-Back Protein Skimmer,6.95E+12,Reef Octopus,204058,247.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-bh1000-hang-on-the-back-protein-skimmer.html,1176,32
+204064,Reef Octopus Classic 110EXT 4鈥 Recirculating Protein Skimmer,6.95E+12,Reef Octopus,204064,263.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-dnw110-4-recirculating-protein-skimmer.html,1169,9
+204061,Reef Octopus Classic 110INT 4鈥 Internal Protein Skimmer,9.50E+11,Reef Octopus,204061,215.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-nwb110-4-pinwheel-in-sump-protein-skimmer.html,1166,57
+205610,BR-140 Biopellet Reactor,6.95E+12,Reef Octopus,205610,299.99,TRUE,FALSE,https://www.bulkreefsupply.com/br-140-reef-octopus-biopellet-reactor.html,1468,9
+205609,BR-110 Biopellet Reactor,6.95E+12,Reef Octopus,205609,239.99,TRUE,FALSE,https://www.bulkreefsupply.com/br-110-reef-octopus-biopellet-reactor.html,1467,1
+204056,Reef Octopus Classic 100 Hang-on-Back Protein Skimmer,6.95E+12,Reef Octopus,204056,231.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-bh100-hang-on-the-back-protein-skimmer.html,1174,27
+204059,Classic 2000 Hang-on-Back Protein Skimmer,6.95E+12,Reef Octopus,204059,279.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-bh2000-hang-on-the-back-protein-skimmer.html,1177,26
+204063,Classic 200INT 8鈥 Internal Protein Skimmer,6.95E+12,Reef Octopus,204063,319.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-nwb200-8-pinwheel-in-sump-protein-skimmer.html,1168,21
+204065,Classic 150EXT 6鈥 Recirculating Protein Skimmer,6.95E+12,Reef Octopus,204065,351.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-dnw150-6-recirculating-protein-skimmer.html,1170,11
+204062,Classic 150INT 6鈥 Internal Protein Skimmer,6.95E+12,Reef Octopus,204062,255.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-nwb150-6-pinwheel-in-sump-protein-skimmer.html,1167,39
+204100,CR140 5.5 Calcium Reactor",6.95E+12,Reef Octopus,204100,449.99,TRUE,FALSE,https://www.bulkreefsupply.com/reef-octopus-calcium-reactor-single-chamber.html,495,4
+251861,6W Jolly Preset Heater (For tanks up to 1.6 gal),8.01E+12,Sicce,251861,19.54,TRUE,FALSE,https://www.bulkreefsupply.com/6w-jolly-preset-heater-for-tanks-up-to-1-6-gal-sicce.html,15453,56
+251863,22W Jolly Preset Heater (For tanks up to 6.6 gal),8.01E+12,Sicce,251863,25.49,TRUE,FALSE,https://www.bulkreefsupply.com/22w-jolly-preset-heater-for-tanks-up-to-6-6-gal-sicce.html,15455,20
+251862,12W Jolly Preset Heater (For tanks up to 3.2 gal),8.01E+12,Sicce,251862,21.24,TRUE,FALSE,https://www.bulkreefsupply.com/12w-jolly-preset-heater-for-tanks-up-to-3-2-gal-sicce.html,15454,37
+251131,Shark PRO Hyperbio Pearl Cartridge with Sponges,8.01E+12,Sicce,251131,11.04,TRUE,FALSE,https://www.bulkreefsupply.com/shark-pro-hyperbio-pearl-cartridge-with-sponges-sicce.html,14879,10
+251135,Shark PRO Filter Sponges (5 pcs),8.01E+12,Sicce,251135,8.49,TRUE,FALSE,https://www.bulkreefsupply.com/shark-pro-filter-sponges-5-pcs-sicce.html,14883,12
+251133,Shark PRO Carbon Cartridge with Sponges,8.01E+12,Sicce,251133,12.74,TRUE,FALSE,https://www.bulkreefsupply.com/shark-pro-carbon-cartridge-with-sponges-sicce.html,14881,6
+251132,Shark PRO Zerophos Cartridge with Sponges,8.01E+12,Sicce,251132,12.74,TRUE,FALSE,https://www.bulkreefsupply.com/shark-pro-zerophos-cartridge-with-sponges-sicce.html,14880,26
+251138,Shark PRO 900 Internal Filter (238 GPH),8.01E+12,Sicce,251138,63.74,TRUE,FALSE,https://www.bulkreefsupply.com/shark-pro-900-internal-filter-238-gph-sicce.html,14761,54
+251137,Shark PRO 700 Internal Filter (185 GPH),8.01E+12,Sicce,251137,55.24,TRUE,FALSE,https://www.bulkreefsupply.com/shark-pro-700-internal-filter-185-gph-sicce.html,14760,61
+251136,Shark PRO 500 Internal Filter (132 GPH),8.01E+12,Sicce,251136,46.74,TRUE,FALSE,https://www.bulkreefsupply.com/shark-pro-500-internal-filter-sicce.html,14758,47
+250383,PSK SDC 1200 Controllable DC Skimmer Pump (317 GPH),8.01E+12,Sicce,250383,254.99,TRUE,FALSE,https://www.bulkreefsupply.com/psk-sdc-1200-controllable-dc-skimmer-pump-317-gph-sicce.html,13386,7
+250382,Syncra SDC 3.0 WiFi Controllable Pump (260-800 GPH),8.01E+12,Sicce,250382,212.49,TRUE,FALSE,https://www.bulkreefsupply.com/syncra-sdc-3-0-wifi-controllable-pump-260-800-gph-sicce.html,13385,44
+231972,Replacement Sponge Kit for WHALE 120 & 200 -  Sicce,8.01E+12,Sicce,231972,8.49,TRUE,FALSE,https://www.bulkreefsupply.com/replacement-sponge-kit-for-whale-120-200-sicce.html,12259,16
+231973,Replacement Sponge Kit for WHALE 350 & 500 -  Sicce,8.01E+12,Sicce,231973,11.89,TRUE,FALSE,https://www.bulkreefsupply.com/replacement-sponge-kit-for-whale-350-500-sicce.html,12260,16
+231974,Space EKO 100 Canister Filter,8.01E+12,Sicce,231974,93.49,TRUE,FALSE,https://www.bulkreefsupply.com/space-eko-100-canister-filter.html,12261,3
+231970,WHALE 350 Canister Filter (330 GPH),8.01E+12,Sicce,231970,161.49,TRUE,FALSE,https://www.bulkreefsupply.com/whale-350-canister-filter-330-gph-sicce.html,12255,15
+231976,Space EKO 300 Canister Filter,8.01E+12,Sicce,231976,135.99,TRUE,FALSE,https://www.bulkreefsupply.com/space-eko-300-canister-filter.html,12263,3
+231969,WHALE 200 Canister Filter (190 GPH),8.01E+12,Sicce,231969,118.99,TRUE,FALSE,https://www.bulkreefsupply.com/whale-200-canister-filter-190-gph-sicce.html,12257,8
+231968,WHALE 120 Canister Filter (140 GPH),8.01E+12,Sicce,231968,101.99,TRUE,FALSE,https://www.bulkreefsupply.com/whale-120-canister-filter-140-gph-sicce.html,12254,8
+214006,Syncra Nano Pump (110 GPH),8.01E+12,Sicce,214006,21.24,TRUE,FALSE,https://www.bulkreefsupply.com/syncra-nano-pump-110-gph-sicce.html,11948,49
+231971,WHALE 500 Canister Filter (390 GPH),8.01E+12,Sicce,231971,186.99,TRUE,FALSE,https://www.bulkreefsupply.com/whale-500-canister-filter-390-gph-sicce.html,12256,7
+214005,Pump Clean - Aquarium Equipment Cleaner,8.01E+12,Sicce,214005,16.99,TRUE,FALSE,https://www.bulkreefsupply.com/pump-clean-aquarium-equipment-cleaner-sicce.html,11486,175
+212921,Ultra Zero Utility Pump,8.01E+12,Sicce,212921,93.49,TRUE,FALSE,https://www.bulkreefsupply.com/ultra-zero-utility-pump-sicce.html,10617,75
+212968,Syncra ADV 10.0 Water Pump (2700 GPH),8.01E+12,Sicce,212968,297.49,FALSE,FALSE,https://www.bulkreefsupply.com/syncra-adv-10-0-water-pump-2700-gph-sicce.html,10581,0
+212370,XStream SDC Powerhead (270 - 2250 GPH),8.01E+12,Sicce,212370,195.49,TRUE,FALSE,https://www.bulkreefsupply.com/xstream-sdc-powerhead-270-2250-gph-sicce.html,9676,3
+211815,Syncra SDC 6.0 WiFi Controllable Pump (530-1450 GPH),8.01E+12,Sicce,211815,297.49,TRUE,FALSE,https://www.bulkreefsupply.com/syncra-sdc-6-0-wifi-controllable-pump-530-1450-gph-sicce.html,8685,45
+211408,Syncra ADV 5.5 Water Pump (1450 GPH),8.01E+12,Sicce,211408,161.49,TRUE,FALSE,https://www.bulkreefsupply.com/syncra-adv-5-5-water-pump-1500-gph-sicce.html,7201,5
+211409,Syncra ADV 7.0 Water Pump (1900 GPH),8.01E+12,Sicce,211409,186.99,TRUE,FALSE,https://www.bulkreefsupply.com/syncra-avd-7-0-water-pump-1900-gph-sicce.html,7202,6
+211410,Syncra ADV 9.0 Water Pump (2500 GPH),8.01E+12,Sicce,211410,212.49,TRUE,FALSE,https://www.bulkreefsupply.com/syncra-avd-9-0-water-pump-2500-gph-sicce.html,7203,8
+210983,Syncra SDC 9.0 WiFi Controllable Pump (1000-2500 GPH),8.01E+12,Sicce,210983,399.49,TRUE,FALSE,https://www.bulkreefsupply.com/syncra-sdc-9-0-controllable-pump-1000-2500-gph-sicce.html,6461,25
+210982,Syncra SDC 7.0 WiFi Controllable Pump (800-1900 GPH),8.01E+12,Sicce,210982,339.99,TRUE,FALSE,https://www.bulkreefsupply.com/syncra-sdc-7-0-controllable-pump-800-1900-gph-sicce.html,6460,18
+209001,Syncra Pro (1500 GPH),8.01E+12,Sicce,209001,135.99,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-pro-1500-gph.html,4165,11
+208993,XStream Wave Pump (925 GPH),8.01E+12,Sicce,208993,62.04,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-xstream-925-wave-pump-powerhead-925gph.html,4157,14
+208994,XStream Wave Pump (1320 GPH),8.01E+12,Sicce,208994,70.54,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-xstream-1320-wave-pump-powerhead-1320-gph.html,4158,9
+209000,Syncra Pro (1000 GPH),8.01E+12,Sicce,209000,118.99,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-pro-1000-gph.html,4164,6
+209002,Syncra Pro (1900 GPH),8.01E+12,Sicce,209002,152.99,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-pro-1900-gph.html,4166,11
+208999,Syncra Pro (800 GPH),8.01E+12,Sicce,208999,101.99,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-pro-800-gph.html,4163,8
+208998,Syncra Pro (550 GPH),8.01E+12,Sicce,208998,76.49,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-pro-550-gph.html,4162,5
+208996,XStream Wave Pump (2120 GPH),8.01E+12,Sicce,208996,93.49,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-xstream-wave-pump-powerhead-2120-gph.html,4160,17
+208995,XStream Wave Pump (1720 GPH),8.01E+12,Sicce,208995,83.29,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-xstream-1720-wave-pump-powerhead-1720-gph.html,4159,3
+208992,Voyager Nano Stream Pump (530 GPH),8.01E+12,Sicce,208992,33.99,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-voyager-nano-530-gph-stream-pump.html,4156,104
+208991,Voyager Nano Stream Pump (270 GPH),8.01E+12,Sicce,208991,29.74,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-voyager-nano-250-gph-stream-pump.html,4155,118
+207733,Syncra Silent 1.5 Pump (357 GPH),8.01E+12,Sicce,207733,59.49,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-silent-1-5-pump-357-gph.html,2701,49
+207734,Syncra Silent 2.0 Pump (568 GPH),8.01E+12,Sicce,207734,84.99,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-silent-2-0-pump-568-gph.html,2702,29
+207744,Voyager 3 Stream Pump (1200 GPH),8.01E+12,Sicce,207744,59.49,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-voyager-3-stream-pump-1200-gph.html,2714,11
+207728,MI MOUSE Pump (82 GPH),8.01E+12,Sicce,207728,16.14,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-mi-mouse-1-8ft-head-82gph.html,2691,33
+207745,Voyager 4 Stream Pump (1600 GPH),8.01E+12,Sicce,207745,76.49,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-voyager-4-stream-pump-1600-gph.html,2715,14
+207747,Voyager HP 3200 Stream Pump (3200 GPH),8.01E+12,Sicce,207747,144.49,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-voyager-hp-3200-stream-pump-3200-gph.html,2717,7
+207737,Syncra Silent 4.0 Pump (951 GPH),8.01E+12,Sicce,207737,144.49,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-silent-4-0-pump-951-gph.html,2705,18
+207736,Syncra Silent 3.5 Pump (660 GPH),8.01E+12,Sicce,207736,118.99,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-silent-3-5-pump-660-gph.html,2704,8
+207740,Syncra HF 12.0 Pump (3200 GPH),8.01E+12,Sicce,207740,305.99,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-hf-12-0-pump-3200-gph.html,2708,4
+207738,Syncra Silent 5.0 Pump (1321 GPH),8.01E+12,Sicce,207738,169.99,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-silent-5-0-pump-1321-gph.html,2706,29
+207735,Syncra Silent 3.0 Pump (714 GPH),8.01E+12,Sicce,207735,101.99,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-silent-3-0-pump-714-gph.html,2703,11
+207732,Syncra Silent 1.0 Pump (251 GPH),8.01E+12,Sicce,207732,47.59,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-silent-1-0-pump-251-gph.html,2700,67
+207730,MICRAPLUS Pump (158 GPH),8.01E+12,Sicce,207730,25.49,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-micraplus-pump-158-gph.html,2693,10
+207731,Syncra Silent 0.5 Pump (185 GPH),8.01E+12,Sicce,207731,36.54,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-syncra-silent-0-5-185-gph.html,2699,26
+207729,MICRA Pump (90 GPH),8.01E+12,Sicce,207729,19.54,TRUE,FALSE,https://www.bulkreefsupply.com/sicce-micra-pump-90-gph.html,2692,44
+252212,"Felt Strip for Care Magnet Long, Strong, & Strong+",4.03E+12,Tunze,252212,3.99,TRUE,FALSE,https://www.bulkreefsupply.com/felt-strip-for-care-magnet-long-strong-strong-tunze.html,15935,30
+252210,Turbelle High Jet Pump,4.03E+12,Tunze,252210,69.99,TRUE,FALSE,https://www.bulkreefsupply.com/turbelle-high-jet-pump-tunze.html,15932,15
+232009,MAR-3182 Macroalgae Reactor,4.03E+12,Tunze,232009,729.99,TRUE,FALSE,https://www.bulkreefsupply.com/mar-3182-macroalgae-reactor-tunze.html,12285,6
+214040,Care Magnet Long 0222.015,4.03E+12,Tunze,214040,45.29,TRUE,FALSE,https://www.bulkreefsupply.com/care-magnet-long-0222-015-tunze.html,11756,17
+214041,Care Magnet Strong 0222.020,4.03E+12,Tunze,214041,87.49,TRUE,FALSE,https://www.bulkreefsupply.com/care-magnet-strong-0222-020-tunze.html,11757,78
+214042,Care Magnet Strong+ 0222.025,4.03E+12,Tunze,214042,104.99,TRUE,FALSE,https://www.bulkreefsupply.com/care-magnet-strong-0222-025-tunze.html,11758,44
+212671,Comline Multifilter 3168 Internal Power Filter,4.03E+12,Tunze,212671,179.99,TRUE,FALSE,https://www.bulkreefsupply.com/comline-multifilter-3168-internal-power-filter-tunze.html,10370,3
+212670,Comline Multifilter 3163 Internal Power Filter,4.03E+12,Tunze,212670,104.99,TRUE,FALSE,https://www.bulkreefsupply.com/comline-multifilter-3163-internal-power-filter-tunze.html,10369,27
+212668,Comline Multifilter 3161 Internal Power Filter,4.03E+12,Tunze,212668,63.79,TRUE,FALSE,https://www.bulkreefsupply.com/comline-multifilter-3161-internal-power-filter-tunze.html,10367,7
+212669,Comline Multifilter 3162 Internal Power Filter,4.03E+12,Tunze,212669,89.99,TRUE,FALSE,https://www.bulkreefsupply.com/comline-multifilter-3162-internal-power-filter-tunze.html,10368,14
+212323,MAR-3181 Macroalgae Reactor,4.03E+12,Tunze,212323,399.99,TRUE,FALSE,https://www.bulkreefsupply.com/mar-3181-macro-algae-reactor-tunze.html,9560,38
+212125,Eco Chic Waterproof Refugium LED Light 8831.00,4.03E+12,Tunze,212125,95.49,TRUE,FALSE,https://www.bulkreefsupply.com/ecochic-waterproof-refugium-led-light-8831-00-tunze.html,9062,128
+211640,Care Panes Aquarium Glass Cleaner,4.03E+12,Tunze,211640,14.29,TRUE,FALSE,https://www.bulkreefsupply.com/care-panes-aquarium-glass-cleaner-tunze.html,7767,39
+211536,CO2 Regulator 7077.3,4.03E+12,Tunze,211536,129.99,TRUE,FALSE,https://www.bulkreefsupply.com/co2-regulator-7077-3-tunze.html,7512,1
+210946,Turbelle Stream 3 Controllable (660 to 3962 GPH),4.03E+12,Tunze,210946,414.99,TRUE,FALSE,https://www.bulkreefsupply.com/turbelle-stream-3-controllable-660-to-3962-gph-tunze.html,6410,16
+210929,Waterproof 10000K LED Fixture 8821.00,4.03E+12,Tunze,210929,86.49,TRUE,FALSE,https://www.bulkreefsupply.com/waterproof-10000k-led-fixture-8821-00-tunze.html,6406,47
+210130,Waterproof Full Spectrum LED Fixture 8850.00,4.03E+12,Tunze,210130,179.99,TRUE,FALSE,https://www.bulkreefsupply.com/waterproof-full-spectrum-led-8850-tunze.html,6170,20
+210191,Magnetic Coral Frag Rock Nano,4.03E+12,Tunze,210191,77.99,TRUE,FALSE,https://www.bulkreefsupply.com/magnetic-coral-frag-rock-nano-tunze.html,5558,19
+210059,Comline DOC Skimmer 9012,4.03E+12,Tunze,210059,349.99,TRUE,FALSE,https://www.bulkreefsupply.com/comline-doc-skimmer-9012-tunze.html,5358,10
+210060,Comline DOC Skimmer 9012 DC,7.81E+11,Tunze,210060,429.99,TRUE,FALSE,https://www.bulkreefsupply.com/comline-doc-skimmer-9012-dc-tunze.html,5359,18
+210192,Magnetic Coral Frag Rock Long,4.03E+12,Tunze,210192,99.49,TRUE,FALSE,https://www.bulkreefsupply.com/magnetic-coral-frag-rock-long-tunze.html,5559,9
+210095,Wavecontroller 7090,4.03E+12,Tunze,210095,62.79,TRUE,FALSE,https://www.bulkreefsupply.com/wavecontroller-7090-tunze.html,5554,9
+210058,Comline DOC Skimmer 9004 DC,4.03E+12,Tunze,210058,234.99,TRUE,FALSE,https://www.bulkreefsupply.com/comline-doc-skimmer-9004-dc-tunze.html,5357,49
+209688,Y Adapter Cable 7090.300,4.03E+12,Tunze,209688,21.79,TRUE,FALSE,https://www.bulkreefsupply.com/y-adapter-cable-7090-300-tunze.html,5025,3
+209689,Turbelle Moonlight Photo Sensor 7097.050,4.03E+12,Tunze,209689,39.99,TRUE,FALSE,https://www.bulkreefsupply.com/turbelle-moonlight-photo-sensor-7097-050-tunze.html,5024,4
+209690,Turbelle Nanostream 6015 (475 GPH),4.03E+12,Tunze,209690,49.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-nanostream-6015-475-gph.html,5023,63
+209412,Comline Wavebox 6214,4.03E+12,Tunze,209412,409.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-comline-wavebox-6214.html,4950,6
+209479,NanoStream Pump Magnet Extension 6025.501,4.03E+12,Tunze,209479,29.79,TRUE,FALSE,https://www.bulkreefsupply.com/6025-501-nano-stream-magnet-extension.html,4732,8
+209480,Stream Pump Magnet Extension 6205.501,4.03E+12,Tunze,209480,69.99,TRUE,FALSE,https://www.bulkreefsupply.com/6205-501-stream-magnet-extension-tunze.html,4733,9
+209005,Controller Pump Cable 7092.300,4.03E+12,Tunze,209005,12.99,TRUE,FALSE,https://www.bulkreefsupply.com/controller-pump-cable-7092-300-tunze.html,4182,10
+208862,Plastic Blades for Tunze Care Magnet 86mm - 2 Pack,4.03E+12,Tunze,208862,8.79,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-plastic-blades-for-care-magnet-86mm-2-pack.html,4019,37
+208863,Blade Set for Care Magnet 86mm,4.03E+12,Tunze,208863,9.29,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-blade-set-for-care-magnet-86mm.html,4020,39
+208861,Plastic Blades for Tunze Care Magnet 45mm - 2 Pack,4.03E+12,Tunze,208861,6.79,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-plastic-blades-for-care-magnet-45mm-2-pack.html,4018,18
+208857,Comline DOC Skimmer 9001,4.03E+12,Tunze,208857,134.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-comline-doc-skimmer-9001.html,4012,22
+208855,Turbelle Nanostream 6020 (660 GPH),4.03E+12,Tunze,208855,56.79,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-nanostream-6020.html,4010,13
+208856,"Turbelle Nanostream 6040 (53 - 1,190 GPH)",4.03E+12,Tunze,208856,179.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-nanostream-6040.html,4011,11
+208864,Stainless Steel Blades for Care Magnet (3 Pack) 0220.155,4.03E+12,Tunze,208864,10.79,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-stainless-steel-blades-for-care-magnet-3-pack.html,4021,66
+208865,Felt Pads for Care Magnet (2 Pack) 0220.157,4.03E+12,Tunze,208865,3.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-felt-pads-for-care-magnet-3-4-2-pack.html,4022,21
+208858,Care Magnet Nano 0220.010,4.03E+12,Tunze,208858,24.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-care-magnet-nano.html,4014,15
+208412,Comline DOC Skimmer 9004,4.03E+12,Tunze,208412,189.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-comline-doc-skimmer-9004.html,3338,57
+208029,Aquarium Tongs,4.03E+12,Tunze,208029,27.79,TRUE,FALSE,https://www.bulkreefsupply.com/aquarium-tongs-tunze.html,3085,147
+208024,400 g Coral Gum Instant - Tunze,,Tunze,208024,53.99,TRUE,TRUE,https://www.bulkreefsupply.com/tunze-coral-gum-instant.html,3077,113
+208023,120 g Coral Gum Instant - Tunze,,Tunze,208023,21.79,TRUE,TRUE,https://www.bulkreefsupply.com/tunze-coral-gum-instant.html,3076,266
+208030,Water Valve 8555.200,4.03E+12,Tunze,208030,104.99,TRUE,FALSE,https://www.bulkreefsupply.com/water-valve-tunze.html,3083,8
+208032,RO Water Controller,4.03E+12,Tunze,208032,234.99,TRUE,FALSE,https://www.bulkreefsupply.com/ro-water-controller-tunze.html,3084,19
+202332,Comline Wavebox 6208,4.03E+12,Tunze,202332,349.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-comline-wavebox-6208.html,2600,4
+207936,Turbelle Nanostream 6095 Controllable (528-2510 GPH),4.03E+12,Tunze,207936,274.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-nanostream-6095-controllable.html,2941,58
+207727,2 Channel Apex to Tunze Stream Cable - Neptune Systems,6.97E+11,Tunze,207727,20.95,TRUE,FALSE,https://www.bulkreefsupply.com/2-channel-aquasurf-apex-to-stream-cable.html,2690,5
+202331,Osmolator Nano 3152 Auto Top Off,4.03E+12,Tunze,202331,114.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-osmolator-nano-3152-auto-top-off.html,2243,157
+202112,Turbelle Stream 6105 Controllable (700 to 3400),4.03E+12,Tunze,202112,324.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-stream-6105-controllable.html,1312,17
+202115,Turbelle Safety Battery Backup Connector 6105.500,4.03E+12,Tunze,202115,64.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-safety-connector.html,1380,13
+202100,Turbelle Nanostream 6025 (740 GPH),4.03E+12,Tunze,202100,67.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-nanostream-6025.html,40,64
+202101,Turbelle Nanostream 6045 (1175 GPH),4.03E+12,Tunze,202101,87.49,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-nanostream-6045.html,41,29
+202103,Nanostream Rock 6025.250,4.03E+12,Tunze,202103,58.79,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-nanostream-rock-6025-250.html,43,4
+202106,Turbelle Stream 6125 (3150 GPH),4.03E+11,Tunze,202106,234.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-stream-6125.html,46,11
+202102,Turbelle Nanostream 6055 Controllable (250-1450 GPH),4.03E+12,Tunze,202102,219.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-nanostream-6055-controllable.html,42,44
+202307,Osmolator Universal 3155 Auto Top Off,4.03E+12,Tunze,202307,229.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-osmolator-universal-3155-auto-top-off.html,86,313
+202312,Replacement Metering Pump for Tunze Osmolator 5000.02,4.03E+12,Tunze,202312,28.29,TRUE,FALSE,https://www.bulkreefsupply.com/replacement-metering-pump-for-tunze-osmolator-5000-02.html,91,180
+202105,Turbelle Stream 6085 (2100 GPH),4.03E+12,Tunze,202105,194.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-stream-6085.html,45,3
+202110,Stream Rock 6200.250,4.03E+12,Tunze,202110,86.49,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-stream-rock-6200-250.html,50,7
+202104,Turbelle Stream 6065 (1700 GPH),4.03E+12,Tunze,202104,144.99,TRUE,FALSE,https://www.bulkreefsupply.com/tunze-turbelle-stream-6065.html,44,5
