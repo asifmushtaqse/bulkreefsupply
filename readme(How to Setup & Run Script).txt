@@ -53,7 +53,7 @@ Run script command:
 python3 -m scrapy crawl brs_daily_products_spider
 
 2.1) Run script at background:
-nohup python3 -m scrapy crawl brs_daily_products_spider &
+nohup python3 -m s crawl brs_daily_products_spider &
 
 Note: "brs_daily_products_spider" is the name of spider, that scrape data.
 
@@ -69,3 +69,12 @@ for any query please send me message.
 
 Kind regards,
 alifarslan
+
+
+Schedule Cron Job to run by every Monday:
+30 15 * * 1 python3.9 /home/admin/scrapers/bulkreefsupply/bulkreefsupply/spiders/run_script.py # run_spider
+
+
+https://medium.datadriveninvestor.com/automate-your-python-scripts-using-cron-schedule-step-by-step-4e0ab3208dd5
+https://www.geeksforgeeks.org/how-to-schedule-python-scripts-as-cron-jobs-with-crontab/
+https://www.cyberciti.biz/faq/linux-display-date-and-time/
