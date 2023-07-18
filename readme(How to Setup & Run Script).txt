@@ -78,3 +78,5 @@ Schedule Cron Job to run by every Monday:
 https://medium.datadriveninvestor.com/automate-your-python-scripts-using-cron-schedule-step-by-step-4e0ab3208dd5
 https://www.geeksforgeeks.org/how-to-schedule-python-scripts-as-cron-jobs-with-crontab/
 https://www.cyberciti.biz/faq/linux-display-date-and-time/
+
+01 16 20 06 * python3.9 /home/admin/scrapers/bulkreefsupply/bulkreefsupply/spiders/run_script.py # run_spider

@@ -54,10 +54,10 @@ scrapingbee_params = {
 }
 
 csv_headers = [
-    # 'date',
+    # 'date', 'quantity',
     'product_id', 'product_name', 'upc', 'vendor', 'sku', 'price', 'in_stock',
-    'has_variants', 'product_url', 'product_cart_id',
-    #  'main_image_url', 'secondary_image_urls', 'quantity', 'description',
+    'has_variants', 'product_url', 'main_image_url', 'secondary_image_urls',
+    'description', 'product_cart_id',
 
     # More information fields
     # 'fluorescent_bulb_wattage', 'maximum_system_volume', 'control_type', 'aquarium_type',
@@ -67,7 +67,7 @@ csv_headers = [
     # 'pvc_connection_type', 'additive_type', 'max._light_coverage_(width)', 'max._light_coverage_(length)',
     # 'adhesive_type', 'out_of_stock_message', 'micron_rating', 'manuals', 'recommended_tank_size',
     # 'tubing_inside_diameter', 'aquarium_size', 'reactor_placement', 'lighting_type', 'system_type', 'color',
-    # 'max_head_height', 'duty_rating', 'warranty', 'alarms', 'number_of_leds', 'dimensions', 'weight'
+    # 'max_head_height', 'duty_rating', 'warranty', 'alarms', 'number_of_leds', 'dimensions', 'weight',
 ]
 
 user_agents = [
