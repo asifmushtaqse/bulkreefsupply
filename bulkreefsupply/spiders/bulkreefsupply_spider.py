@@ -71,8 +71,8 @@ class BulkReefSupplyBRSSpider(Spider):
 
         'CRAWLERA_APIKEY': crawlera_api_key,
         # "ROTATING_PROXY_LIST_PATH": 'proxies.txt',
-        # 'LOG_FILE': logs_file_path,
-        # 'LOG_LEVEL': 'INFO',
+        'LOG_FILE': logs_file_path,
+        'LOG_LEVEL': 'INFO',
 
         # 'FEEDS': get_feed(products_filename, feed_format='csv', fields=get_csv_headers(), overwrite=True),
 
