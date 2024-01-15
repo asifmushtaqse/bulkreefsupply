@@ -139,7 +139,7 @@ class BulkReefSupplyBRSSpider(Spider):
     def parse(self, response):
         # Testing specific URLs
         # url = "https://www.bulkreefsupply.com/fish-acclimation-bundle-bulk-reef-supply.html"  # 204
-        # # url = "https://www.bulkreefsupply.com/brs-stick-on-thermometer-bulk-reef-supply.html"  # 1005
+        # url = "https://www.bulkreefsupply.com/brs-stick-on-thermometer-bulk-reef-supply.html"  # 1005
         # # url = "https://www.bulkreefsupply.com/jumpguard-feeding-portal-d-d-the-aquarium-solution.html"  # 868
         # return self.get_product_requests(response, [url])
 
@@ -188,7 +188,7 @@ class BulkReefSupplyBRSSpider(Spider):
                         variant.update(self.get_product(p))
                         variant['product_cart_id'] = self.get_product_cart_id(response, sku=variant['product_id'])
 
-                        if variant['in_stock']:
+                        if bool(variant['in_stock']):
                             self.append_cart_request(response, item=variant)
                         else:
                             variant['qty'] = 0
@@ -236,7 +236,7 @@ class BulkReefSupplyBRSSpider(Spider):
         item = {}
         item['product_id'] = prod['productID']
         item["product_name"] = clean(prod['name'])
-        item["vendor"] = clean(prod['brand'])
+        item["vendor"] = clean(prod['brand']['name'])
         item["sku"] = prod['sku']
         item["price"] = prod['offers']['price']
         # item["description"] = clean(prod['description'])
