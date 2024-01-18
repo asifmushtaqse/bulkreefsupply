@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 import os
 import re
+import sys
 import json
 from datetime import datetime
 from copy import deepcopy
-from csv import DictReader
+from csv import DictReader, field_size_limit
 import random
 
 from scrapy import Request, FormRequest
@@ -122,6 +123,7 @@ class BulkReefSupplyBRSSpider(Spider):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        self.increase_column_size_limit()
         self.seen_urls = []
 
         # daily_products = get_csv_records('../input/daily_products.csv')
@@ -231,8 +233,8 @@ class BulkReefSupplyBRSSpider(Spider):
                 self.logger.info(item)
                 yield from self.get_next_product_request(response)
         except Exception as item_err:
-            print(f"Exception in parse_quantity: \n {item_err}")
-            a = 0
+            print(f"Exception in parse_quantity: \n {item_err}")  # field larger than field limit (131072)
+            a = 0  # open('logs/item_errors.jl', mode='a+').write(f"{item}\n")
 
     def is_qty_added_successfully(self, response):
         return 'successfully added to cart.' in response.text.lower()
@@ -438,6 +440,16 @@ class BulkReefSupplyBRSSpider(Spider):
         headers = deepcopy(self.headers)
         headers['user-agent'] = random.choice(user_agents)
         return headers
+
+    def increase_column_size_limit(self):
+        maxInt = sys.maxsize
+
+        while True:
+            try:
+                field_size_limit(maxInt)
+                break
+            except OverflowError:
+                maxInt = int(maxInt / 10)
 
     def close(spider, reason):
         end_time = (datetime.now() - spider.start_time).total_seconds()
