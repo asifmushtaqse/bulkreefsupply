@@ -14,7 +14,9 @@ from scrapy.spiders import Spider
 from bulkreefsupply.spiders.static_data import req_meta, category_urls, user_agents, crawlera_api_key
 from bulkreefsupply.spiders.utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
-    retry_invalid_response, create_dir, get_csv_records
+    retry_invalid_response, increase_column_size_limit, create_dir, get_csv_records, get_jl_records
+
+increase_column_size_limit()
 
 
 def get_existing_records():
@@ -123,7 +125,6 @@ class BulkReefSupplyBRSSpider(Spider):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.increase_column_size_limit()
         self.seen_urls = []
 
         # daily_products = get_csv_records('../input/daily_products.csv')
@@ -139,12 +140,16 @@ class BulkReefSupplyBRSSpider(Spider):
 
     @retry_invalid_response
     def parse(self, response):
-        # Testing specific URLs
+        # for p in get_jl_records('logs/item_errors.jl'):
+        #     yield self.write_to_csv(p)
+
+        # Test Specific Products Links
         # url = "https://www.bulkreefsupply.com/fish-acclimation-bundle-bulk-reef-supply.html"  # 204
         # url = "https://www.bulkreefsupply.com/brs-stick-on-thermometer-bulk-reef-supply.html"  # 1005
         # url = "https://www.bulkreefsupply.com/jumpguard-feeding-portal-d-d-the-aquarium-solution.html"  # 868
         url = "https://www.bulkreefsupply.com/radion-xr15-g6-blue-led-light-fixture-ecotech-marine.html"  # 868
         # return self.get_product_requests(response, [url])
+
         return self.get_product_requests(response, self.existing_records)
 
     @retry_invalid_response
@@ -196,9 +201,9 @@ class BulkReefSupplyBRSSpider(Spider):
                             variant['qty'] = 0
                             variant[self.quantity_col_report] = 0
                             yield self.write_to_csv(variant)
-                            self.logger.info(item)
                     except Exception as variant_err:
                         self.logger.debug(f"Got Variant Error:\n{variant_err}")
+                        self.write_failed_item_to_jl(item)
                         a = 0
             else:
                 item.update(self.get_product(prod))
@@ -210,7 +215,6 @@ class BulkReefSupplyBRSSpider(Spider):
                     item['qty'] = 0
                     item[self.quantity_col_report] = 0
                     yield self.write_to_csv(item)
-                    self.logger.info(item)
 
         except Exception as err:
             self.logger.debug(f"Got Error While Parsing Product {response.url}:\n {err}")
@@ -230,11 +234,11 @@ class BulkReefSupplyBRSSpider(Spider):
                 item = deepcopy(response.meta['item'])
                 item[self.quantity_col_report] = item.pop('qty')
                 yield self.write_to_csv(item)
-                self.logger.info(item)
                 yield from self.get_next_product_request(response)
         except Exception as item_err:
             print(f"Exception in parse_quantity: \n {item_err}")  # field larger than field limit (131072)
-            a = 0  # open('logs/item_errors.jl', mode='a+').write(f"{item}\n")
+            self.write_failed_item_to_jl(item)
+            a = 0
 
     def is_qty_added_successfully(self, response):
         return 'successfully added to cart.' in response.text.lower()
@@ -319,6 +323,7 @@ class BulkReefSupplyBRSSpider(Spider):
         csv_writer = self.get_csv_writer()
         csv_writer.write(row)
         csv_writer.close()
+        self.logger.info(item)
         return item
 
     def get_csv_writer(self):
@@ -441,15 +446,14 @@ class BulkReefSupplyBRSSpider(Spider):
         headers['user-agent'] = random.choice(user_agents)
         return headers
 
-    def increase_column_size_limit(self):
-        maxInt = sys.maxsize
+    def write_failed_item_to_jl(self, item):
+        errors_product_file = 'logs/products_insertion_failed.jl'
+        if not os.path.exists(errors_product_file):
+            with open(errors_product_file, mode='w') as f:
+                pass
 
-        while True:
-            try:
-                field_size_limit(maxInt)
-                break
-            except OverflowError:
-                maxInt = int(maxInt / 10)
+        with open('logs/products_insertion_failed.jl', mode='a+') as f:
+            f.write(f"{item}\n")
 
     def close(spider, reason):
         end_time = (datetime.now() - spider.start_time).total_seconds()

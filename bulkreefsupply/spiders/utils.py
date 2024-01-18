@@ -1,9 +1,10 @@
 import json
 import os
 import re
+import sys
 import time
 from copy import deepcopy
-from csv import DictReader
+from csv import DictReader, field_size_limit
 from datetime import datetime
 from html import unescape
 
@@ -102,7 +103,8 @@ def get_json_file_records(filename):
 def get_jl_records(filename):
     if not os.path.exists(filename):
         return []
-    return json.loads("[" + ",".join(open(filename, encoding='utf-8').readlines()) + "]" or '[]')
+    # return json.loads("[" + ",".join(open(filename, encoding='utf-8').readlines()) + "]" or '[]')
+    return [eval(r.replace(',{', '{')) for r in open(filename, encoding='utf-8').readlines() if r]
 
 
 def get_output_file_dir():
@@ -236,6 +238,17 @@ def get_csv_headers(is_scrape_daily=False):
         header_cols.append(get_next_quantity_column())
 
     return header_cols
+
+
+def increase_column_size_limit():
+    maxInt = sys.maxsize
+
+    while True:
+        try:
+            field_size_limit(maxInt)
+            break
+        except OverflowError:
+            maxInt = int(maxInt / 10)
 
 # records = get_json_file_records('./output/bulkreefsupply_products.json')
 # keys = set()
