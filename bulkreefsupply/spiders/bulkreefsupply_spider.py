@@ -124,25 +124,25 @@ class BulkReefSupplyBRSSpider(Spider):
         super().__init__(**kwargs)
         self.seen_urls = []
 
-        daily_products = get_csv_records('../input/daily_products.csv')
-        self.seen_urls += [r['product_url'].rstrip('/') for r in daily_products
-                           if r and r['product_url'] != 'product_url']
+        # daily_products = get_csv_records('../input/daily_products.csv')
+        # self.seen_urls += [r['product_url'].rstrip('/') for r in daily_products
+        #                    if r and r['product_url'] != 'product_url']
 
         self.delete_file(self.products_filename)
 
     def start_requests(self):
         yield Request(self.base_url, callback=self.parse, headers=self.headers)
         yield Request(self.sitemap_url, callback=self.parse_sitemap, headers=self.headers)
-        # yield from self.get_categories_requests()  # It is called via function -> retry_invalid_response
+        # yield from self.get_categories_requests()  # In case it is called via function -> retry_invalid_response
 
     @retry_invalid_response
     def parse(self, response):
         # Testing specific URLs
         # url = "https://www.bulkreefsupply.com/fish-acclimation-bundle-bulk-reef-supply.html"  # 204
         # url = "https://www.bulkreefsupply.com/brs-stick-on-thermometer-bulk-reef-supply.html"  # 1005
-        # # url = "https://www.bulkreefsupply.com/jumpguard-feeding-portal-d-d-the-aquarium-solution.html"  # 868
+        # url = "https://www.bulkreefsupply.com/jumpguard-feeding-portal-d-d-the-aquarium-solution.html"  # 868
+        url = "https://www.bulkreefsupply.com/radion-xr15-g6-blue-led-light-fixture-ecotech-marine.html"  # 868
         # return self.get_product_requests(response, [url])
-
         return self.get_product_requests(response, self.existing_records)
 
     @retry_invalid_response
@@ -194,8 +194,10 @@ class BulkReefSupplyBRSSpider(Spider):
                             variant['qty'] = 0
                             variant[self.quantity_col_report] = 0
                             yield self.write_to_csv(variant)
+                            self.logger.info(item)
                     except Exception as variant_err:
                         self.logger.debug(f"Got Variant Error:\n{variant_err}")
+                        a = 0
             else:
                 item.update(self.get_product(prod))
                 item['product_cart_id'] = self.get_product_cart_id(response, sku=item['product_id'])
@@ -206,9 +208,11 @@ class BulkReefSupplyBRSSpider(Spider):
                     item['qty'] = 0
                     item[self.quantity_col_report] = 0
                     yield self.write_to_csv(item)
+                    self.logger.info(item)
 
         except Exception as err:
             self.logger.debug(f"Got Error While Parsing Product {response.url}:\n {err}")
+            a = 0
 
         yield from self.get_next_product_request(response)
 
@@ -217,13 +221,18 @@ class BulkReefSupplyBRSSpider(Spider):
         self.set_limits(response)
         item = response.meta['item']
 
-        if response.meta['item']['qty'] < self.max_quantity and item['qty'] != item['lower_limit']:
-            yield self.get_add_to_cart_quantity_request(response)
-        else:
-            item = deepcopy(response.meta['item'])
-            item[self.quantity_col_report] = item.pop('qty')
-            yield self.write_to_csv(item)
-            yield from self.get_next_product_request(response)
+        try:
+            if response.meta['item']['qty'] < self.max_quantity and item['qty'] != item['lower_limit']:
+                yield self.get_add_to_cart_quantity_request(response)
+            else:
+                item = deepcopy(response.meta['item'])
+                item[self.quantity_col_report] = item.pop('qty')
+                yield self.write_to_csv(item)
+                self.logger.info(item)
+                yield from self.get_next_product_request(response)
+        except Exception as item_err:
+            print(f"Exception in parse_quantity: \n {item_err}")
+            a = 0
 
     def is_qty_added_successfully(self, response):
         return 'successfully added to cart.' in response.text.lower()
@@ -398,7 +407,8 @@ class BulkReefSupplyBRSSpider(Spider):
 
         for url in product_urls:
             url = url.rstrip('/')
-            if not url or url.count('/') > 3 or not url.endswith('.html') or url in self.seen_urls:
+
+            if not url or url.count('/') < 3 or not url.endswith('.html') or url in self.seen_urls:  # url.count('/')>3
                 continue
             self.seen_urls.append(url)
 
