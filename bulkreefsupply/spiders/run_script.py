@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from scrapy.crawler import CrawlerProcess
 
 from bulkreefsupply_spider import BulkReefSupplyBRSSpider
