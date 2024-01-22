@@ -72,14 +72,16 @@ alifarslan
 
 
 Schedule Cron Job to run by every Monday:
-30 15 * * 1 python3.9 /home/admin/scrapers/bulkreefsupply/bulkreefsupply/spiders/run_script.py # run_spider
+30 15 * * 1 python3.9 /home/deploy/crawlers/bulkreefsupply/bulkreefsupply/spiders/run_script.py # run_spider
 
 
 https://medium.datadriveninvestor.com/automate-your-python-scripts-using-cron-schedule-step-by-step-4e0ab3208dd5
 https://www.geeksforgeeks.org/how-to-schedule-python-scripts-as-cron-jobs-with-crontab/
 https://www.cyberciti.biz/faq/linux-display-date-and-time/
 
-01 16 20 06 * python3.9 /home/admin/scrapers/bulkreefsupply/bulkreefsupply/spiders/run_script.py # run_spider
+01 16 20 06 * python3.9 /home/deploy/crawlers/bulkreefsupply/bulkreefsupply/spiders/run_script.py # run_spider
+* * * * * python3.9 /home/deploy/crawlers/bulkreefsupply/bulkreefsupply/spiders/test_cron_script.py # test_cron_1
+* * * * * python /home/deploy/crawlers/bulkreefsupply/bulkreefsupply/spiders/test_cron_script.py # test_cron_2
 
 
 Download File Path: https://archive.topshelfaquatics.com/output/bulkreefsupply_products_3.csv

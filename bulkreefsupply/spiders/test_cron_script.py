@@ -3,8 +3,15 @@
 import os.path
 from datetime import datetime
 
-base_url = "https://archive.topshelfaquatics.com/output"
-file_name = f"{base_url}/test_time_file.txt"
+from dotenv import dotenv_values
+
+
+def get_output_file_dir():
+    config = dotenv_values(".env")
+    return config['PRODUCTS_FILE_DIR'].rstrip('/')
+
+
+file_name = f"{get_output_file_dir()}/test_time_file.txt"
 # file_name = "time_file.txt"
 
 if not os.path.exists(file_name):
