@@ -11,7 +11,7 @@ from html import unescape
 from dotenv import dotenv_values
 
 from .static_data import csv_headers, scrapingbee_proxy_url, scrapingbee_premium_proxy_url, \
-    scrapingbee_stealth_proxy_url
+    scrapingbee_stealth_proxy_url, PRODUCTS_FILE_DIR
 
 
 def clean(text):
@@ -108,9 +108,10 @@ def get_jl_records(filename):
 
 
 def get_output_file_dir():
-    config = dotenv_values(".env")
+    # config = dotenv_values(".env")
     # config = dotenv_values(f"{sys.path[2]}/bulkreefsupply/.env")
-    return config['PRODUCTS_FILE_DIR'].rstrip('/')
+    # return config['PRODUCTS_FILE_DIR'].rstrip('/')
+    return PRODUCTS_FILE_DIR.rstrip('/')
 
 
 def get_filename_t(is_scrape_daily=False):

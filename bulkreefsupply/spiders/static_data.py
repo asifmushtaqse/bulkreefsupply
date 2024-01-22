@@ -2,6 +2,8 @@ from datetime import datetime
 
 from scrapy import Selector
 
+PRODUCTS_FILE_DIR = '/home/deploy/public_html/output/'
+
 crawlera_api_key = "91bea46c315949248aa1432e1126d502"
 scrapingbee_api_key = "I21NC3DWP4MDCLJCBQ07VS3MXYC7O5V1VFGVEGP2H6PK18MG33JODJNSTK9B8UEU9CZ2CQU77PIUTMSZ"
 scrapingbee_proxy_url = ("https://app.scrapingbee.com/api/v1/?api_key=" + scrapingbee_api_key +
