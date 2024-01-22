@@ -5,7 +5,7 @@ from datetime import datetime
 
 from dotenv import dotenv_values
 
-from .static_data import PRODUCTS_FILE_DIR
+from static_data import PRODUCTS_FILE_DIR
 
 
 def get_output_file_dir():

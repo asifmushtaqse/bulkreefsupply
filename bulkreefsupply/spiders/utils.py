@@ -10,7 +10,7 @@ from html import unescape
 
 from dotenv import dotenv_values
 
-from .static_data import csv_headers, scrapingbee_proxy_url, scrapingbee_premium_proxy_url, \
+from static_data import csv_headers, scrapingbee_proxy_url, scrapingbee_premium_proxy_url, \
     scrapingbee_stealth_proxy_url, PRODUCTS_FILE_DIR
 
 
