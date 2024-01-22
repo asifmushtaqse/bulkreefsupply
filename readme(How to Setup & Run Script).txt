@@ -80,3 +80,6 @@ https://www.geeksforgeeks.org/how-to-schedule-python-scripts-as-cron-jobs-with-c
 https://www.cyberciti.biz/faq/linux-display-date-and-time/
 
 01 16 20 06 * python3.9 /home/admin/scrapers/bulkreefsupply/bulkreefsupply/spiders/run_script.py # run_spider
+
+
+Download File Path: https://archive.topshelfaquatics.com/output/bulkreefsupply_products_3.csv
