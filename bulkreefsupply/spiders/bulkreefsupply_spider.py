@@ -12,8 +12,8 @@ import random
 from scrapy import Request, FormRequest
 from scrapy.spiders import Spider
 
-from bulkreefsupply.spiders.static_data import req_meta, category_urls, user_agents, crawlera_api_key
-from bulkreefsupply.spiders.utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
+from static_data import req_meta, category_urls, user_agents, crawlera_api_key
+from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
     retry_invalid_response, increase_column_size_limit, create_dir, get_csv_records, get_jl_records
 
