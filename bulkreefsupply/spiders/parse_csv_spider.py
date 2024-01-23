@@ -4,7 +4,7 @@ from csv import DictReader
 
 from scrapy.spiders import Spider
 
-from bulkreefsupply.spiders.utils import clean, get_feed, get_csv_headers
+from utils import clean, get_feed, get_csv_headers
 
 
 class ParseCSVSpider(Spider):

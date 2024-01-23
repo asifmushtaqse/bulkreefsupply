@@ -79,3 +79,5 @@ Schedule Cron Job to run by every Monday:
 
 Download File Path: https://archive.topshelfaquatics.com/output/bulkreefsupply_products_3.csv
 Download File Path: https://archive.topshelfaquatics.com/output/test_time_file.txt
+
+16 19 * * 1 python /home/deploy/crawlers/bulkreefsupply/bulkreefsupply/spiders/run_script.py # run_spider_2
