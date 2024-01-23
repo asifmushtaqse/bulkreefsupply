@@ -81,3 +81,8 @@ Download File Path: https://archive.topshelfaquatics.com/output/bulkreefsupply_p
 Download File Path: https://archive.topshelfaquatics.com/output/test_time_file.txt
 
 16 19 * * 1 python /home/deploy/crawlers/bulkreefsupply/bulkreefsupply/spiders/run_script.py # run_spider_2
+
+nohup python /home/deploy/crawlers/bulkreefsupply/bulkreefsupply/spiders/run_script.py &
+
+# Copy products file from scraper output folder to public html output folder
+cp /home/deploy/crawlers/bulkreefsupply/bulkreefsupply/output/bulkreefsupply_products_3.csv /home/deploy/public_html/output/
