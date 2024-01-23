@@ -41,7 +41,8 @@ class BulkReefSupplyBRSSpider(Spider):
     if not os.path.exists(logs_dir):
         os.mkdir(logs_dir)
 
-    logs_file_path = f"{logs_dir}/{name}_logs.log"
+    # logs_file_path = f"{logs_dir}/{name}_logs.log"
+    logs_file_path = f"{name}_logs.log"
 
     if os.path.exists(logs_file_path):
         os.remove(logs_file_path)
