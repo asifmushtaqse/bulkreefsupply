@@ -35,7 +35,8 @@ class BulkReefSupplyBRSSpider(Spider):
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
     # products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{}.csv'
     products_filename = get_csv_feed_file_name()
-    logs_dir = f"{PRODUCTS_FILE_DIR.rstrip('/')}/logs"
+    # logs_dir = f"{PRODUCTS_FILE_DIR.rstrip('/')}/logs"
+    logs_dir = "logs"
 
     if os.path.exists(logs_dir):
         os.mkdir(logs_dir)
