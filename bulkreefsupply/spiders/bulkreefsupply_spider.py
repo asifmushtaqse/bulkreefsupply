@@ -38,17 +38,17 @@ class BulkReefSupplyBRSSpider(Spider):
     # logs_dir = f"{PRODUCTS_FILE_DIR.rstrip('/')}/logs"
     logs_dir = "logs"
 
-    if os.path.exists(logs_dir):
+    if not os.path.exists(logs_dir):
         os.mkdir(logs_dir)
 
     logs_file_path = f"{logs_dir}/{name}_logs.log"
 
+    if os.path.exists(logs_file_path):
+        os.remove(logs_file_path)
+
     cookiejar = 0
     max_quantity = 1000
     quantity_interval = 5
-
-    if os.path.exists(logs_file_path):
-        os.remove(logs_file_path)
 
     start_urls = [
         sitemap_url,
