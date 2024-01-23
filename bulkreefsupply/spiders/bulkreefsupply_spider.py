@@ -12,7 +12,7 @@ import random
 from scrapy import Request, FormRequest
 from scrapy.spiders import Spider
 
-from static_data import req_meta, category_urls, user_agents, crawlera_api_key
+from static_data import req_meta, category_urls, user_agents, crawlera_api_key, PRODUCTS_FILE_DIR
 from utils import clean, get_feed, get_sitemap_urls, get_output_file_dir, get_csv_headers, \
     get_csv_feed_file_name, get_today_date, get_last_report_records, get_next_quantity_column, \
     retry_invalid_response, increase_column_size_limit, create_dir, get_csv_records, get_jl_records
@@ -35,7 +35,11 @@ class BulkReefSupplyBRSSpider(Spider):
     sitemap_url = "https://www.bulkreefsupply.com/sitemap/google_sitemap.xml"
     # products_filename = f'{get_output_file_dir()}/bulkreefsupply_products_{}.csv'
     products_filename = get_csv_feed_file_name()
-    logs_dir = "logs"
+    logs_dir = f"{PRODUCTS_FILE_DIR.rstrip('/')}/logs"
+
+    if os.path.exists(logs_dir):
+        os.mkdir(logs_dir)
+
     logs_file_path = f"{logs_dir}/{name}_logs.log"
 
     cookiejar = 0
