@@ -161,7 +161,10 @@ class BulkReefSupplyBRSSpider(Spider):
 
     @retry_invalid_response
     def parse_sitemap(self, response):
-        return self.get_product_requests(response, get_sitemap_urls(response)[:])
+        urls = get_sitemap_urls(response)[:]
+        urls += [r['product_url'].strip() for r in DictReader(open('input_urls.csv', encoding='utf-8'))
+                 if r and r.get('product_url')]
+        return self.get_product_requests(response, list(set(urls)))
 
     @retry_invalid_response
     def parse_listings(self, response):
